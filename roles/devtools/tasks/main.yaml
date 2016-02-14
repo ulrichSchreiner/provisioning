@@ -1,14 +1,7 @@
-- name: install git package
-  apt: name=git state=present
-
-- name: install curl
-  apt: name=curl state=present
-
-- name: install tar
-  apt: name=tar state=present
-
-- name: install gzip
-  apt: name=gzip state=present
+- name: install base packages
+  apt: name={{item}} state=present
+  with_items:
+    - "{{base_packages}}"
 
 - name: install liquidprompt
   git: >
