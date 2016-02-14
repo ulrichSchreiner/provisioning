@@ -1,0 +1,32 @@
+- name: install git package
+  apt: name=git state=present
+
+- name: install curl
+  apt: name=curl state=present
+
+- name: install tar
+  apt: name=tar state=present
+
+- name: install gzip
+  apt: name=gzip state=present
+
+- name: install liquidprompt
+  git: >
+    repo=https://github.com/nojhan/liquidprompt.git
+    dest=/usr/local/liquidprompt
+    version=def86eba38703dd69e655a77ae610923e9a19051
+
+- name: install autoenv
+  git: >
+    repo=https://github.com/kennethreitz/autoenv.git
+    dest=/usr/local/autoenv
+    version=efb7e7e9d9c59c6452157b4760b8521b08db705a
+
+- name: add key for nodesource
+  apt_key: url=https://deb.nodesource.com/gpgkey/nodesource.gpg.key state=present
+
+- name: add node repository
+  apt_repository: repo='deb https://deb.nodesource.com/{{nodejs_version}} {{ansible_distribution_release}} main' state=present
+
+- name: install nodejs
+  apt: name=nodejs state=present

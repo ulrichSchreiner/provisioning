@@ -1,0 +1,58 @@
+source /usr/local/autoenv/activate.sh
+source /usr/local/liquidprompt/liquidprompt
+
+_atocker() {
+docker run  \
+    --rm \
+    -it \
+    --device /dev/dri \
+    -v /etc/localtime:/etc/localtime:ro \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v `pwd`:/work \
+    -v $HOME/.config:/config \
+    -v $HOME/.gitconfig:/devhome/.gitconfig \
+    -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+    -e DISPLAY=$DISPLAY \
+    -e LANG=$LANG \
+    -e HOSTUSER=`id -un` \
+    -e HOSTGROUP=`id -gn` \
+    -e HOSTUSERID=`id -u` \
+    -e HOSTGROUPID=`id -g` \
+    -e WORKSPACE=`pwd` \
+    ulrichschreiner/atocker "$1"
+}
+alias gbatom=_atocker
+alias atm="_atocker plain"
+
+_vsc() {
+  docker run -it --rm \
+      --privileged \
+      -v /tmp/.X11-unix:/tmp/.X11-unix  \
+      -v `pwd`:`pwd` \
+      -v $HOME/.config:/config \
+      -e DISPLAY=unix$DISPLAY \
+      -v $HOME/.gitconfig:/devhome/.gitconfig \
+      -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+      --device /dev/dri \
+      -e LANG=$LANG \
+      -e HOSTUSER=`id -un` \
+      -e HOSTGROUP=`id -gn` \
+      -e HOSTUSERID=`id -u` \
+      -e HOSTGROUPID=`id -g` \
+      -e WORKSPACE=`pwd` \
+      ulrichschreiner/vsc "$@"
+}
+alias vsc=_vsc
+
+_ansible() {
+  docker run -it --rm -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v `pwd`:/work ulrichschreiner/ansible-playbook "$@"
+}
+alias ansible-playbook=_ansible
+
+alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
+alias dockviz="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
+
+# don't forget to do a "npm config set prefix ~/npm"
+export NODE_PATH="$HOME/npm/lib/node_modules"
+
+export PATH=~/bin:~/go/bin:/usr/local/go_appengine:~/npm/bin:$PATH

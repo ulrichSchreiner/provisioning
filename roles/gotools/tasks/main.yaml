@@ -1,0 +1,25 @@
+- name: create go destination path
+  file: path=/usr/local/go-{{golang_version}} state=directory mode=0755
+
+- name: download go
+  unarchive: >
+    src=https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz
+    creates=/usr/local/go-{{golang_version}}/go
+    dest=/usr/local/go-{{golang_version}}
+    copy=no
+
+- name: symlink the go directory to needed version
+  file: src=/usr/local/go-{{golang_version}}/go dest=/usr/local/go state=link
+
+- name: create go/appengine destination path
+  file: path=/usr/local/goapp-{{goapp_version}} state=directory mode=0755
+
+- name: download go appengine
+  unarchive: >
+    src=https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
+    creates=/usr/local/goapp-{{goapp_version}}/go_appengine
+    dest=/usr/local/goapp-{{goapp_version}}
+    copy=no
+
+- name: symlink the go appengine directory to needed version
+  file: src=/usr/local/goapp-{{goapp_version}}/go_appengine dest=/usr/local/go_appengine state=link

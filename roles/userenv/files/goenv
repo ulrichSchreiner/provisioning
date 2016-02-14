@@ -1,0 +1,3 @@
+fn=`readlink -f $1`
+dn=`dirname $fn`
+export GOPATH=$dn
