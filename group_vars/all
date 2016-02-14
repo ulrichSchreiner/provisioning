@@ -3,5 +3,13 @@ gb_version: v0.4.0
 goapp_version: 1.9.32
 nodejs_version: node_4.x
 
-go_installation: /usr/local/go-{{golang_version}}
-goapp_installation: /usr/local/goapp-{{goapp_version}}
+go_base: /usr/local/go-
+goapp_base: /usr/local/goapp-
+go_installation: "{{go_base}}{{golang_version}}"
+goapp_installation: "{{goapp_base}}{{goapp_version}}"
+
+old_go_versions:
+    - 1.5.2
+
+old_goapp_versions:
+    - 1.9.31

@@ -18,3 +18,13 @@
     dest=goapp_installation
     copy=no
 
+- name: remove old go installations
+  file: path={{go_base}}{{item}} state=absent
+  with_items:
+    - "{{old_go_versions}}"
+
+- name: remove old goapp installations
+  file: path={{goapp_base}}{{item}} state=absent
+  with_items:
+    - "{{old_goapp_versions}}"
+    
