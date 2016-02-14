@@ -1,17 +1,22 @@
----
- - hosts: all
-   gather_facts: no
-   become: yes
-   pre_tasks:
-    - name: 'install python2'
-      raw: apt-get -y install python-simplejson
+# first make sure python2 is installed
+# do not gather_facts here, because this only
+# works with python2
+- hosts: all
+  gather_facts: no
+  become: yes
+  pre_tasks:
+   - name: 'install python2'
+     raw: apt-get -y install python-simplejson
 
- - hosts: development
-   become: yes
-   roles:
-     - devtools
-     - gotools
+# no install some base packages and tools where wee
+# need root privileges
+- hosts: development
+  become: yes
+  roles:
+    - devtools
+    - gotools
 
- - hosts: development
-   roles:
-     - userenv
+# last but not least: install user specific configuration
+- hosts: development
+  roles:
+    - userenv
