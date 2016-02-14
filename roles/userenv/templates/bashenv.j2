@@ -55,4 +55,5 @@ alias dockviz="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
 
-export PATH=~/bin:~/go/bin:/usr/local/go_appengine:~/npm/bin:$PATH
+export GOROOT={{go_installation}}/go
+export PATH=~/bin:~/go/bin:{{go_installation}}/go/bin:{{goapp_installation}}/go_appengine:~/npm/bin:$PATH
