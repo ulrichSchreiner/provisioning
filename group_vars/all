@@ -14,9 +14,10 @@ base_packages:
     - curl
     - git
     - gzip
+    - make
     - mercurial
     - tar
-    
+
 go_base: /usr/local/go-
 goapp_base: /usr/local/goapp-
 go_installation: "{{go_base}}{{golang_version}}"

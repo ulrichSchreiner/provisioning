@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+  then
+    echo "please enter a path which should be a GOPATH enabled workspace"
+    exit 0
+fi
+
+TARGET=$1/.env
+echo 'fn=`readlink -f $1`' >$TARGET
+echo 'dn=`dirname $fn`' >>$TARGET
+echo 'export GOPATH=$dn' >>$TARGET

@@ -23,3 +23,6 @@
 
 - name: set the npm configuration
   copy: src=npmrc dest=~/.npmrc
+
+- name: install script to transform a directory to a GOPATH enabled workspace
+  template: src=createStdGoWS dest=~/bin/createStdGoWS mode=0755
