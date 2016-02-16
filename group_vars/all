@@ -2,6 +2,7 @@ golang_version: 1.5.3
 gb_version: v0.4.0
 goapp_version: 1.9.32
 nodejs_version: node_4.x
+docker_compose_version: 1.6.0
 
 old_go_versions:
     - 1.5.2
@@ -11,6 +12,7 @@ old_goapp_versions:
 
 base_packages:
     - apt-transport-https
+    - bzr
     - curl
     - git
     - gzip
@@ -18,7 +20,8 @@ base_packages:
     - mercurial
     - tar
 
-go_base: /usr/local/go-
+usr_local: /usr/local
+go_base: "{{usr_local}}/go-"
 goapp_base: /usr/local/goapp-
 go_installation: "{{go_base}}{{golang_version}}"
 goapp_installation: "{{goapp_base}}{{goapp_version}}"

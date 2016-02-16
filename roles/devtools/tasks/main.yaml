@@ -32,3 +32,10 @@
 
 - name: install git-lfs
   apt: name=git-lfs state=present
+
+- name: install docker-compose as a container
+  get_url: >
+    url=https://github.com/docker/compose/releases/download/{{docker_compose_version}}/run.sh
+    dest={{usr_local}}/bin/docker-compose
+    mode=0755
+    force=yes
