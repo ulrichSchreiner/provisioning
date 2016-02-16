@@ -12,7 +12,7 @@ Then simply call  `./run.sh`
 ## What will be installed
 
 The `devtools` role will install some basic packages which i need for my
-everyda work (`git`, `curl`, `make`, ...). It will also install `nodejs 4.x`
+everyday work (`git`, `curl`, `make`, ...). It will also install `nodejs 4.x`
 and `git-lfs` as well als `docker-compose`.
 
 The `gotools` role will install `go` and the `go appengine SDK` in the versions
