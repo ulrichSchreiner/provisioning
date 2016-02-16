@@ -14,6 +14,7 @@ base_packages:
     - make
     - mercurial
     - tar
+    - tmux
 
 localinstallation: /usr/local
 go_base: "{{localinstallation}}/go"
