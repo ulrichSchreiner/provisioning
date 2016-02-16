@@ -1,30 +1,41 @@
-- name: create go destination path
-  file: path={{go_installation}} state=directory mode=0755
+- name: check go version
+  command: grep -q "{{golang_version}}" {{go_base}}/VERSION
+  register: goversion
+  always_run: True
+  ignore_errors: True
+  changed_when: False
+
+- name: remove old go installation when go version changed
+  file: path={{go_base}} state=absent
+  when: goversion.rc != 0
+
+- name: create go destination path (recreate if previous task deleted it)
+  file: path={{go_base}} state=directory mode=0755
 
 - name: download go
   unarchive: >
     src=https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz
-    creates={{go_installation}}/go
-    dest={{go_installation}}
+    dest={{localinstallation}}
     copy=no
+  when: goversion.rc != 0
 
-- name: create go/appengine destination path
-  file: path={{goapp_installation}} state=directory mode=0755
+- name: check goapp version
+  command: grep -q "{{goapp_version}}" {{goapp_base}}/VERSION
+  register: goappversion
+  always_run: True
+  ignore_errors: True
+  changed_when: False
+
+- name: remove old goapp installation when goapp version changed
+  file: path={{goapp_base}} state=absent
+  when: goappversion.rc != 0
+
+- name: create go/appengine destination path (recreate if previous task deleted it)
+  file: path={{goapp_base}} state=directory mode=0755
 
 - name: download go appengine
   unarchive: >
     src=https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
-    creates={{goapp_installation}}/go_appengine
-    dest={{goapp_installation}}
+    dest={{localinstallation}}
     copy=no
-
-- name: remove old go installations
-  file: path={{go_base}}{{item}} state=absent
-  with_items:
-    - "{{old_go_versions}}"
-
-- name: remove old goapp installations
-  file: path={{goapp_base}}{{item}} state=absent
-  with_items:
-    - "{{old_goapp_versions}}"
-    
+  when: goappversion.rc != 0

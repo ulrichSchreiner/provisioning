@@ -56,5 +56,7 @@ alias sphinx="docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschrein
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
 
-export GOROOT={{go_installation}}/go
-export PATH=~/bin:~/go/bin:{{go_installation}}/go/bin:{{goapp_installation}}/go_appengine:~/npm/bin:$PATH
+# GOROOT is only required if not /usr/local/go, but leave it here
+export GOROOT={{go_base}}
+
+export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:$PATH
