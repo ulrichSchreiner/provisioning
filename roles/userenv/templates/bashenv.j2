@@ -44,14 +44,19 @@ _vsc() {
 }
 alias vsc=_vsc
 
-_ansible() {
+_ansibleplaybook() {
   docker run -it --rm -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v `pwd`:/work ulrichschreiner/ansible-playbook "$@"
 }
-alias ansible-playbook=_ansible
+alias ansible-playbook=_ansibleplaybook
+
+_sphinx() {
+  docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschreiner/sphinx "$@"
+}
+alias sphinx=_sphinx
 
 alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
 alias dockviz="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
-alias sphinx="docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschreiner/sphinx"
+
 
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
