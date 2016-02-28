@@ -3,6 +3,7 @@ gb_version: v0.4.0
 goapp_version: 1.9.32
 nodejs_version: node_4.x
 docker_compose_version: 1.6.0
+ansible_version: 2.0.1.0-1
 
 base_packages:
     - apt-transport-https

@@ -5,4 +5,4 @@ docker run -it --rm \
   --env SSH_AUTH_SOCK=/ssh-agent \
   --net host \
   -v `pwd`:/work ulrichschreiner/ansible playbook \
-  -u `whoami` -v --ask-become-pass --ask-pass -i inventory playbook.yaml
+  -u `whoami` -vv --ask-become-pass --ask-pass -i inventory playbook.yaml
