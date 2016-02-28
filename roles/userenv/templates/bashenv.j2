@@ -44,33 +44,6 @@ _vsc() {
 }
 alias vsc=_vsc
 
-_ansible() {
-  subc=$1
-  shift
-  docker run -it --rm -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent -v `pwd`:/work ulrichschreiner/ansible $subc "$@"
-}
-_ansible_playbook() {
-  _ansible playbook "$@"
-}
-_ansible_vault() {
-  _ansible vault "$@"
-}
-_ansible_doc() {
-  _ansible doc "$@"
-}
-_ansible_pull() {
-  _ansible pull "$@"
-}
-_ansible_galaxy() {
-  _ansible galaxy "$@"
-}
-alias ansible-playbook=_ansible_playbook
-alias ansible-vault=_ansible_vault
-alias ansible-doc=_ansible_doc
-alias ansible-pull=_ansible_pull
-alias ansible-galaxy=_ansible_galaxy
-alias ansible=_ansible
-
 _sphinx() {
   docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschreiner/sphinx "$@"
 }
