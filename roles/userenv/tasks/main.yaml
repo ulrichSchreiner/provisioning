@@ -1,6 +1,9 @@
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
 
+- name: create local bin
+  file: path=~/bin state=directory mode=0755
+
 - name: make the go directory a GOPATH enabled workspace
   copy: src=goenv dest=~/go/.env mode=664
 
@@ -12,7 +15,7 @@
   register: gb_cloned
 
 - name: install gb
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/constabulary/gb && go get -u ./...
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/constabulary/gb && /usr/local/go/bin/go get -u ./...
   when: gb_cloned|changed
 
 - name: create environment for sourcing
