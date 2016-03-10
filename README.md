@@ -11,9 +11,12 @@ Then simply call  `./run.sh`
 
 ## What will be installed
 
-The `devtools` role will install some basic packages which i need for my
-everyday work (`git`, `curl`, `make`, ...). It will also install `nodejs 4.x`
-and `git-lfs` as well als `docker-compose`.
+With the `worktools` role i will install some external repositories (docker,
+dropbox, chrome, ...) and install the basic tools i use for my daily work. The
+list of tools is in `group_vars/all`.
+
+The `devtools` role installs some tools where there is no ubuntu package
+available. They are cloned from github in the specified version.
 
 The `gotools` role will install `go` and the `go appengine SDK` in the versions
 specified in `group_vars/all`.

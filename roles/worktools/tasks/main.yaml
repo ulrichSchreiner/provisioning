@@ -1,12 +1,12 @@
 - name: add key for dropbox
   apt_key: >
-    keyserver=pgp.mit.edu
+    keyserver={{ dropbox_keyserver }}
     id={{ dropbox_key }}
     state=present
 
 - name: add key for docker
   apt_key: >
-    keyserver=hkp://p80.pool.sks-keyservers.net
+    keyserver={{ docker_keyserver }}
     id={{ docker_key }}
     state=present
 

@@ -1,16 +1,20 @@
-golang_version: 1.6
-gb_version: v0.4.0
-goapp_version: 1.9.32
-nodejs_version: node_4.x
-docker_compose_version: 1.6.0
-ansible_version: 2.0.1.0-1
+golang_version: "1.6"
+gb_version: "v0.4.0"
+goapp_version: "1.9.32"
+nodejs_version: "node_4.x"
+docker_compose_version: "1.6.0"
+localansible_version: "2.0.1.0-1"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 packagecloud_key_url: https://packagecloud.io/gpg.key
-
 dropbox_key: 5044912E
+dropbox_keyserver: pgp.mit.edu
 docker_key: 58118E89F3A912897C070ADBF76221572C52609D
+docker_keyserver: hkp://p80.pool.sks-keyservers.net
+
+liquidprompt_version: def86eba38703dd69e655a77ae610923e9a19051
+autoenv_version: efb7e7e9d9c59c6452157b4760b8521b08db705a
 
 base_packages:
     - apt-transport-https

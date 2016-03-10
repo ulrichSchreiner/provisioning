@@ -12,7 +12,7 @@
 - name: create go destination path (recreate if previous task deleted it)
   file: path={{go_base}} state=directory mode=0755
 
-# don't use unarchive-task here, becaus it has a bug when the target
+# don't use unarchive-task here, because it has a bug when the target
 # directory does not exist (https://github.com/ansible/ansible-modules-core/issues/2936)
 - name: download go
   get_url: >

@@ -1,20 +1,20 @@
 - name: install liquidprompt
   git: >
     repo=https://github.com/nojhan/liquidprompt.git
-    dest=/usr/local/liquidprompt
-    version=def86eba38703dd69e655a77ae610923e9a19051
+    dest={{ localinstallation }}/liquidprompt
+    version={{ liquidprompt_version }}
 
 - name: install autoenv
   git: >
     repo=https://github.com/kennethreitz/autoenv.git
-    dest=/usr/local/autoenv
-    version=efb7e7e9d9c59c6452157b4760b8521b08db705a
+    dest={{ localinstallation }}/autoenv
+    version={{ autoenv_version }}
 
-- name: install ansible-docker
+- name: install local ansible-docker
   git: >
     repo=https://github.com/ulrichSchreiner/ansible-docker.git
-    dest=/usr/local/ansible-docker
-    version=2.0.1.0-1
+    dest={{ localinstallation }}/ansible-docker
+    version={{ localansible_version }}
 
 - name: create ansible shortcuts
   file: src=/usr/local/ansible-docker/ansible dest=/usr/local/bin/{{item}} mode=0755 state=link
