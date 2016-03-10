@@ -12,11 +12,16 @@
 - name: create go destination path (recreate if previous task deleted it)
   file: path={{go_base}} state=directory mode=0755
 
+# don't use unarchive-task here, becaus it has a bug when the target
+# directory does not exist (https://github.com/ansible/ansible-modules-core/issues/2936)
 - name: download go
-  unarchive: >
-    src=https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz
-    dest={{localinstallation}}
-    copy=no
+  get_url: >
+    url=https://storage.googleapis.com/golang/go{{golang_version}}.linux-amd64.tar.gz
+    dest=/tmp/go{{golang_version}}.linux-amd64.tar.gz
+  when: goversion.rc != 0
+
+- name: unpack go
+  shell: cd {{localinstallation}} && tar xzf /tmp/go{{golang_version}}.linux-amd64.tar.gz && rm /tmp/go{{golang_version}}.linux-amd64.tar.gz
   when: goversion.rc != 0
 
 - name: check goapp version
@@ -34,8 +39,11 @@
   file: path={{goapp_base}} state=directory mode=0755
 
 - name: download go appengine
-  unarchive: >
-    src=https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
-    dest={{localinstallation}}
-    copy=no
+  get_url: >
+    url=https://storage.googleapis.com/appengine-sdks/featured/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
+    dest=/tmp/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
+  when: goappversion.rc != 0
+
+- name: unpack go
+  shell: cd {{localinstallation}} && unzip /tmp/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip && rm /tmp/go_appengine_sdk_linux_amd64-{{goapp_version}}.zip
   when: goappversion.rc != 0

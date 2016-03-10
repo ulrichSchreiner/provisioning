@@ -13,6 +13,7 @@
 - hosts: development
   become: yes
   roles:
+    - worktools
     - devtools
     - gotools
 
