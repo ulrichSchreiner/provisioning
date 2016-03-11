@@ -1,6 +1,13 @@
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
 
+- name: create workspaces for development (github, bitbucket, fits)
+  file: path=~/workspaces/{{item}} state=directory mode=0755
+  with_items:
+    - ulrichSchreiner
+    - usc
+    - ize0h88
+
 - name: create local bin
   file: path=~/bin state=directory mode=0755
 
