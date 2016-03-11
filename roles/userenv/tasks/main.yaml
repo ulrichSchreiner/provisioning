@@ -22,7 +22,7 @@
   register: gb_cloned
 
 - name: install gb
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/constabulary/gb && {{go_base}}/bin/go get -u ./...
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/constabulary/gb && {{go_base}}/bin/go install ./... 
   when: gb_cloned|changed
 
 - name: create environment for sourcing
