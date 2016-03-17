@@ -33,8 +33,8 @@
   register: unused_cloned
 
 - name: install unused
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/honnef.co/go/unused && {{go_base}}/bin/go get  && {{go_base}}/bin/go install
-  when: unused_cloned|changed and False
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/honnef.co/go/unused/cmd/unused && {{go_base}}/bin/go get  && {{go_base}}/bin/go install
+  when: unused_cloned|changed
 
 - name: create environment for sourcing
   template: src=bashenv.j2 dest=~/.bashenv
