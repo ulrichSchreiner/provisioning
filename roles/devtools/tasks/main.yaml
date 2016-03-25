@@ -29,9 +29,9 @@
 - name: create local bin directory
   file: path={{localinstallation}}/bin state=directory mode=0755
 
-- name: install docker-compose as a container
+- name: install docker-compose as a direct command
   get_url: >
-    url=https://github.com/docker/compose/releases/download/{{docker_compose_version}}/run.sh
+    url=https://github.com/docker/compose/releases/download/{{docker_compose_version}}/docker-compose-{{ansible_system}}-{{ansible_machine}}
     dest={{localinstallation}}/bin/docker-compose
     mode=0755
     force=yes
