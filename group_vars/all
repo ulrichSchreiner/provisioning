@@ -19,6 +19,7 @@ autoenv_version: efb7e7e9d9c59c6452157b4760b8521b08db705a
 
 base_packages:
     - apt-transport-https
+    - build-essential
     - bzr
     - curl
     - dropbox

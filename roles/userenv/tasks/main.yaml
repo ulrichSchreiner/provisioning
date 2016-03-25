@@ -6,6 +6,7 @@
   with_items:
     - ulrichSchreiner
     - usc
+    - isw
     - ize0h88
 
 - name: create local bin
