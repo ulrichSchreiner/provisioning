@@ -1,0 +1,2 @@
+- lineinfile: dest=/etc/sysctl.d/10-magic-sysrq.conf state=absent regexp="^kernel.sysrq = 176"
+- lineinfile: dest=/etc/sysctl.d/10-magic-sysrq.conf state=present line="kernel.sysrq = 1"
