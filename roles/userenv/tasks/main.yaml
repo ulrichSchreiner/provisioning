@@ -51,6 +51,7 @@
 
 - name: check if npm-check-updates is installed
   shell: npm list -g --depth 1 npm-check-updates
+  ignore_errors: yes
   register: ncu
   always_run: True
   changed_when: False
