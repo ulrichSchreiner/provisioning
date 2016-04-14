@@ -39,6 +39,7 @@ base_packages:
     - thunderbird-locale-de
     - tmux
     - unzip
+    - vim
 
 localinstallation: /usr/local
 go_base: "{{localinstallation}}/go"
