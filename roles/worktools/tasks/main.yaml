@@ -27,6 +27,10 @@
 
 - name: activate addons apt sources
   template: src=addons.list.j2 dest=/etc/apt/sources.list.d/addons.list
+  register: newsources
+
+- apt: update_cache=yes
+  when: newsources|changed
 
 - name: install base packages
   apt: name={{item}} state=present
