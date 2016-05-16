@@ -15,6 +15,17 @@
 - name: make the go directory a GOPATH enabled workspace
   copy: src=goenv dest=~/go/.env mode=664
 
+- name: clone goconvey
+  git: >
+      repo=https://github.com/smartystreets/goconvey.git
+      dest=~/go/src/github.com/smartystreets/goconvey
+      version={{goconvey_version}}
+  register: goconvey_cloned
+
+- name: install goconvey
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/smartystreets/goconvey && {{go_base}}/bin/go get && {{go_base}}/bin/go install 
+  when: goconvey_cloned|changed
+
 - name: clone gb
   git: >
       repo=https://github.com/constabulary/gb.git
