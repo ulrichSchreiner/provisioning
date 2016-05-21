@@ -23,7 +23,7 @@
   register: goconvey_cloned
 
 - name: install goconvey
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/smartystreets/goconvey && {{go_base}}/bin/go get && {{go_base}}/bin/go install 
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/smartystreets/goconvey && {{go_base}}/bin/go get && {{go_base}}/bin/go install
   when: goconvey_cloned|changed
 
 - name: clone gb
@@ -67,6 +67,23 @@
   always_run: True
   changed_when: False
 
-- name: instal npm-check-updates if needed
+- name: install npm-check-updates if needed
   shell: npm install -g npm-check-updates
   when: ncu.rc != 0
+
+- name: check glide
+  command: ~/go/bin/glide |grep -q "{{glide_version}}"
+  register: glideversion
+  always_run: True
+  ignore_errors: True
+  changed_when: False
+
+- name: install glide
+  get_url: >
+    url=https://github.com/Masterminds/glide/releases/download/{{glide_version}}/glide-{{glide_version}}-linux-amd64.tar.gz
+    dest=/tmp/glide.tar.gz
+  when: glideversion.rc != 0
+
+- name: unpack glide
+  shell: cd $HOME/go/bin && tar --strip-components 1 -xzf /tmp/glide.tar.gz && rm /tmp/glide.tar.gz
+  when: glideversion.rc != 0
