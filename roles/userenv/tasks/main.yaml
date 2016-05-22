@@ -1,6 +1,21 @@
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
 
+- name: create local development workspace
+  file: path=~/development state=directory mode=0755
+
+- name: create common subdirs
+  file: path=~/development/{{item}} state=directory mode=0755
+  with_items:
+    - src/gitlab.com/globalsafetrack
+    - src/github.com/ulrichSchreiner
+    - src/bitbucket.com/isw
+    - src/bitbucket.com/usc
+    - src/git.f-i-ts.de/devops
+    - src/git.f-i-ts.de/ize0h88
+    - pkg
+    - bin
+
 - name: create workspaces for development (github, bitbucket, fits)
   file: path=~/workspaces/{{item}} state=directory mode=0755
   with_items:
@@ -72,7 +87,7 @@
   when: ncu.rc != 0
 
 - name: check glide
-  command: ~/go/bin/glide |grep -q "{{glide_version}}"
+  command: ~/go/bin/glide -v |grep -q "{{glide_version}}"
   register: glideversion
   always_run: True
   ignore_errors: True
