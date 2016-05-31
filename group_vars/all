@@ -16,7 +16,7 @@ dropbox_keyserver: pgp.mit.edu
 docker_key: 58118E89F3A912897C070ADBF76221572C52609D
 docker_keyserver: hkp://p80.pool.sks-keyservers.net
 
-liquidprompt_version: def86eba38703dd69e655a77ae610923e9a19051
+liquidprompt_version: v_1.10
 autoenv_version: efb7e7e9d9c59c6452157b4760b8521b08db705a
 
 base_packages:
