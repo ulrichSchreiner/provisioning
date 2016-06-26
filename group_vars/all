@@ -1,5 +1,5 @@
 golang_version: "1.6.2"
-gb_version: "v0.4.1"
+gb_version: "v0.4.3"
 glide_version: "0.10.2"
 goapp_version: "1.9.32"
 nodejs_version: "node_4.x"
