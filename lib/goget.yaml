@@ -1,0 +1,10 @@
+- name: clone {{item.name}}
+  git: >
+      repo={{item.url}}
+      dest=~/go/src/{{item.path}}
+      version={{item.version}}
+  register: item_cloned
+
+- name: install {{item.name}}
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get && {{go_base}}/bin/go install ./...
+  when: item_cloned|changed

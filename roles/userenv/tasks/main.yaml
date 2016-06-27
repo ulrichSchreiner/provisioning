@@ -30,38 +30,9 @@
 - name: make the go directory a GOPATH enabled workspace
   copy: src=goenv dest=~/go/.env mode=664
 
-- name: clone goconvey
-  git: >
-      repo=https://github.com/smartystreets/goconvey.git
-      dest=~/go/src/github.com/smartystreets/goconvey
-      version={{goconvey_version}}
-  register: goconvey_cloned
-
-- name: install goconvey
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/smartystreets/goconvey && {{go_base}}/bin/go get && {{go_base}}/bin/go install
-  when: goconvey_cloned|changed
-
-- name: clone gb
-  git: >
-      repo=https://github.com/constabulary/gb.git
-      dest=~/go/src/github.com/constabulary/gb
-      version={{gb_version}}
-  register: gb_cloned
-
-- name: install gb
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/github.com/constabulary/gb && {{go_base}}/bin/go get && {{go_base}}/bin/go install ./...
-  when: gb_cloned|changed
-
-- name: clone unused
-  git: >
-      repo=https://github.com/dominikh/go-unused.git
-      dest=~/go/src/honnef.co/go/unused
-      version={{unused_version}}
-  register: unused_cloned
-
-- name: install unused
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/honnef.co/go/unused/cmd/unused && {{go_base}}/bin/go get  && {{go_base}}/bin/go install
-  when: unused_cloned|changed
+- name: install go tools
+  include: lib/goget.yaml
+  with_items: "{{gogetable_tools}}"
 
 - name: create environment for sourcing
   template: src=bashenv.j2 dest=~/.bashenv
@@ -85,20 +56,3 @@
 - name: install npm-check-updates if needed
   shell: npm install -g npm-check-updates
   when: ncu.rc != 0
-
-- name: check glide
-  command: ~/go/bin/glide -v |grep -q "{{glide_version}}"
-  register: glideversion
-  always_run: True
-  ignore_errors: True
-  changed_when: False
-
-- name: install glide
-  get_url: >
-    url=https://github.com/Masterminds/glide/releases/download/{{glide_version}}/glide-{{glide_version}}-linux-amd64.tar.gz
-    dest=/tmp/glide.tar.gz
-  when: glideversion.rc != 0
-
-- name: unpack glide
-  shell: cd $HOME/go/bin && tar --strip-components 1 -xzf /tmp/glide.tar.gz && rm /tmp/glide.tar.gz
-  when: glideversion.rc != 0
