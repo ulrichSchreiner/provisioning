@@ -64,3 +64,8 @@ gogetable_tools:
     version: "22afecf135d9e686b2e0872ad34f03756552905d"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
+  -
+    name: govendor
+    version: "149dead46a0b5ec0d44f36ab95b7077a049eb68b"
+    url: https://github.com/kardianos/govendor.git
+    path: github.com/kardianos/govendor
