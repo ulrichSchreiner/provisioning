@@ -27,6 +27,7 @@ alias atm="_atocker"
 _vsc() {
   docker run -it --rm \
       --privileged \
+      --security-opt=seccomp:unconfined \
       -v /tmp/.X11-unix:/tmp/.X11-unix  \
       -v `pwd`:`pwd` \
       -v $HOME/.config:/config \
