@@ -61,7 +61,7 @@ gogetable_tools:
     path: honnef.co/go/unused
   -
     name: glide
-    version: "22afecf135d9e686b2e0872ad34f03756552905d"
+    version: "v0.11.0"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
   -
