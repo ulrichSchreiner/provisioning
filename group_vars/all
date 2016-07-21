@@ -1,5 +1,5 @@
 golang_version: "1.6.2"
-goapp_version: "1.9.38"
+goapp_version: "1.9.40"
 nodejs_version: "node_4.x"
 docker_compose_version: "1.7.1"
 localansible_version: "2.0.1.0-1"
@@ -61,7 +61,7 @@ gogetable_tools:
     path: honnef.co/go/unused
   -
     name: glide
-    version: "v0.11.0"
+    version: "v0.11.1"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
   -
