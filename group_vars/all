@@ -49,6 +49,11 @@ gogetable_tools:
     version: "v0.4.3"
     url: https://github.com/constabulary/gb.git
     path: github.com/constabulary/gb
+  - 
+    name: gotty
+    version: "510542b1590762a273c5af3068feb4acc266055e"
+    url: https://github.com/yudai/gotty.git
+    path: github.com/yudai/gotty
   -
     name: goconvey
     version: "1.6.2"
