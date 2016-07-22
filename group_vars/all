@@ -55,6 +55,11 @@ gogetable_tools:
     url: https://github.com/yudai/gotty.git
     path: github.com/yudai/gotty
   -
+    name: peco
+    version: "v0.3.6"
+    url: https://github.com/peco/peco.git
+    path: github.com/peco/peco
+  -
     name: goconvey
     version: "1.6.2"
     url: https://github.com/smartystreets/goconvey.git
