@@ -60,6 +60,11 @@ gogetable_tools:
     url: https://github.com/peco/peco.git
     path: github.com/peco/peco
   -
+    name: hugo
+    version: "v0.16"
+    url: https://github.com/spf13/hugo.git
+    path: github.com/spf13/hugo
+  -
     name: goconvey
     version: "1.6.2"
     url: https://github.com/smartystreets/goconvey.git
