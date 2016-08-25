@@ -49,38 +49,46 @@ gogetable_tools:
     version: "v0.4.3"
     url: https://github.com/constabulary/gb.git
     path: github.com/constabulary/gb
+    install: "./..."
   - 
     name: gotty
     version: "510542b1590762a273c5af3068feb4acc266055e"
     url: https://github.com/yudai/gotty.git
     path: github.com/yudai/gotty
+    install: "./..."
   -
     name: peco
     version: "v0.4.2"
     url: https://github.com/peco/peco.git
     path: github.com/peco/peco
+    install: "./..."
   -
     name: hugo
     version: "v0.16"
     url: https://github.com/spf13/hugo.git
     path: github.com/spf13/hugo
+    install: "./..."
   -
     name: goconvey
     version: "1.6.2"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
+    install: "./..."
   -
     name: unused
     version: "9057d575b3bb51f1e1251088a8b8196f4226f936"
     url: https://github.com/dominikh/go-unused.git
     path: honnef.co/go/unused
+    install: "./..."
   -
     name: glide
-    version: "v0.11.1"
+    version: "v0.12.0"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
+    install: ""
   -
     name: govendor
     version: "v1.0.5"
     url: https://github.com/kardianos/govendor.git
     path: github.com/kardianos/govendor
+    install: "./..."
