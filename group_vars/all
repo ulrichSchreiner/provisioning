@@ -81,6 +81,6 @@ gogetable_tools:
     path: github.com/Masterminds/glide
   -
     name: govendor
-    version: "v1.0.4"
+    version: "v1.0.5"
     url: https://github.com/kardianos/govendor.git
     path: github.com/kardianos/govendor
