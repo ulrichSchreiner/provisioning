@@ -3,6 +3,7 @@ goapp_version: "1.9.40"
 nodejs_version: "node_6.x"
 docker_compose_version: "1.8.0"
 localansible_version: "2.1.1.0"
+bfg_version: "1.12.13"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
@@ -50,7 +51,7 @@ gogetable_tools:
     url: https://github.com/constabulary/gb.git
     path: github.com/constabulary/gb
     install: "./..."
-  - 
+  -
     name: gotty
     version: "510542b1590762a273c5af3068feb4acc266055e"
     url: https://github.com/yudai/gotty.git

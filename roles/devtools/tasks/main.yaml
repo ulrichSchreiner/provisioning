@@ -35,3 +35,16 @@
     dest={{localinstallation}}/bin/docker-compose
     mode=0755
     force=yes
+
+- name: create local bfg directory
+  file: path={{localinstallation}}/bfg state=directory mode=0755
+
+- name: install bfg a jar
+  get_url: >
+    url=http://repo1.maven.org/maven2/com/madgag/bfg/{{bfg_version}}/bfg-{{bfg_version}}.jar
+    dest={{localinstallation}}/bfg/bfg-{{bfg_version}}.jar
+    mode=0755
+    force=yes
+
+- name: install bfg command
+  template: src=bfg.j2 dest={{localinstallation}}/bin/bfg mode=0755
