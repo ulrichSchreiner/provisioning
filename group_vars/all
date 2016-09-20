@@ -40,6 +40,7 @@ base_packages:
     - ttf-ancient-fonts
     - unzip
     - vim
+    - libpcap-dev
 
 localinstallation: /usr/local
 go_base: "{{localinstallation}}/go"
@@ -94,3 +95,9 @@ gogetable_tools:
     url: https://github.com/kardianos/govendor.git
     path: github.com/kardianos/govendor
     install: "./..."
+  -
+    name: mylg
+    version: "v0.2.3"
+    url: https://github.com/mehrdadrad/mylg.git
+    path: github.com/mehrdadrad/mylg
+    install: ""
