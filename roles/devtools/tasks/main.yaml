@@ -36,6 +36,14 @@
     mode=0755
     force=yes
 
+- name: install docker-machine as a direct command
+  get_url: >
+    url=https://github.com/docker/machine/releases/download/{{docker_machine_version}}/docker-machine-{{ansible_system}}-{{ansible_machine}}
+    dest={{localinstallation}}/bin/docker-machine
+    mode=0755
+    force=yes
+
+
 - name: create local bfg directory
   file: path={{localinstallation}}/bfg state=directory mode=0755
 
