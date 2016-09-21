@@ -97,7 +97,7 @@ gogetable_tools:
     install: "./..."
   -
     name: mylg
-    version: "v0.2.3"
+    version: "5dc49a561ea616eda1dc197dff5e8d034b2e771e"
     url: https://github.com/mehrdadrad/mylg.git
     path: github.com/mehrdadrad/mylg
     install: ""
