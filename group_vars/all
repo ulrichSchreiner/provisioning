@@ -85,7 +85,7 @@ gogetable_tools:
     install: "./..."
   -
     name: glide
-    version: "v0.12.0"
+    version: "v0.12.2"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
     install: ""
