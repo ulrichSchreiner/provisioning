@@ -107,4 +107,10 @@ gogetable_tools:
     url: https://github.com/davecheney/httpstat
     path: github.com/davecheney/httpstat
     install: ""
+  -
+    name: sift
+    version: "v0.8.0"
+    url: https://github.com/svent/sift
+    path: github.com/svent/sift
+    install: ""
 
