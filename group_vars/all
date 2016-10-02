@@ -103,7 +103,7 @@ gogetable_tools:
     install: ""
   -
     name: httpstat
-    version: "v1.0.0-rc.1"
+    version: "v1.0.0"
     url: https://github.com/davecheney/httpstat
     path: github.com/davecheney/httpstat
     install: ""
