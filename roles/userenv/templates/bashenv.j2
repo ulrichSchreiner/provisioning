@@ -9,7 +9,7 @@ docker run  \
     -v /etc/localtime:/etc/localtime:ro \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v `pwd`:/work \
-    -v $HOME/.config:/config \
+    -v $HOME/Dropbox/appconfig:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
     -e DISPLAY=$DISPLAY \
@@ -30,7 +30,7 @@ _vsc() {
       --security-opt=seccomp:unconfined \
       -v /tmp/.X11-unix:/tmp/.X11-unix  \
       -v `pwd`:`pwd` \
-      -v $HOME/.config:/config \
+      -v $HOME/Dropbox/appconfig:/config \
       -e DISPLAY=unix$DISPLAY \
       -v $HOME/.gitconfig:/devhome/.gitconfig \
       -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
