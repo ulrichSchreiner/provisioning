@@ -41,6 +41,7 @@ base_packages:
     - unzip
     - vim
     - virtualbox
+    - virtualbox-dkms
     - libpcap-dev
 
 localinstallation: /usr/local
