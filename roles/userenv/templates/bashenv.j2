@@ -50,6 +50,12 @@ _sphinx() {
 }
 alias sphinx=_sphinx
 
+_dme () {
+  eval $(docker-machine env "$1")
+}
+alias dme=_dme
+alias dm=docker-machine
+
 alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
 alias dockviz="docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock nate/dockviz"
 alias icafox="~/workspaces/ize0h88/dockers/icafox/icafox"
