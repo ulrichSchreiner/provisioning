@@ -5,6 +5,7 @@ docker_compose_version: "1.8.1"
 docker_machine_version: "v0.8.1"
 localansible_version: "2.1.1.0"
 bfg_version: "1.12.13"
+micro_editor_version: "1.1.1"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
