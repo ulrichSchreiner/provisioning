@@ -5,6 +5,8 @@ docker_compose_version: "1.8.1"
 docker_machine_version: "v0.8.1"
 localansible_version: "2.1.1.0"
 bfg_version: "1.12.13"
+#my_distribution_release: {{ansible_distribution_release}}
+my_distribution_release: xenial
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
