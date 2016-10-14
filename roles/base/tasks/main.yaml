@@ -1,1 +1,10 @@
 - lineinfile: dest=/etc/sysctl.d/10-magic-sysrq.conf state=present line="kernel.sysrq = 1" regexp="^kernel.sysrq.*"
+
+- apt_repository:
+    repo: "{{item}}"
+    state: present
+  with_items:
+    - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
+    - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
+    - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
+    - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'

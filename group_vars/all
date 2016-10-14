@@ -7,6 +7,7 @@ localansible_version: "2.1.1.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
+micro_editor_version: "1.1.1"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
@@ -42,6 +43,8 @@ base_packages:
     - ttf-ancient-fonts
     - unzip
     - vim
+    - virtualbox
+    - virtualbox-dkms
     - libpcap-dev
 
 localinstallation: /usr/local
@@ -115,4 +118,3 @@ gogetable_tools:
     url: https://github.com/svent/sift
     path: github.com/svent/sift
     install: ""
-

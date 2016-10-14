@@ -56,3 +56,31 @@
 
 - name: install bfg command
   template: src=bfg.j2 dest={{localinstallation}}/bin/bfg mode=0755
+
+- name: create local micro directory
+  file: path={{localinstallation}}/micro-{{micro_editor_version}} state=directory mode=0755
+  register: micro_directory
+
+- name: download microeditor
+  get_url: >
+    url=https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}/micro-{{micro_editor_version}}-linux64.tar.gz
+    dest={{localinstallation}}/micro-{{micro_editor_version}}
+  when: micro_directory|changed
+
+- name: unpack micro
+  shell: cd {{localinstallation}}/micro-{{micro_editor_version}} && tar xzf micro-{{micro_editor_version}}-linux64.tar.gz --strip-components 1
+  when: micro_directory|changed
+
+- name: symlink micro editor
+  file: >
+    src={{localinstallation}}/micro-{{micro_editor_version}}/micro
+    dest={{ localinstallation }}/bin/micro
+    state=link
+
+- find: paths="{{localinstallation}}" patterns="micro-*" file_type=directory
+  register: micro_installations
+
+- name: remove old micro_installations
+  file: path={{item.path}} state=absent
+  when: item.path != "{{localinstallation}}/micro-{{micro_editor_version}}"
+  with_items: "{{micro_installations.files}}"
