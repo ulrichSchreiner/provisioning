@@ -57,6 +57,9 @@
 - name: install bfg command
   template: src=bfg.j2 dest={{localinstallation}}/bin/bfg mode=0755
 
+- name: install swarmcluster as command
+  template: src=swarmcluster.j2 dest={{localinstallation}}/bin/swarmcluster mode="0755"
+  
 - name: create local micro directory
   file: path={{localinstallation}}/micro-{{micro_editor_version}} state=directory mode=0755
   register: micro_directory

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# call with swarmcluster <abspath-to-inventory> vpnet tun1
+
+docker run -it --rm  \
+  -v $SSH_AUTH_SOCK:/ssh-agent \
+  --env SSH_AUTH_SOCK=/ssh-agent \
+  -v $1:/work/hosts \
+  -e NETNAME=$2 \
+  -e VPN_INTERFACE=$3 \
+  ulrichschreiner/swarmcluster
