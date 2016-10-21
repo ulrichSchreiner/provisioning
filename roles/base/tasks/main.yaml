@@ -8,3 +8,48 @@
     - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
     - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
     - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
+
+- name: google cloud packages
+  apt_key: >
+    url={{ google_cloud_url}}
+    state=present
+
+- name: add key for dropbox
+  apt_key: >
+    keyserver={{ dropbox_keyserver }}
+    id={{ dropbox_key }}
+    state=present
+
+- name: add key for docker
+  apt_key: >
+    keyserver={{ docker_keyserver }}
+    id={{ docker_key }}
+    state=present
+
+- name: add key for google chrome
+  apt_key: >
+    url={{ chrome_key_url }}
+    state=present
+
+- name: add key for nodesource
+  apt_key: >
+    url={{ node_key_url }}
+    state=present
+
+- name: add key for packagecloud
+  apt_key: >
+    url={{ packagecloud_key_url }}
+    state=present
+
+- name: activate addons apt sources
+  template: src=addons.list.j2 dest=/etc/apt/sources.list.d/addons.list
+  register: newsources
+
+- apt: update_cache=yes
+  when: newsources|changed
+
+- name: install base packages
+  apt: name={{item}} state=present
+  with_items:
+    - "{{base_packages}}"
+    

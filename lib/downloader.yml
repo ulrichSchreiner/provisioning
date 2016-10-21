@@ -1,0 +1,73 @@
+- name: create local product directory
+  file: path={{localinstallation}}/{{product.name}}-{{product.version}} state=directory mode=0755
+  register: product_directory
+
+- name: check if binary artifact is already here
+  stat: path={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}
+  register: stf
+  when: not product.bundle|default(False)
+
+- name: check if bundle artifact is already here
+  stat: path={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.package}}
+  register: std
+  when: product.bundle|default(False)
+
+- name: evaluate if artifact already here
+  set_fact:
+    already_here: "{{ stf.stat.exists|default(False) }}"
+  when: "{{ stf.stat is defined }}"
+
+- name: evaluate if bundle already here
+  set_fact:
+    already_here: "{{ std.stat.exists|default(False) }}"
+  when: "{{ std.stat is defined }}"
+
+- name: download product
+  get_url: >
+    url={{product.url}}/{{product.package}}
+    dest={{localinstallation}}/{{product.name}}-{{product.version}}
+  when: not already_here
+
+- name: unpack tgz product
+  shell: >
+    cd {{localinstallation}}/{{product.name}}-{{product.version}} && tar xzf {{product.package}} --strip-components 1
+  when: not already_here and product.is == "tgz"
+
+- name: unpack zip product
+  shell: >
+    cd {{localinstallation}}/{{product.name}}-{{product.version}} && unzip {{product.package}}
+  when: not already_here and product.is == "zip"
+
+- name: rename product when binary
+  shell: >
+    cd {{localinstallation}}/{{product.name}}-{{product.version}} && mv {{product.package}} {{product.name}} && chmod 755 {{product.name}}
+  when: not already_here and product.is == "bin"
+
+- name: symlink product
+  file: >
+    src={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}
+    dest={{ localinstallation }}/bin/{{product.name}}
+    state=link
+  when: not product.bundle|default(False)
+
+- name: symlink plain product folder
+  file: >
+    src={{localinstallation}}/{{product.name}}-{{product.version}}
+    dest={{ localinstallation }}/{{product.name}}
+    state=link
+  when: product.bundle|default(False) and product.is == "tgz"
+
+- name: symlink subproduct folder
+  file: >
+    src={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}
+    dest={{ localinstallation }}/{{product.name}}
+    state=link
+  when: product.bundle|default(False) and product.is == "zip"
+
+- find: paths="{{localinstallation}}" patterns="{{product.name}}-*" file_type=directory
+  register: product_installations
+
+- name: remove old product installations
+  file: path={{item.path}} state=absent
+  when: item.path != "{{localinstallation}}/{{product.name}}-{{product.version}}"
+  with_items: "{{product_installations.files}}"

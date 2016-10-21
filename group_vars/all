@@ -8,10 +8,53 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 micro_editor_version: "1.1.1"
+minikube_version: "0.11.0"
+
+gh_products:
+  -
+    name: "micro"
+    version: "{{micro_editor_version}}"
+    url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
+    package: "micro-{{micro_editor_version}}-linux64.tar.gz"
+    is: "tgz"
+  -
+    name: "docker-compose"
+    version: "{{docker_compose_version}}"
+    url: "https://github.com/docker/compose/releases/download/{{docker_compose_version}}"
+    package: "docker-compose-{{ansible_system}}-{{ansible_machine}}"
+    is: "bin"
+  -
+    name: "docker-machine"
+    version: "{{docker_machine_version}}"
+    url: "https://github.com/docker/machine/releases/download/{{docker_machine_version}}"
+    package: "docker-machine-{{ansible_system}}-{{ansible_machine}}"
+    is: "bin"
+  -
+    name: "minikube"
+    version: "{{minikube_version}}"
+    url: "  https://github.com/kubernetes/minikube/releases/download/v{{minikube_version}}"
+    package: "minikube-linux-amd64"
+    is: "bin"
+  -
+    name: "go"
+    version: "{{golang_version}}"
+    url: "https://storage.googleapis.com/golang"
+    package: "go{{golang_version}}.linux-amd64.tar.gz"
+    is: "tgz"
+    bundle: True
+  -
+    name: "go_appengine"
+    version: "{{goapp_version}}"
+    url: "https://storage.googleapis.com/appengine-sdks/featured"
+    package: "go_appengine_sdk_linux_amd64-{{goapp_version}}.zip"
+    is: "zip"
+    bundle: True
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 packagecloud_key_url: https://packagecloud.io/gpg.key
+google_cloud_url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
 dropbox_key: 5044912E
 dropbox_keyserver: pgp.mit.edu
 docker_key: 58118E89F3A912897C070ADBF76221572C52609D
@@ -46,6 +89,10 @@ base_packages:
     - virtualbox
     - virtualbox-dkms
     - libpcap-dev
+    - kubelet
+    - kubeadm
+    - kubectl
+    - kubernetes-cni
 
 localinstallation: /usr/local
 go_base: "{{localinstallation}}/go"
