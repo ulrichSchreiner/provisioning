@@ -7,14 +7,15 @@ localansible_version: "2.1.1.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-micro_editor_version: "1.1.1"
+micro_editor_version: "1.1.2-dev.50"
 minikube_version: "0.11.0"
 
 gh_products:
   -
     name: "micro"
     version: "{{micro_editor_version}}"
-    url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
+    url: "https://github.com/zyedidia/micro/releases/download/nightly"
+    _url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
     package: "micro-{{micro_editor_version}}-linux64.tar.gz"
     is: "tgz"
   -
@@ -89,6 +90,8 @@ base_packages:
     - virtualbox
     - virtualbox-dkms
     - libpcap-dev
+
+not_installed:
     - kubelet
     - kubeadm
     - kubectl
