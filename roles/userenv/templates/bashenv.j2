@@ -14,7 +14,8 @@ docker run  \
     -v $HOME/Dropbox/appconfig:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
-    -v /var/run/dbus:/var/run/dbus \
+    -v /var/run/dbus:/var/run/dbus:ro \
+    -v /etc/machine-id:/etc/machine-id:ro \
     -e DISPLAY=$DISPLAY \
     -e LANG=$LANG \
     -e HOSTUSER=`id -un` \
@@ -38,7 +39,8 @@ _vsc() {
       -e DISPLAY=unix$DISPLAY \
       -v $HOME/.gitconfig:/devhome/.gitconfig \
       -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
-      -v /var/run/dbus:/var/run/dbus \
+      -v /var/run/dbus:/var/run/dbus:ro \
+      -v /etc/machine-id:/etc/machine-id:ro \
       --device /dev/dri \
       -e LANG=$LANG \
       -e HOSTUSER=`id -un` \
