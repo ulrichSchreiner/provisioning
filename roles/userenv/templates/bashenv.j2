@@ -14,6 +14,7 @@ docker run  \
     -v $HOME/Dropbox/appconfig:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+    -v /var/run/dbus:/var/run/dbus \
     -e DISPLAY=$DISPLAY \
     -e LANG=$LANG \
     -e HOSTUSER=`id -un` \
@@ -21,7 +22,7 @@ docker run  \
     -e HOSTUSERID=`id -u` \
     -e HOSTGROUPID=`id -g` \
     -e WORKSPACE=`pwd | cut --complement -d / -n -f 2,3` \
-    -e XAUTHORITY=$XAUTHORITY -v $XAUTHORITY:$XAUTHORITY \
+    -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
     quay.io/ulrichschreiner/atocker "$1"
 }
 alias gbatom="_atocker gb"
@@ -37,6 +38,7 @@ _vsc() {
       -e DISPLAY=unix$DISPLAY \
       -v $HOME/.gitconfig:/devhome/.gitconfig \
       -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+      -v /var/run/dbus:/var/run/dbus \
       --device /dev/dri \
       -e LANG=$LANG \
       -e HOSTUSER=`id -un` \
@@ -44,7 +46,7 @@ _vsc() {
       -e HOSTUSERID=`id -u` \
       -e HOSTGROUPID=`id -g` \
       -e WORKSPACE=`pwd` \
-      -e XAUTHORITY=$XAUTHORITY -v $XAUTHORITY:$XAUTHORITY \
+      -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
       quay.io/ulrichschreiner/vsc "$@"
 }
 alias vsc=_vsc
