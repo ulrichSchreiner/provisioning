@@ -21,6 +21,7 @@ docker run  \
     -e HOSTUSERID=`id -u` \
     -e HOSTGROUPID=`id -g` \
     -e WORKSPACE=`pwd | cut --complement -d / -n -f 2,3` \
+    -e XAUTHORITY=$XAUTHORITY -v $XAUTHORITY:$XAUTHORITY \
     quay.io/ulrichschreiner/atocker "$1"
 }
 alias gbatom="_atocker gb"
@@ -43,6 +44,7 @@ _vsc() {
       -e HOSTUSERID=`id -u` \
       -e HOSTGROUPID=`id -g` \
       -e WORKSPACE=`pwd` \
+      -e XAUTHORITY=$XAUTHORITY -v $XAUTHORITY:$XAUTHORITY \
       quay.io/ulrichschreiner/vsc "$@"
 }
 alias vsc=_vsc
