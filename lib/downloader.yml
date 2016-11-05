@@ -1,14 +1,14 @@
 - name: create local product directory
-  file: path={{localinstallation}}/{{product.name}}-{{product.version}} state=directory mode=0755
+  file: path="{{localinstallation}}/{{product.name}}-{{product.version}}" state=directory mode="0755"
   register: product_directory
 
 - name: check if binary artifact is already here
-  stat: path={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}
+  stat: path="{{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}"
   register: stf
   when: not product.bundle|default(False)
 
 - name: check if bundle artifact is already here
-  stat: path={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.package}}
+  stat: path="{{localinstallation}}/{{product.name}}-{{product.version}}/{{product.package}}"
   register: std
   when: product.bundle|default(False)
 
@@ -68,6 +68,6 @@
   register: product_installations
 
 - name: remove old product installations
-  file: path={{item.path}} state=absent
+  file: path="{{item.path}}" state=absent
   when: item.path != "{{localinstallation}}/{{product.name}}-{{product.version}}"
   with_items: "{{product_installations.files}}"
