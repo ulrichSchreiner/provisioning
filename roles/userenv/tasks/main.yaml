@@ -56,3 +56,11 @@
 - name: install npm-check-updates if needed
   shell: npm install -g npm-check-updates
   when: ncu.rc != 0
+
+- name: insert/update my local ssh config
+  blockinfile:
+    dest: ~/.ssh/config
+    block: |
+      Host *
+         ForwardAgent yes
+           
