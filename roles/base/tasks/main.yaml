@@ -9,6 +9,7 @@
     - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
     - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
     - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
+    - 'ppa:git-core/ppa'
 
 - name: google cloud packages
   apt_key: >
@@ -53,4 +54,3 @@
   apt: name={{item}} state=present
   with_items:
     - "{{base_packages}}"
-    
