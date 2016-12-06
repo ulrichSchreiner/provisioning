@@ -45,7 +45,7 @@
 
 - name: symlink product
   file: >
-    src={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}
+    src={{localinstallation}}/{{product.name}}-{{product.version}}/{{product.binary|default(product.name)}}
     dest={{ localinstallation }}/bin/{{product.name}}
     state=link
   when: not product.bundle|default(False)
