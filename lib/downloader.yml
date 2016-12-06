@@ -3,7 +3,7 @@
   register: product_directory
 
 - name: check if binary artifact is already here
-  stat: path="{{localinstallation}}/{{product.name}}-{{product.version}}/{{product.name}}"
+  stat: path="{{localinstallation}}/{{product.name}}-{{product.version}}/{{product.binary|default(product.name)}}"
   register: stf
   when: not product.bundle|default(False)
 
