@@ -61,6 +61,7 @@
 - name: insert/update my local ssh config
   blockinfile:
     create: yes
+    mode: "0600"
     dest: ~/.ssh/config
     block: |
       Host *
