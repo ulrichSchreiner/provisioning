@@ -10,6 +10,7 @@ my_distribution_release: xenial
 micro_editor_version: "1.1.3"
 minikube_version: "0.11.0"
 jid_version: "0.6.1"
+powerlinefonts_version: "a44abd0e742ad6e7fd8d8bc4c3cad5155c9f3a92"
 
 gh_products:
   -
@@ -70,6 +71,7 @@ docker_keyserver: hkp://p80.pool.sks-keyservers.net
 
 liquidprompt_version: v_1.11
 autoenv_version: v0.2.0
+gitopen_version: 1.1.1
 
 base_packages:
     - apt-transport-https
@@ -82,6 +84,7 @@ base_packages:
     - fonts-symbola
     - git
     - git-lfs
+    - git-extras
     - google-chrome-stable
     - grep
     - gzip
@@ -97,6 +100,7 @@ base_packages:
     - virtualbox
     - virtualbox-dkms
     - libpcap-dev
+    - zsh
 
 not_installed:
     - kubelet
@@ -123,7 +127,7 @@ gogetable_tools:
     install: "./..."
   -
     name: peco
-    version: "v0.4.2"
+    version: "v0.4.6"
     url: https://github.com/peco/peco.git
     path: github.com/peco/peco
     install: "./..."
@@ -157,12 +161,6 @@ gogetable_tools:
     url: https://github.com/kardianos/govendor.git
     path: github.com/kardianos/govendor
     install: "./..."
-  -
-    name: mylg
-    version: "5dc49a561ea616eda1dc197dff5e8d034b2e771e"
-    url: https://github.com/mehrdadrad/mylg.git
-    path: github.com/mehrdadrad/mylg
-    install: ""
   -
     name: httpstat
     version: "v1.0.0"

@@ -8,15 +8,6 @@
    - name: 'install python2'
      raw: apt-get -y install python-simplejson
 
-# no install some base packages and tools where wee
-# need root privileges
-- hosts: development
-  become: yes
-  roles:
-    - base
-    - devtools
 
-# last but not least: install user specific configuration
-- hosts: development
-  roles:
-    - userenv
+- include: devtools.yaml
+- include: userenv.yaml

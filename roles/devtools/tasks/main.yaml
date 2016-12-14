@@ -4,11 +4,29 @@
     dest={{ localinstallation }}/liquidprompt
     version={{ liquidprompt_version }}
 
+- name: install git-open
+  git: >
+    repo=https://github.com/paulirish/git-open.git
+    dest={{ localinstallation }}/git-open
+    version={{ gitopen_version }}
+
+- name: symlink git-open
+  file: >
+    src={{localinstallation}}/git-open/git-open
+    dest={{ localinstallation }}/bin/git-open
+    state=link
+
 - name: install autoenv
   git: >
     repo=https://github.com/kennethreitz/autoenv.git
     dest={{ localinstallation }}/autoenv
     version={{ autoenv_version }}
+
+- name: install powerline-fonts
+  git: >
+    repo=https://github.com/powerline/fonts.git
+    dest={{ localinstallation }}/powerline-fonts
+    version={{ powerlinefonts_version }}
 
 - name: install local ansible-docker
   git: >
