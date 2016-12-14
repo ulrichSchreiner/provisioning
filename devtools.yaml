@@ -1,0 +1,7 @@
+# no install some base packages and tools where wee
+# need root privileges
+- hosts: development
+  become: yes
+  roles:
+    - base
+    - devtools
