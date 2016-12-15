@@ -35,16 +35,13 @@
   with_items: "{{gogetable_tools}}"
 
 - name: create environment for sourcing
-  template: src=bashenv.j2 dest=~/.bashenv
+  template: src=myenv.j2 dest=~/.myenv
 
 - name: source the new environment
-  lineinfile: dest=~/.bashrc regexp='^source ~/.bashenv' line='source ~/.bashenv'
+  lineinfile: dest=~/.bashrc regexp='^source ~/.myenv' line='source ~/.myenv'
 
 - name: set the npm configuration
   copy: src=npmrc dest=~/.npmrc
-
-- name: install script to transform a directory to a GOPATH enabled workspace
-  template: src=createStdGoWS dest=~/bin/createStdGoWS mode=0755
 
 - name: check if npm-check-updates is installed
   shell: npm list -g --depth 1 npm-check-updates
@@ -65,3 +62,11 @@
     block: |
       Host *
          ForwardAgent yes
+
+- name: install oh-my-zsh
+  git: >
+    repo=https://github.com/robbyrussell/oh-my-zsh.git
+    dest=~/.oh-my-zsh
+
+- name: install my zshrc
+  template: src=zshrc.j2 dest=~/.zshrc

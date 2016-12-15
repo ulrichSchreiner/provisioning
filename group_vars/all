@@ -94,6 +94,7 @@ base_packages:
     - nodejs
     - tar
     - tmux
+    - tmuxinator
     - ttf-ancient-fonts
     - unzip
     - vim

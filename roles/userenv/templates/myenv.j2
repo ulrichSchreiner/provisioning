@@ -1,7 +1,9 @@
 export TERM=xterm-256color
 
+source ~/Dropbox/Entwicklung/environment
 source {{ localinstallation }}/autoenv/activate.sh
-source {{ localinstallation }}/liquidprompt/liquidprompt
+# work with zsh now, it includes good plugins already
+# source {{ localinstallation }}/liquidprompt/liquidprompt
 
 _atocker() {
 docker run  \
@@ -77,3 +79,4 @@ export GOPATH=~/development:/go
 export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:$PATH
 
 export ANSIBLE_CONFIG_DIR=$HOME/Dropbox/ansible-config
+export EDITOR='vim'
