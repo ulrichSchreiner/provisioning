@@ -3,7 +3,7 @@
 all: playbook ;
 
 %:
-	 docker run -it --rm \
+	 @docker run -it --rm \
 	  -v $SSH_AUTH_SOCK:/ssh-agent \
 	  --env SSH_AUTH_SOCK=/ssh-agent \
 	  --net host \
