@@ -128,7 +128,7 @@ gogetable_tools:
     install: "./..."
   -
     name: peco
-    version: "v0.4.6"
+    version: "v0.4.7"
     url: https://github.com/peco/peco.git
     path: github.com/peco/peco
     install: "./..."
