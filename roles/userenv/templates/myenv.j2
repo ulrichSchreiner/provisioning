@@ -32,11 +32,13 @@ alias gbatom="_atocker gb"
 alias atm="_atocker"
 
 _vsc() {
+  DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=" ' { print $2 } '`
   docker run -it --rm \
       --privileged \
       --security-opt=seccomp:unconfined \
       -v /tmp/.X11-unix:/tmp/.X11-unix  \
       -v `pwd`:`pwd` \
+      -v $DBUSPATH:$DBUSPATH \
       -v $HOME/Dropbox/appconfig:/config \
       -e DISPLAY=unix$DISPLAY \
       -v $HOME/.gitconfig:/devhome/.gitconfig \
@@ -51,6 +53,7 @@ _vsc() {
       -e HOSTGROUPID=`id -g` \
       -e WORKSPACE=`pwd` \
       -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
+      -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
       quay.io/ulrichschreiner/vsc "$@"
 }
 alias vsc=_vsc
