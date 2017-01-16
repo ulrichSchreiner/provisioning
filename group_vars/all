@@ -79,6 +79,7 @@ base_packages:
     - build-essential
     - bzr
     - curl
+    - direnv
     - dropbox
     - firefox
     - firefox-locale-de
@@ -175,7 +176,7 @@ gogetable_tools:
     url: https://github.com/svent/sift
     path: github.com/svent/sift
     install: ""
-  - 
+  -
     name: gopherjs
     version: "{{gopherjs_version}}"
     url: https://github.com/gopherjs/gopherjs

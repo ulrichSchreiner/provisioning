@@ -16,12 +16,6 @@
     dest={{ localinstallation }}/bin/git-open
     state=link
 
-- name: install autoenv
-  git: >
-    repo=https://github.com/kennethreitz/autoenv.git
-    dest={{ localinstallation }}/autoenv
-    version={{ autoenv_version }}
-
 - name: install powerline-fonts
   git: >
     repo=https://github.com/powerline/fonts.git
