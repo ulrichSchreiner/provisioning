@@ -12,6 +12,7 @@ minikube_version: "0.11.0"
 jid_version: "0.7.2"
 powerlinefonts_version: "a44abd0e742ad6e7fd8d8bc4c3cad5155c9f3a92"
 gopherjs_version: "dcd7ed070932688cbd543449d96aaae225ffd90c"
+mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
 
 gh_products:
   -
@@ -182,3 +183,9 @@ gogetable_tools:
     url: https://github.com/gopherjs/gopherjs
     path: github.com/gopherjs/gopherjs
     install: ""
+  - 
+    name: mailguncli
+    version: "{{mailgun_version}}"
+    url: https://github.com/mailgun/mailgun-go
+    path: github.com/mailgun/mailgun-go
+    install: "./..."
