@@ -189,3 +189,9 @@ gogetable_tools:
     url: https://github.com/mailgun/mailgun-go
     path: github.com/mailgun/mailgun-go
     install: "./..."
+  - 
+    name: wuzz
+    version: 36e5a32e78ca1c40a825824c62e7ad68a8099c14
+    url: https://github.com/asciimoo/wuzz
+    path: github.com/asciimoo/wuzz
+    install: ""
