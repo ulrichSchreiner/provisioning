@@ -198,7 +198,7 @@ gogetable_tools:
     install: "./..."
   - 
     name: wuzz
-    version: 36e5a32e78ca1c40a825824c62e7ad68a8099c14
+    version: "v0.1.0" 
     url: https://github.com/asciimoo/wuzz
     path: github.com/asciimoo/wuzz
     install: ""
