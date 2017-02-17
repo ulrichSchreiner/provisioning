@@ -125,48 +125,43 @@ go_base: "{{localinstallation}}/go"
 goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
-  - 
+  -
     name: doctl
     version: "v{{doctl_version}}"
     url: https://github.com/digitalocean/doctl.git
     path: github.com/digitalocean/doctl
+    getpath: ""
     install: ""
   -
     name: gb
     version: "v0.4.3"
     url: https://github.com/constabulary/gb.git
     path: github.com/constabulary/gb
-    install: "./..."
   -
     name: gotty
     version: "ddbaa983c02ea8b0acc3c561c8d2fc7d8f7c336c"
     url: https://github.com/yudai/gotty.git
     path: github.com/yudai/gotty
-    install: "./..."
   -
     name: peco
     version: "v0.4.7"
     url: https://github.com/peco/peco.git
     path: github.com/peco/peco
-    install: "./..."
   -
     name: hugo
     version: "v0.18"
     url: https://github.com/spf13/hugo.git
     path: github.com/spf13/hugo
-    install: "./..."
   -
     name: goconvey
     version: "1.6.2"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
-    install: "./..."
   -
     name: unused
     version: "9057d575b3bb51f1e1251088a8b8196f4226f936"
     url: https://github.com/dominikh/go-unused.git
     path: honnef.co/go/unused
-    install: "./..."
   -
     name: glide
     version: "v0.12.3"
@@ -178,7 +173,6 @@ gogetable_tools:
     version: "v1.0.5"
     url: https://github.com/kardianos/govendor.git
     path: github.com/kardianos/govendor
-    install: "./..."
   -
     name: httpstat
     version: "v1.0.0"
@@ -197,15 +191,14 @@ gogetable_tools:
     url: https://github.com/gopherjs/gopherjs
     path: github.com/gopherjs/gopherjs
     install: ""
-  - 
+  -
     name: mailguncli
     version: "{{mailgun_version}}"
     url: https://github.com/mailgun/mailgun-go
     path: github.com/mailgun/mailgun-go
-    install: "./..."
-  - 
+  -
     name: wuzz
-    version: "v0.1.0" 
+    version: "v0.1.0"
     url: https://github.com/asciimoo/wuzz
     path: github.com/asciimoo/wuzz
     install: ""
