@@ -14,6 +14,7 @@ whalebrew_version: "0.0.4"
 powerlinefonts_version: "a44abd0e742ad6e7fd8d8bc4c3cad5155c9f3a92"
 gopherjs_version: "dcd7ed070932688cbd543449d96aaae225ffd90c"
 mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
+doctl_version: "1.5.0"
 
 gh_products:
   -
@@ -124,6 +125,12 @@ go_base: "{{localinstallation}}/go"
 goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
+  - 
+    name: doctl
+    version: "v{{doctl_version}}"
+    url: https://github.com/digitalocean/doctl.git
+    path: github.com/digitalocean/doctl
+    install: ""
   -
     name: gb
     version: "v0.4.3"
