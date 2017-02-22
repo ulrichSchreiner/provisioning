@@ -134,7 +134,7 @@ gogetable_tools:
     install: ""
   -
     name: gb
-    version: "v0.4.3"
+    version: "v0.4.4"
     url: https://github.com/constabulary/gb.git
     path: github.com/constabulary/gb
   -
