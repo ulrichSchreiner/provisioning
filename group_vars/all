@@ -126,6 +126,11 @@ goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
   -
+    name: dep
+    version: "f0384c39b8ce79b40bbfa5408a30abc205dee1b1"
+    url: https://github.com/golang/dep.git
+    path: github.com/golang/dep
+  -
     name: doctl
     version: "v{{doctl_version}}"
     url: https://github.com/digitalocean/doctl.git
@@ -164,7 +169,7 @@ gogetable_tools:
     path: honnef.co/go/unused
   -
     name: glide
-    version: "v0.12.3"
+    version: "e57ccfb06a9dc43379e8a62a8616788979a06b00"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
     install: ""
