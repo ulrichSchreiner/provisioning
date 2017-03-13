@@ -207,3 +207,9 @@ gogetable_tools:
     url: https://github.com/asciimoo/wuzz
     path: github.com/asciimoo/wuzz
     install: ""
+  - 
+    name: pet
+    version: "v0.0.1"
+    url: https://github.com/knqyf263/pet
+    path: github.com/knqyf263/pet
+    install: ""
