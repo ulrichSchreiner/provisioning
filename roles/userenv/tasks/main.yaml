@@ -43,6 +43,9 @@
 - name: source the new environment
   lineinfile: dest=~/.bashrc regexp='^source ~/.myenv' line='source ~/.myenv'
 
+- name: set zsh as default for tmux
+  lineinfile: dest=~/.tmux.conf regexp="^set-option -g default-shell /bin/zsh" line="set-option -g default-shell /bin/zsh" create=yes state=present
+
 - name: set the npm configuration
   copy: src=npmrc dest=~/.npmrc
 
