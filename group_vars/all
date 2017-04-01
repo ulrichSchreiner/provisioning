@@ -138,11 +138,6 @@ gogetable_tools:
     getpath: ""
     install: ""
   -
-    name: gb
-    version: "v0.4.4"
-    url: https://github.com/constabulary/gb.git
-    path: github.com/constabulary/gb
-  -
     name: gotty
     version: "ddbaa983c02ea8b0acc3c561c8d2fc7d8f7c336c"
     url: https://github.com/yudai/gotty.git
@@ -163,13 +158,8 @@ gogetable_tools:
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
   -
-    name: unused
-    version: "9057d575b3bb51f1e1251088a8b8196f4226f936"
-    url: https://github.com/dominikh/go-unused.git
-    path: honnef.co/go/unused
-  -
     name: glide
-    version: "e57ccfb06a9dc43379e8a62a8616788979a06b00"
+    version: "869001d1571ce5f03fd0078bff188b9d3f272807"
     url: https://github.com/Masterminds/glide.git
     path: github.com/Masterminds/glide
     install: ""
