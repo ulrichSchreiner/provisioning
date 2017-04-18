@@ -127,7 +127,7 @@ goapp_base: "{{localinstallation}}/go_appengine"
 gogetable_tools:
   -
     name: dep
-    version: "f0384c39b8ce79b40bbfa5408a30abc205dee1b1"
+    version: "477398819a549a19de3927435f70c43bb600e27c"
     url: https://github.com/golang/dep.git
     path: github.com/golang/dep
   -
@@ -197,7 +197,7 @@ gogetable_tools:
     url: https://github.com/asciimoo/wuzz
     path: github.com/asciimoo/wuzz
     install: ""
-  - 
+  -
     name: pet
     version: "v0.2.2"
     url: https://github.com/knqyf263/pet
