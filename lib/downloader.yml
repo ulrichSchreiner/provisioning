@@ -15,12 +15,12 @@
 - name: evaluate if artifact already here
   set_fact:
     already_here: "{{ stf.stat.exists|default(False) }}"
-  when: "{{ stf.stat is defined }}"
+  when: stf.stat is defined
 
 - name: evaluate if bundle already here
   set_fact:
     already_here: "{{ std.stat.exists|default(False) }}"
-  when: "{{ std.stat is defined }}"
+  when: std.stat is defined
 
 - name: download product
   get_url: >
@@ -69,5 +69,5 @@
 
 - name: remove old product installations
   file: path="{{item.path}}" state=absent
-  when: item.path != "{{localinstallation}}/{{product.name}}-{{product.version}}"
+  when: item.path != localinstallation+"/"+product.name+"-"+product.version
   with_items: "{{product_installations.files}}"
