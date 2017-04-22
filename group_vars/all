@@ -149,7 +149,7 @@ gogetable_tools:
     path: github.com/peco/peco
   -
     name: hugo
-    version: "v0.18"
+    version: "v0.20.2"
     url: https://github.com/spf13/hugo.git
     path: github.com/spf13/hugo
   -
