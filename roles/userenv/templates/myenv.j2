@@ -9,6 +9,8 @@ _atocker() {
 docker run  \
     --rm \
     -it \
+    --privileged \
+    --security-opt=seccomp:unconfined \
     --device /dev/dri \
     -v /etc/localtime:/etc/localtime:ro \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
