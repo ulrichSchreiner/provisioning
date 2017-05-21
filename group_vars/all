@@ -146,7 +146,7 @@ gogetable_tools:
     install: ""
   -
     name: gotty
-    version: "ddbaa983c02ea8b0acc3c561c8d2fc7d8f7c336c"
+    version: "v1.0.0"
     url: https://github.com/yudai/gotty.git
     path: github.com/yudai/gotty
   -
