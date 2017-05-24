@@ -1,4 +1,4 @@
-golang_version: "1.8.1"
+golang_version: "1.8.2"
 goapp_version: "1.9.48"
 nodejs_version: "node_6.x"
 docker_compose_version: "1.13.0"
