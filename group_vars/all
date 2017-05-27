@@ -134,7 +134,7 @@ goapp_base: "{{localinstallation}}/go_appengine"
 gogetable_tools:
   -
     name: dep
-    version: "837bea19d85f54b0ef6fb3b2c87e290b96ac0729"
+    version: "v0.1.0"
     url: https://github.com/golang/dep.git
     path: github.com/golang/dep
   -
