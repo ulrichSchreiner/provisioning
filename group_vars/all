@@ -88,11 +88,10 @@ chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 packagecloud_key_url: https://packagecloud.io/gpg.key
 google_cloud_url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
+docker_key_url: https://download.docker.com/linux/ubuntu/gpg
 
 dropbox_key: 5044912E
 dropbox_keyserver: pgp.mit.edu
-docker_key: 58118E89F3A912897C070ADBF76221572C52609D
-docker_keyserver: hkp://p80.pool.sks-keyservers.net
 
 liquidprompt_version: v_1.11
 autoenv_version: v0.2.0

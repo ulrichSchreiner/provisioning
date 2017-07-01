@@ -13,7 +13,7 @@
 
 - name: google cloud packages
   apt_key: >
-    url={{ google_cloud_url}}
+    url={{ google_cloud_url }}
     state=present
 
 - name: add key for dropbox
@@ -24,8 +24,7 @@
 
 - name: add key for docker
   apt_key: >
-    keyserver={{ docker_keyserver }}
-    id={{ docker_key }}
+    url={{ docker_key_url }}
     state=present
 
 - name: add key for google chrome
