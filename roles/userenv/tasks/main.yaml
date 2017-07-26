@@ -46,6 +46,12 @@
 - name: set zsh as default for tmux
   lineinfile: dest=~/.tmux.conf regexp="^set-option -g default-shell /bin/zsh" line="set-option -g default-shell /bin/zsh" create=yes state=present
 
+- name: set shortcut to sync keys in tmux
+  lineinfile: dest=~/.tmux.conf regexp="synchronize-panes on" line="bind -n C-x setw synchronize-panes on" create=yes state=present
+
+- name: set shortcut to sync keys in tmux (off)
+  lineinfile: dest=~/.tmux.conf regexp="synchronize-panes off" line="bind -n M-x setw synchronize-panes off" create=yes state=present
+
 - name: set the npm configuration
   copy: src=npmrc dest=~/.npmrc
 
