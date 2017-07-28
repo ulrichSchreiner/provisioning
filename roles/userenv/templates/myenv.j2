@@ -33,37 +33,6 @@ docker run  \
 alias gbatom="_atocker gb"
 alias atm="_atocker"
 
-_vsc() {
-  CFGPATH=$HOME/Dropbox/appconfig`pwd | cut --complement -d / -n -f 2,3`
-  mkdir -p $CFGPATH
-  DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=" ' { print $2 } '`
-  docker run -it --rm \
-      --privileged \
-      --security-opt=seccomp:unconfined \
-      -v /tmp/.X11-unix:/tmp/.X11-unix  \
-      -v `pwd`:`pwd` \
-      -w `pwd` \
-      -v $DBUSPATH:$DBUSPATH \
-      -v $CFGPATH:/config \
-      -e DISPLAY=unix$DISPLAY \
-      -v $HOME/.gitconfig:/devhome/.gitconfig \
-      -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
-      -v /var/run/dbus:/var/run/dbus:ro \
-      -v /etc/machine-id:/etc/machine-id:ro \
-      --device /dev/dri \
-      -e LANG=$LANG \
-      -e HOSTUSER=`id -un` \
-      -e HOSTGROUP=`id -gn` \
-      -e HOSTUSERID=`id -u` \
-      -e HOSTGROUPID=`id -g` \
-      -e WORKSPACE=`pwd` \
-      -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
-      -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
-      quay.io/ulrichschreiner/vsc "$@"
-}
-
-alias vsc=_vsc
-
 _sphinx() {
   docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschreiner/sphinx "$@"
 }

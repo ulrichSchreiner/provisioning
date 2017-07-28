@@ -52,6 +52,10 @@
 - name: set shortcut to sync keys in tmux (off)
   lineinfile: dest=~/.tmux.conf regexp="synchronize-panes off" line="bind -n M-x setw synchronize-panes off" create=yes state=present
 
+- name: create a vsc starter script
+  copy: src=vsc dest=/usr/local/bin/vsc mode=0755
+  become: yes
+
 - name: set the npm configuration
   copy: src=npmrc dest=~/.npmrc
 
