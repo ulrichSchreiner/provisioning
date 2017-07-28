@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[de_DE]=
+Comment=
+Exec=/usr/local/bin/vsc
+GenericName[de_DE]=
+GenericName=
+Icon=/home/usc/Dropbox/nicepics/vscode.ico
+MimeType=
+Name[de_DE]=VSCode
+Name=VSCode
+Path=/home/usc/
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=none
+X-KDE-SubstituteUID=false
+X-KDE-Username=
