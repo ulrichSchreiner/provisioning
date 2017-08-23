@@ -169,7 +169,7 @@ gogetable_tools:
     path: github.com/gohugoio/hugo
   -
     name: goconvey
-    version: "1.6.2"
+    version: "1.6.3"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
   -
