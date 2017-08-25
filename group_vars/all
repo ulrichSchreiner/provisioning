@@ -1,4 +1,4 @@
-golang_version: "1.8.3"
+golang_version: "1.9"
 goapp_version: "1.9.48"
 nodejs_version: "node_7.x"
 docker_compose_version: "1.15.0"
@@ -140,6 +140,11 @@ goapp_base: "{{localinstallation}}/go_appengine"
 tile38_base: "{{localinstallation}}/tile38"
 
 gogetable_tools:
+  - 
+    name: httplab
+    version: "v0.3.0"
+    url: https://github.com/gchaincl/httplab.git
+    path: github.com/gchaincl/httplab
   -
     name: dep
     version: "v0.3.0"
