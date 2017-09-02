@@ -6,5 +6,5 @@
   register: item_cloned
 
 - name: install {{item.name}}
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get {{item.getpath|default("./...")}} && {{go_base}}/bin/go install {{item.install|default("./...")}}
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get -u {{item.getpath|default("./...")}} && {{go_base}}/bin/go install {{item.install|default("./...")}}
   when: item_cloned|changed
