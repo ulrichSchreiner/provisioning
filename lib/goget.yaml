@@ -5,6 +5,18 @@
       version={{item.version}}
   register: item_cloned
 
+- name: checkout master
+  shell: cd $HOME/go/src/{{item.path}} && git checkout master
+  when: item_cloned|changed
+
+- name: get dependencies
+  shell: cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get -u {{item.getpath|default("./...")}}
+  when: item_cloned|changed
+
+- name: checkout version
+  shell: cd $HOME/go/src/{{item.path}} && git checkout {{item.version}}
+  when: item_cloned|changed
+
 - name: install {{item.name}}
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get -u {{item.getpath|default("./...")}} && {{go_base}}/bin/go install {{item.install|default("./...")}}
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go install {{item.install|default("./...")}}
   when: item_cloned|changed
