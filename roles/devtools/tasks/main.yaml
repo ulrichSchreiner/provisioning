@@ -16,12 +16,6 @@
     dest={{ localinstallation }}/bin/git-open
     state=link
 
-- name: install powerline-fonts
-  git: >
-    repo=https://github.com/powerline/fonts.git
-    dest={{ localinstallation }}/powerline-fonts
-    version={{ powerlinefonts_version }}
-
 - name: install local ansible-docker
   git: >
     repo=https://github.com/ulrichSchreiner/ansible-docker.git
