@@ -15,8 +15,15 @@ gopherjs_version: "dcd7ed070932688cbd543449d96aaae225ffd90c"
 mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
 doctl_version: "1.7.0"
 tile38_release: "1.9.0"
+dep_version: "0.3.1"
 
 gh_products:
+  -
+    name: "dep"
+    version: "{{dep_version}}"
+    url: "https://github.com/golang/dep/releases/download/v{{dep_version}}"
+    package: "dep-linux-amd64"
+    is: "bin"
   -
     name: "ngrok"
     binary: "ngrok"
@@ -144,11 +151,6 @@ gogetable_tools:
     version: "v0.3.0"
     url: https://github.com/gchaincl/httplab.git
     path: github.com/gchaincl/httplab
-  -
-    name: dep
-    version: "v0.3.1"
-    url: https://github.com/golang/dep.git
-    path: github.com/golang/dep
   -
     name: doctl
     version: "v{{doctl_version}}"
