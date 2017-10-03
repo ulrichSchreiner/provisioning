@@ -19,6 +19,7 @@ docker run -d --rm \
     -v /run/docker.sock:/run/docker.sock:ro \
     -v /etc/machine-id:/etc/machine-id:ro \
     --device /dev/dri \
+    --device /dev/snd \
     -e LANG=$LANG \
     -e HOSTUSER=`id -un` \
     -e HOSTGROUP=`id -gn` \
