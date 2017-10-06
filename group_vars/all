@@ -8,7 +8,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 micro_editor_version: "1.3.1"
-minikube_version: "0.21.0"
+minikube_version: "0.22.2"
 jid_version: "0.7.2"
 whalebrew_version: "0.0.4"
 gopherjs_version: "dcd7ed070932688cbd543449d96aaae225ffd90c"
