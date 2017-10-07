@@ -16,6 +16,7 @@ mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
 doctl_version: "1.7.0"
 tile38_release: "1.9.0"
 dep_version: "0.3.1"
+helm_version: "2.6.2"
 
 gh_products:
   -
@@ -43,6 +44,12 @@ gh_products:
     version: "{{micro_editor_version}}"
     url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
     package: "micro-{{micro_editor_version}}-linux64.tar.gz"
+    is: "tgz"
+  -
+    name: "helm"
+    version: "{{helm_version}}"
+    url: "https://storage.googleapis.com/kubernetes-helm"
+    package: "helm-v{{helm_version}}-linux-amd64.tar.gz"
     is: "tgz"
   -
     name: "whalebrew"
