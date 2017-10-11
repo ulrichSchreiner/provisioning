@@ -10,11 +10,10 @@ my_distribution_release: xenial
 micro_editor_version: "1.3.1"
 minikube_version: "0.22.3"
 jid_version: "0.7.2"
-whalebrew_version: "0.0.4"
+whalebrew_version: "0.1.0"
 gopherjs_version: "dcd7ed070932688cbd543449d96aaae225ffd90c"
 mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
 doctl_version: "1.7.0"
-tile38_release: "1.9.0"
 dep_version: "0.3.1"
 helm_version: "2.6.2"
 
@@ -83,13 +82,6 @@ gh_products:
     is: "tgz"
     bundle: True
   -
-    name: "tile38"
-    version: "{{tile38_release}}"
-    url: "https://github.com/tidwall/tile38/releases/download/{{tile38_release}}"
-    package: "tile38-{{tile38_release}}-linux-amd64.tar.gz"
-    is: "tgz"
-    bundle: True
-  -
     name: "go_appengine"
     version: "{{goapp_version}}"
     url: "https://storage.googleapis.com/appengine-sdks/featured"
@@ -150,7 +142,6 @@ not_installed:
 localinstallation: /usr/local
 go_base: "{{localinstallation}}/go"
 goapp_base: "{{localinstallation}}/go_appengine"
-tile38_base: "{{localinstallation}}/tile38"
 
 gogetable_tools:
   - 
