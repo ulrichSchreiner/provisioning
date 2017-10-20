@@ -21,6 +21,7 @@ docker run  \
     -v /var/run/dbus:/var/run/dbus:ro \
     -v /etc/machine-id:/etc/machine-id:ro \
     -e DISPLAY=$DISPLAY \
+    -e DISABLE_GPU="--disable-gpu" \
     -e LANG=$LANG \
     -e HOSTUSER=`id -un` \
     -e HOSTGROUP=`id -gn` \

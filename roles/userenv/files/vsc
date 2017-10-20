@@ -28,4 +28,5 @@ docker run -d --rm \
     -e WORKSPACE=`pwd` \
     -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
     -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
+    -e DISABLE_GPU="--disable-gpu" \
     quay.io/ulrichschreiner/vsc "$@"
