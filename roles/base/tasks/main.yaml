@@ -62,6 +62,11 @@
   
 - name: do ubuntu specific things
   block:
+    - name: install some repos
+      copy: src={{item}} dest=/etc/yum.repos.d/{{item | basename }}
+      with_fileglob: 
+        - "*.repo"
+      
     - name: install base packages
       dnf: name={{item}} state=present
       with_items: "{{fedora_packages}}"
