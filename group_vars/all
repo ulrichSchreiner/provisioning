@@ -134,14 +134,24 @@ base_packages:
 
 fedora_packages:
     - direnv
+    - binutils
     - bzr
     - curl
+    - dkms
+    - gcc
     - git-lfs
     - git-extras
+    - glibc-headers
+    - glibc-devel
     - grep
     - gzip
     - htop
+    - libgomp
+    - kernel-headers
+    - kernel-devel
+    - make
     - mercurial
+    - patch
     - tmux
     - tmuxinator
     - vim
