@@ -140,6 +140,7 @@ fedora_packages:
     - git-extras
     - grep
     - gzip
+    - htop
     - mercurial
     - tmux
     - tmuxinator
