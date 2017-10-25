@@ -151,6 +151,7 @@ fedora_packages:
     - kernel-devel
     - make
     - mercurial
+    - nodejs
     - patch
     - tmux
     - tmuxinator
