@@ -149,6 +149,7 @@ fedora_packages:
     - libgomp
     - kernel-headers
     - kernel-devel
+    - kwalletcli
     - make
     - mercurial
     - nodejs
