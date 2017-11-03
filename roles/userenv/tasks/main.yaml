@@ -91,3 +91,6 @@
   git: >
     repo=https://github.com/rupa/z.git
     dest=~/tools/z
+
+- name: start gpg-agent when kde starts
+  copy: src=gpg-agent-startup.sh dest=~/.config/plasma-workspace/env/gpg-agent-startup.sh mode=0755
