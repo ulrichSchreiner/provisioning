@@ -12,9 +12,17 @@ minikube_version: "0.23.0"
 jid_version: "0.7.2"
 whalebrew_version: "0.1.0"
 mailgun_version: "1dbc18b05c395261d22b3a98eddfeae839a8abed"
-doctl_version: "1.7.0"
+doctl_version: "1.7.1"
 dep_version: "0.3.2"
 helm_version: "2.6.2"
+fzf_version: "0.17.1"
+pet_version: "0.2.4"
+wuzz_version: "0.4.0"
+httplab_version: "0.4.0"
+gotty_version: "1.0.1"
+peco_version: "0.5.1"
+glide_version: "0.13.1"
+httpstat_version: "1.0.0"
 
 gh_products:
   -
@@ -87,6 +95,60 @@ gh_products:
     package: "go_appengine_sdk_linux_amd64-{{goapp_version}}.zip"
     is: "zip"
     bundle: True
+  -
+    name: "fzf"
+    version: "{{fzf_version}}"
+    url: "https://github.com/junegunn/fzf-bin/releases/download/{{fzf_version}}"
+    package: "fzf-{{fzf_version}}-linux_amd64.tgz"
+    is: "tgz0"
+  -
+    name: "pet"
+    version: "{{pet_version}}"
+    url: "https://github.com/knqyf263/pet/releases/download/v{{pet_version}}"
+    package: "pet_{{pet_version}}_linux_amd64.zip"
+    is: "zip"
+  -
+    name: "wuzz"
+    version: "{{wuzz_version}}"
+    url: "https://github.com/asciimoo/wuzz/releases/download/v{{wuzz_version}}"
+    package: "wuzz_linux_amd64"
+    is: "bin"
+  -
+    name: "doctl"
+    version: "{{doctl_version}}"
+    url: "https://github.com/digitalocean/doctl/releases/download/v{{doctl_version}}"
+    package: "doctl-{{doctl_version}}-linux-amd64.tar.gz"
+    is: "tgz0"
+  -
+    name: "httplab"
+    version: "{{httplab_version}}"
+    url: "https://github.com/gchaincl/httplab/releases/download/v{{httplab_version}}"
+    package: "httplab_{{httplab_version}}_linux_amd64.tar.gz"
+    is: "tgz0"
+  -
+    name: "gotty"
+    version: "{{gotty_version}}"
+    url: "https://github.com/yudai/gotty/releases/download/v{{gotty_version}}"
+    package: "gotty_linux_amd64.tar.gz"
+    is: "tgz0"
+  -
+    name: "peco"
+    version: "{{peco_version}}"
+    url: "https://github.com/peco/peco/releases/download/v{{peco_version}}"
+    package: "peco_linux_amd64.tar.gz"
+    is: "tgz"
+  -
+    name: "glide"
+    version: "{{glide_version}}"
+    url: "https://github.com/Masterminds/glide/releases/download/v{{glide_version}}"
+    package: "glide-v{{glide_version}}-linux-arm64.tar.gz"
+    is: "tgz"
+  -
+    name: "httpstat"
+    version: "{{httpstat_version}}"
+    url: "https://github.com/davecheney/httpstat/releases/download/v{{httpstat_version}}"
+    package: "httpstat-linux-amd64-v{{httpstat_version}}"
+    is: "bin"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
@@ -172,50 +234,11 @@ go_base: "{{localinstallation}}/go"
 goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
-  - 
-    name: httplab
-    version: "v0.3.0"
-    url: https://github.com/gchaincl/httplab.git
-    path: github.com/gchaincl/httplab
-  -
-    name: doctl
-    version: "v{{doctl_version}}"
-    url: https://github.com/digitalocean/doctl.git
-    path: github.com/digitalocean/doctl
-    getpath: ""
-    install: ""
-  -
-    name: gotty
-    version: "v1.0.1"
-    url: https://github.com/yudai/gotty.git
-    path: github.com/yudai/gotty
-  -
-    name: peco
-    version: "v0.5.1"
-    url: https://github.com/peco/peco.git
-    path: github.com/peco/peco
   -
     name: goconvey
     version: "1.6.3"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
-  -
-    name: glide
-    version: "869001d1571ce5f03fd0078bff188b9d3f272807"
-    url: https://github.com/Masterminds/glide.git
-    path: github.com/Masterminds/glide
-    install: ""
-  -
-    name: govendor
-    version: "v1.0.5"
-    url: https://github.com/kardianos/govendor.git
-    path: github.com/kardianos/govendor
-  -
-    name: httpstat
-    version: "v1.0.0"
-    url: https://github.com/davecheney/httpstat
-    path: github.com/davecheney/httpstat
-    install: ""
   -
     name: sift
     version: "v0.9.0"
@@ -227,15 +250,3 @@ gogetable_tools:
     version: "{{mailgun_version}}"
     url: https://github.com/mailgun/mailgun-go
     path: github.com/mailgun/mailgun-go
-  -
-    name: wuzz
-    version: "v0.4.0"
-    url: https://github.com/asciimoo/wuzz
-    path: github.com/asciimoo/wuzz
-    install: ""
-  -
-    name: pet
-    version: "v0.2.3"
-    url: https://github.com/knqyf263/pet
-    path: github.com/knqyf263/pet
-    install: ""
