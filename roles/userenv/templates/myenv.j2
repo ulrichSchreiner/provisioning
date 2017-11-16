@@ -6,9 +6,11 @@ source ~/Dropbox/Entwicklung/environment
 # source {{ localinstallation }}/liquidprompt/liquidprompt
 
 _atocker() {
+  DBPATH=$(echo $DBUS_SESSION_BUS_ADDRESS|cut -d '=' -f2)
 docker run  \
     --rm \
     -it \
+    --net=host \
     --privileged \
     --security-opt=seccomp:unconfined \
     --device /dev/dri \
@@ -19,6 +21,8 @@ docker run  \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
     -v /var/run/dbus:/var/run/dbus:ro \
+    -v $DBPATH:/dbus \
+    -e DBUS_SESSION_BUS_ADDRESS="unix:path=/dbus" \
     -v /etc/machine-id:/etc/machine-id:ro \
     -e DISPLAY=$DISPLAY \
     -e DISABLE_GPU="--disable-gpu" \
