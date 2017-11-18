@@ -141,7 +141,7 @@ gh_products:
     name: "glide"
     version: "{{glide_version}}"
     url: "https://github.com/Masterminds/glide/releases/download/v{{glide_version}}"
-    package: "glide-v{{glide_version}}-linux-arm64.tar.gz"
+    package: "glide-v{{glide_version}}-linux-amd64.tar.gz"
     is: "tgz"
   -
     name: "httpstat"
