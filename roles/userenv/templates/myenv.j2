@@ -5,6 +5,8 @@ source ~/Dropbox/Entwicklung/environment
 # work with zsh now, it includes good plugins already
 # source {{ localinstallation }}/liquidprompt/liquidprompt
 
+alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
+
 _atocker() {
   DBPATH=$(echo $DBUS_SESSION_BUS_ADDRESS|cut -d '=' -f2)
 docker run  \
