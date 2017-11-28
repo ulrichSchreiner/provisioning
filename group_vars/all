@@ -207,6 +207,7 @@ fedora_packages:
     - glibc-devel
     - grep
     - gzip
+    - highlight
     - htop
     - libgomp
     - kernel-headers
