@@ -23,6 +23,7 @@ gotty_version: "1.0.1"
 peco_version: "0.5.1"
 glide_version: "0.13.1"
 httpstat_version: "1.0.0"
+hugo_version: "0.31.1"
 
 gh_products:
   -
@@ -149,6 +150,12 @@ gh_products:
     url: "https://github.com/davecheney/httpstat/releases/download/v{{httpstat_version}}"
     package: "httpstat-linux-amd64-v{{httpstat_version}}"
     is: "bin"
+  -
+    name: "hugo"
+    version: "{{hugo_version}}"
+    url: "https://github.com/gohugoio/hugo/releases/download/v{{hugo_version}}"
+    package: "hugo_{{hugo_version}}_Linux-64bit.tar.gz"
+    is: "tgz0"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
