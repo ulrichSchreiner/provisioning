@@ -3,7 +3,7 @@
 CFGPATH=$HOME/Dropbox/appconfig`pwd | cut --complement -d / -n -f 2,3`
 mkdir -p $CFGPATH
 DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=|," ' { print $2 } '`
-docker run -d --rm --net=host \
+docker run -it -d --rm --net=host \
     --privileged \
     --security-opt=seccomp:unconfined \
     -v /tmp/.X11-unix:/tmp/.X11-unix  \
