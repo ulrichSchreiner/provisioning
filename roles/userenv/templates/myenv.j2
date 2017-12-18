@@ -66,6 +66,7 @@ export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:$PATH
 
 export ANSIBLE_CONFIG_DIR=$HOME/Dropbox/ansible-config
 export EDITOR='vim'
+export GPG_TTY=$(tty)
 
 function prev() {
   PREV=$(fc -lrn | head -n 1)

@@ -11,7 +11,7 @@ docker run -it -d --rm --net=host \
     -w `pwd` \
     -v $CFGPATH:/config \
     -v $HOME/Dropbox/Entwicklung/git:/devhome/Dropbox/Entwicklung/git:ro \
-    -v $HOME/Dropbox/Entwicklung/gnupg:/devhome/.gnupg:ro \
+    -v $HOME/Dropbox/Entwicklung/gnupg:/devhome/.gnupg \
     -v $XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR \
     -e DISPLAY=unix$DISPLAY \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
