@@ -23,7 +23,7 @@ gotty_version: "1.0.1"
 peco_version: "0.5.2"
 glide_version: "0.13.1"
 httpstat_version: "1.0.0"
-hugo_version: "0.31.1"
+hugo_version: "0.32.1"
 
 gh_products:
   -
