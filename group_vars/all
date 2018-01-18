@@ -24,6 +24,8 @@ peco_version: "0.5.2"
 glide_version: "0.13.1"
 httpstat_version: "1.0.0"
 hugo_version: "0.32.2"
+stern_version: "1.6.0"
+kail_version: "0.6.0"
 
 gh_products:
   -
@@ -31,6 +33,12 @@ gh_products:
     version: "{{dep_version}}"
     url: "https://github.com/golang/dep/releases/download/v{{dep_version}}"
     package: "dep-linux-amd64"
+    is: "bin"
+  -
+    name: "stern"
+    version: "{{stern_version}}"
+    url: "https://github.com/wercker/stern/releases/download/{{stern_version}}"
+    package: "stern_linux_amd64"
     is: "bin"
   -
     name: "ngrok"
@@ -52,6 +60,12 @@ gh_products:
     url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
     package: "micro-{{micro_editor_version}}-linux64.tar.gz"
     is: "tgz"
+  -
+    name: "kail"
+    version: "{{kail_version}}"
+    url: "https://github.com/boz/kail/releases/download/v{{kail_version}}"
+    package: "kail_{{kail_version}}_linux_amd64.tar.gz"
+    is: "tgz0"
   -
     name: "helm"
     version: "{{helm_version}}"
@@ -216,6 +230,7 @@ fedora_packages:
     - gzip
     - highlight
     - htop
+    - jq
     - libgomp
     - kernel-headers
     - kernel-devel
