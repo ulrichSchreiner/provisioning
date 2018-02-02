@@ -26,6 +26,7 @@ httpstat_version: "1.0.0"
 hugo_version: "0.32.2"
 stern_version: "1.6.0"
 kail_version: "0.6.0"
+grv_version: "0.1.0"
 
 gh_products:
   -
@@ -39,6 +40,12 @@ gh_products:
     version: "{{stern_version}}"
     url: "https://github.com/wercker/stern/releases/download/{{stern_version}}"
     package: "stern_linux_amd64"
+    is: "bin"
+  -
+    name: "gview"
+    version: "{{grv_version}}"
+    url: "https://github.com/rgburke/grv/releases/download/v{{grv_version}}"
+    package: "grv_v{{grv_version}}_linux64"
     is: "bin"
   -
     name: "ngrok"
