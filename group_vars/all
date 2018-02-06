@@ -27,6 +27,7 @@ hugo_version: "0.32.2"
 stern_version: "1.6.0"
 kail_version: "0.6.0"
 grv_version: "0.1.1"
+jj_version: "1.1.2"
 
 gh_products:
   -
@@ -66,6 +67,12 @@ gh_products:
     version: "{{micro_editor_version}}"
     url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
     package: "micro-{{micro_editor_version}}-linux64.tar.gz"
+    is: "tgz"
+  -
+    name: "jj"
+    version: "{{jj_version}}"
+    url: "https://github.com/tidwall/jj/releases/download/v{{jj_version}}"
+    package: "jj-{{jj_version}}-linux-amd64.tar.gz"
     is: "tgz"
   -
     name: "kail"
