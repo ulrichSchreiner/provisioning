@@ -16,7 +16,7 @@ doctl_version: "1.7.1"
 dep_version: "0.4.1"
 helm_version: "2.6.2"
 fzf_version: "0.17.3"
-pet_version: "0.2.4"
+pet_version: "0.3.0"
 wuzz_version: "0.4.0"
 httplab_version: "0.4.0"
 gotty_version: "1.0.1"
@@ -27,7 +27,7 @@ hugo_version: "0.32.2"
 stern_version: "1.6.0"
 kail_version: "0.6.0"
 grv_version: "0.1.2"
-jj_version: "1.1.2"
+jj_version: "1.2.0"
 
 gh_products:
   -
@@ -134,8 +134,8 @@ gh_products:
     name: "pet"
     version: "{{pet_version}}"
     url: "https://github.com/knqyf263/pet/releases/download/v{{pet_version}}"
-    package: "pet_{{pet_version}}_linux_amd64.zip"
-    is: "zip"
+    package: "pet_{{pet_version}}_linux_amd64.tar.gz"
+    is: "tgz0"
   -
     name: "wuzz"
     version: "{{wuzz_version}}"
