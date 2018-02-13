@@ -28,8 +28,15 @@ stern_version: "1.6.0"
 kail_version: "0.6.0"
 grv_version: "0.1.2"
 jj_version: "1.2.0"
+rke_version: "0.1.1"
 
 gh_products:
+  -
+    name: "rke"
+    version: "{{rke_version}}"
+    url: "https://github.com/rancher/rke/releases/download/v{{rke_version}}"
+    package: "rke_linux-amd64"
+    is: "bin"
   -
     name: "dep"
     version: "{{dep_version}}"
