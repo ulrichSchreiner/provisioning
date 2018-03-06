@@ -12,5 +12,5 @@
      debug: var=ansible_distribution
 
 
-- include: devtools.yaml
-- include: userenv.yaml
+- import_playbook: devtools.yaml
+- import_playbook: userenv.yaml

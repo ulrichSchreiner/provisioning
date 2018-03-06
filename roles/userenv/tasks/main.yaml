@@ -34,7 +34,7 @@
   copy: src=goenv dest=~/go/.envrc mode=664
 
 - name: install go tools
-  include: lib/goget.yaml
+  include_tasks: lib/goget.yaml
   with_items: "{{gogetable_tools}}"
 
 - name: create environment for sourcing

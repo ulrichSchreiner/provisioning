@@ -30,7 +30,7 @@
   file: path={{localinstallation}}/bin state=directory mode=0755
 
 - name: install github products
-  include: lib/downloader.yml product={{p}}
+  include_tasks: lib/downloader.yml product={{p}}
   with_items: "{{gh_products}}"
   loop_control:
     loop_var: p
