@@ -2,10 +2,14 @@
 
 all: playbook ;
 
+# the catchall rule requires my user to have my public key in my authorized_keys and
+# also so enable password-less sudo for me! if this is not possible add the parameters
+# --ask-become-pass --ask-pass to the invocation of the playbook
+
 %:
 	 @docker run -it --rm \
-	  -v $SSH_AUTH_SOCK:/ssh-agent \
+	  -v $(SSH_AUTH_SOCK):/ssh-agent \
 	  --env SSH_AUTH_SOCK=/ssh-agent \
 	  --net host \
 	  -v `pwd`:/work ulrichschreiner/ansible playbook \
-	  -u `whoami` -vv --ask-become-pass --ask-pass -i inventory $@.yaml
+	  -u `whoami` -vv -i inventory $@.yaml
