@@ -54,7 +54,10 @@ HIST_STAMPS="dd.mm.yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gitfast docker go git-extras tmux tmuxinator fedora kubectl gpg-agent docker-compose golang systemd web-search)
+plugins=(ssh-agent git gitfast docker go git-extras tmux tmuxinator fedora kubectl gpg-agent docker-compose golang systemd web-search)
+
+zstyle :omz:plugins:ssh-agent identities id_rsa id_dsa google_compute_engine
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
 source ~/.myenv
