@@ -101,3 +101,6 @@
 
 - name: start gpg-agent when kde starts
   copy: src=gpg-agent-startup.sh dest=~/.config/plasma-workspace/env/gpg-agent-startup.sh mode=0755
+
+- name: copy terraform configuration
+  copy: src=terraformrc dest=~/.terraformrc
