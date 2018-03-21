@@ -29,8 +29,15 @@ kail_version: "0.6.0"
 grv_version: "0.1.3"
 jj_version: "1.2.0"
 rke_version: "0.1.2"
-
+terraform_version: "0.11.4"
+terraform_provider_ct_version: "0.2.1"
 gh_products:
+  -
+    name: "terraform-provider-ct"
+    version: "{{terraform_provider_ct_version}}"
+    url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
+    package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
+    is: "tgz"
   -
     name: "rke"
     version: "{{rke_version}}"
@@ -61,6 +68,13 @@ gh_products:
     version: "2.2.4"
     url: "https://bin.equinox.io/c/4VmDzA7iaHb"
     package: "ngrok-stable-linux-amd64.zip"
+    is: "zip"
+  -
+    name: "terraform"
+    binary: "terraform"
+    version: "{{terraform_version}}"
+    url: "https://releases.hashicorp.com/terraform/{{terraform_version}}"
+    package: "terraform_{{terraform_version}}_linux_amd64.zip"
     is: "zip"
   -
     name: "jid"
@@ -266,7 +280,7 @@ fedora_packages:
     - vim
     - libpcap-devel
     - zsh
-    
+
 not_installed:
     - kubelet
     - kubeadm
