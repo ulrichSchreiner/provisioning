@@ -1,7 +1,7 @@
 golang_version: "1.10"
 goapp_version: "1.9.48"
 nodejs_version: "node_7.x"
-docker_compose_version: "1.20.0"
+docker_compose_version: "1.20.1"
 docker_machine_version: "v0.14.0"
 localansible_version: "2.2.0.0-0"
 bfg_version: "1.12.13"
