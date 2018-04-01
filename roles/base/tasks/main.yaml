@@ -60,7 +60,7 @@
         - "{{base_packages}}"
   when: ansible_distribution == "Ubuntu"
   
-- name: do ubuntu specific things
+- name: do fedora specific things
   block:
     - name: install some repos
       copy: src={{item}} dest=/etc/yum.repos.d/{{item | basename }}
