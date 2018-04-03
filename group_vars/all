@@ -279,6 +279,8 @@ fedora_packages:
     - tmuxinator
     - vim
     - libpcap-devel
+    - ripgrep
+    - tokei
     - zsh
 
 not_installed:
@@ -297,12 +299,6 @@ gogetable_tools:
     version: "1.6.3"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
-  -
-    name: sift
-    version: "v0.9.0"
-    url: https://github.com/svent/sift
-    path: github.com/svent/sift
-    install: ""
   -
     name: mailguncli
     version: "{{mailgun_version}}"

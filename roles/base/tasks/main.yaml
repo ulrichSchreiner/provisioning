@@ -52,7 +52,7 @@
       register: newsources
 
     - apt: update_cache=yes
-      when: newsources|changed
+      when: newsources is changed
 
     - name: install base packages
       apt: name={{item}} state=present
