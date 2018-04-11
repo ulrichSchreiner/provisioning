@@ -1,7 +1,7 @@
 golang_version: "1.10.1"
 goapp_version: "1.9.48"
 nodejs_version: "node_7.x"
-docker_compose_version: "1.20.1"
+docker_compose_version: "1.21.0"
 docker_machine_version: "v0.14.0"
 localansible_version: "2.2.0.0-0"
 bfg_version: "1.12.13"
@@ -29,7 +29,7 @@ kail_version: "0.6.0"
 grv_version: "0.1.3"
 jj_version: "1.2.0"
 rke_version: "0.1.2"
-terraform_version: "0.11.5"
+terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
 gh_products:
   -
