@@ -31,7 +31,14 @@ jj_version: "1.2.0"
 rke_version: "0.1.2"
 terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
+vegeta_version: "6.3.0"
 gh_products:
+  -
+    name: "vegeta"
+    version: "{{vegeta_version}}"
+    url: "https://github.com/tsenart/vegeta/releases/download/v{{vegeta_version}}"
+    package: "vegeta-v{{vegeta_version}}-linux-amd64.tar.gz"
+    is: "tgz0"
   -
     name: "terraform-provider-ct"
     version: "{{terraform_provider_ct_version}}"
