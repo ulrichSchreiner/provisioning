@@ -108,7 +108,7 @@
 
 - name: create the folders for pathogen.vim
   file: path=~/.vim/{{item}} state=directory mode=0755
-  items:
+  with_items:
     - autoload
     - bundle
 
