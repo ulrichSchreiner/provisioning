@@ -213,7 +213,6 @@ gh_products:
     is: "tgz0"
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
-node_key_url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 packagecloud_key_url: https://packagecloud.io/gpg.key
 google_cloud_url: https://packages.cloud.google.com/apt/doc/apt-key.gpg
 docker_key_url: https://download.docker.com/linux/ubuntu/gpg

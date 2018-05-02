@@ -37,11 +37,6 @@
         url={{ chrome_key_url }}
         state=present
 
-    - name: add key for nodesource
-      apt_key: >
-        url={{ node_key_url }}
-        state=present
-
     - name: add key for packagecloud
       apt_key: >
         url={{ packagecloud_key_url }}
