@@ -15,6 +15,7 @@ docker run -it -d --rm --net=host \
     -v $XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR \
     -e DISPLAY=unix$DISPLAY \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
+    -v $HOME/.kube:/devhome/.kube \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
     -v $HOME/.git-credential-cache:/devhome/.git-credential-cache \
     -v /var/run/dbus:/var/run/dbus:ro \
