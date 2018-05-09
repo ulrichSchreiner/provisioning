@@ -102,3 +102,6 @@ source <(stern --completion=zsh)
 
 # disable shared history
 unsetopt share_history
+
+source ~/.kube-ps1/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT

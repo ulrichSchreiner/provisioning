@@ -89,6 +89,11 @@
     repo=https://github.com/robbyrussell/oh-my-zsh.git
     dest=~/.oh-my-zsh
 
+- name: install kube-ps1
+  git: >
+    repo=https://github.com/jonmosco/kube-ps1.git
+    dest=~/.kube-ps1
+
 - name: install my zshrc
   template: src=zshrc.j2 dest=~/.zshrc
 
