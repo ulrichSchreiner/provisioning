@@ -7,7 +7,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 micro_editor_version: "1.4.0"
-minikube_version: "0.24.1"
+minikube_version: "0.26.1"
 jid_version: "0.7.2"
 whalebrew_version: "0.1.0"
 mailgun_version: "master"
