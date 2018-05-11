@@ -106,5 +106,7 @@ unsetopt share_history
 KUBE_PS1_SYMBOL_ENABLE=false
 KUBE_PS1_CTX_COLOR=226
 KUBE_PS1_NS_COLOR=75
-source ~/.kube-ps1/kube-ps1.sh
+source ~/tools/kube-ps1/kube-ps1.sh
 PROMPT='$(kube_ps1) '$PROMPT
+
+source ~/tools/ktx/ktx-completion.sh

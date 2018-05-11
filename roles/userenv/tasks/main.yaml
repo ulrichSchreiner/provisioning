@@ -92,7 +92,18 @@
 - name: install kube-ps1
   git: >
     repo=https://github.com/jonmosco/kube-ps1.git
-    dest=~/.kube-ps1
+    dest=~/tools/kube-ps1
+
+- name: install ktx
+  git: >
+    repo=https://github.com/heptio/ktx.git
+    dest=~/tools/ktx
+
+- name: install ktx binary
+  file:
+    src: ~/tools/ktx/ktx
+    dest: ~/bin/ktx
+    state: link
 
 - name: install my zshrc
   template: src=zshrc.j2 dest=~/.zshrc
