@@ -6,10 +6,7 @@ localansible_version: "2.2.0.0-0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-micro_editor_version: "1.4.0"
 minikube_version: "0.27.0"
-jid_version: "0.7.2"
-whalebrew_version: "0.1.0"
 mailgun_version: "master"
 doctl_version: "1.8.0"
 dep_version: "0.4.1"
@@ -82,19 +79,6 @@ gh_products:
     package: "terraform_{{terraform_version}}_linux_amd64.zip"
     is: "zip"
   -
-    name: "jid"
-    binary: "jid_linux_amd64"
-    version: "{{jid_version}}"
-    url: "https://github.com/simeji/jid/releases/download/{{jid_version}}"
-    package: "jid_linux_amd64.zip"
-    is: "zip"
-  -
-    name: "micro"
-    version: "{{micro_editor_version}}"
-    url: "https://github.com/zyedidia/micro/releases/download/v{{micro_editor_version}}"
-    package: "micro-{{micro_editor_version}}-linux64.tar.gz"
-    is: "tgz"
-  -
     name: "jj"
     version: "{{jj_version}}"
     url: "https://github.com/tidwall/jj/releases/download/v{{jj_version}}"
@@ -112,12 +96,6 @@ gh_products:
     url: "https://storage.googleapis.com/kubernetes-helm"
     package: "helm-v{{helm_version}}-linux-amd64.tar.gz"
     is: "tgz"
-  -
-    name: "whalebrew"
-    version: "{{whalebrew_version}}"
-    url: "https://github.com/bfirsh/whalebrew/releases/download/{{whalebrew_version}}"
-    package: "whalebrew-{{ansible_system}}-{{ansible_machine}}"
-    is: "bin"
   -
     name: "docker-compose"
     version: "{{docker_compose_version}}"
@@ -264,6 +242,7 @@ fedora_packages:
     - gzip
     - highlight
     - htop
+    - jid
     - jq
     - libgomp
     - kernel-headers
@@ -272,6 +251,7 @@ fedora_packages:
     - kwalletcli
     - make
     - mercurial
+    - micro
     - nodejs
     - patch
     - tmux
