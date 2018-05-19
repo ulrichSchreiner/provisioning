@@ -105,6 +105,11 @@
     dest: ~/bin/ktx
     state: link
 
+- name: install fubectl
+  git: >
+    repo=https://github.com/kubermatic/fubectl.git
+    dest=~/tools/fubectl
+    
 - name: install my zshrc
   template: src=zshrc.j2 dest=~/.zshrc
 

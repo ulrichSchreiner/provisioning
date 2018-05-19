@@ -14,7 +14,6 @@ mailgun_version: "master"
 doctl_version: "1.8.0"
 dep_version: "0.4.1"
 helm_version: "2.8.2"
-fzf_version: "0.17.3"
 pet_version: "0.3.0"
 wuzz_version: "0.4.0"
 httplab_version: "0.4.0"
@@ -30,13 +29,13 @@ jj_version: "1.2.0"
 rke_version: "0.1.2"
 terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
-vegeta_version: "6.3.0"
+vegeta_version: "7.0.0"
 gh_products:
   -
     name: "vegeta"
     version: "{{vegeta_version}}"
     url: "https://github.com/tsenart/vegeta/releases/download/v{{vegeta_version}}"
-    package: "vegeta-v{{vegeta_version}}-linux-amd64.tar.gz"
+    package: "vegeta-{{vegeta_version}}-linux-amd64.tar.gz"
     is: "tgz0"
   -
     name: "terraform-provider-ct"
@@ -152,12 +151,6 @@ gh_products:
     is: "zip"
     bundle: True
   -
-    name: "fzf"
-    version: "{{fzf_version}}"
-    url: "https://github.com/junegunn/fzf-bin/releases/download/{{fzf_version}}"
-    package: "fzf-{{fzf_version}}-linux_amd64.tgz"
-    is: "tgz0"
-  -
     name: "pet"
     version: "{{pet_version}}"
     url: "https://github.com/knqyf263/pet/releases/download/v{{pet_version}}"
@@ -261,6 +254,7 @@ fedora_packages:
     - bzr
     - curl
     - dkms
+    - fzf
     - gcc
     - git-lfs
     - git-extras
