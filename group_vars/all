@@ -260,6 +260,7 @@ fedora_packages:
     - libpcap-devel
     - ripgrep
     - tokei
+    - yarn
     - zsh
 
 not_installed:
