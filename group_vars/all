@@ -259,6 +259,7 @@ fedora_packages:
     - vim
     - libpcap-devel
     - ripgrep
+    - telepresence
     - tokei
     - yarn
     - zsh
