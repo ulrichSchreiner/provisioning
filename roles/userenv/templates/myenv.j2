@@ -24,7 +24,7 @@ docker run  \
     -e DBUS_SESSION_BUS_ADDRESS="unix:path=/dbus" \
     -v /etc/machine-id:/etc/machine-id:ro \
     -e DISPLAY=$DISPLAY \
-    -e DISABLE_GPU="--disable-gpu" \
+    -e xDISABLE_GPU="--disable-gpu" \
     -e LANG=$LANG \
     -e HOSTUSER=`id -un` \
     -e HOSTGROUP=`id -gn` \
