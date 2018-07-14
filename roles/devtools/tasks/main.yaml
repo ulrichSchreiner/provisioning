@@ -14,7 +14,7 @@
   git: >
     repo=https://github.com/ulrichSchreiner/ansible-docker.git
     dest={{ localinstallation }}/ansible-docker
-    version={{ localansible_version }}
+    version=master
 
 - name: create ansible shortcuts
   file: src=/usr/local/ansible-docker/ansible dest=/usr/local/bin/{{item}} mode=0755 state=link
@@ -25,6 +25,9 @@
     - ansible-doc
     - ansible-pull
     - ansible-galaxy
+    - ansible-console
+    - ansible-config
+    - ansible-inventory
 
 - name: create local bin directory
   file: path={{localinstallation}}/bin state=directory mode=0755

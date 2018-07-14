@@ -11,5 +11,6 @@ all: playbook ;
 	  -v $(SSH_AUTH_SOCK):/ssh-agent \
 	  --env SSH_AUTH_SOCK=/ssh-agent \
 	  --net host \
+    	  -v $(ANSIBLE_CONFIG_DIR):/etc/ansible \
 	  -v `pwd`:/work ulrichschreiner/ansible playbook \
-	  -u `whoami` -vv -i inventory $@.yaml
+	  -u `whoami` -v -i inventory $@.yaml
