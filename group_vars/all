@@ -229,6 +229,7 @@ fedora_packages:
     - direnv
     - binutils
     - bzr
+    - clang
     - curl
     - dkms
     - fzf
