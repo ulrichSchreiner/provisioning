@@ -262,6 +262,7 @@ fedora_packages:
     - ripgrep
     - telepresence
     - tokei
+    - xclip
     - yarn
     - zsh
 
