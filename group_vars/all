@@ -232,6 +232,8 @@ fedora_packages:
     - clang
     - curl
     - dkms
+    - fwupd
+    - fwupdate
     - fzf
     - gcc
     - git-lfs
