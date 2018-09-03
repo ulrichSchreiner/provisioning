@@ -1,20 +1,12 @@
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
 
-- name: create local development workspace
-  file: path=~/development state=directory mode=0755
-
 - name: create common subdirs
-  file: path=~/development/{{item}} state=directory mode=0755
+  file: path=~/go/{{item}} state=directory mode=0755
   with_items:
-    - src/gitlab.com/globalsafetrack
-    - src/github.com/ulrichSchreiner
-    - src/bitbucket.com/isw
-    - src/bitbucket.com/usc
-    - src/git.f-i-ts.de/devops
-    - src/git.f-i-ts.de/ize0h88
     - pkg
     - bin
+    - src
 
 - name: create workspaces for development (github, bitbucket, fits)
   file: path=~/workspaces/{{item}} state=directory mode=0755
@@ -109,7 +101,7 @@
   git: >
     repo=https://github.com/kubermatic/fubectl.git
     dest=~/tools/fubectl
-    
+
 - name: install my zshrc
   template: src=zshrc.j2 dest=~/.zshrc
 
