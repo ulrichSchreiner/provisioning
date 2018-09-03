@@ -262,6 +262,7 @@ fedora_packages:
     - vim
     - libpcap-devel
     - ripgrep
+    - skopeo
     - telepresence
     - tokei
     - xclip
