@@ -26,7 +26,14 @@ rke_version: "0.1.2"
 terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
 vegeta_version: "11.3.0"
+go_swagger: "0.16.0"
 gh_products:
+  -
+    name: "swagger"
+    version: "{{go_swagger}}"
+    url: "https://github.com/go-swagger/go-swagger/releases/download/{{go_swagger}}"
+    package: "swagger_linux_amd64"
+    is: "bin"
   -
     name: "vegeta"
     version: "{{vegeta_version}}"
@@ -116,7 +123,7 @@ gh_products:
   -
     name: "go"
     version: "{{golang_version}}"
-    url: "https://storage.googleapis.com/golang"
+    url: "https://dl.google.com/go"
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
