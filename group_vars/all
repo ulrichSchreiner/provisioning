@@ -27,7 +27,14 @@ terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
 vegeta_version: "11.3.0"
 go_swagger: "0.16.0"
+linuxkit_version: "0.6"
 gh_products:
+  -
+    name: "linuxkit"
+    version: "{{linuxkit_version}}"
+    url: "https://github.com/linuxkit/linuxkit/releases/download/v{{linuxkit_version}}"
+    package: "linuxkit-linux-amd64"
+    is: "bin"
   -
     name: "swagger"
     version: "{{go_swagger}}"
