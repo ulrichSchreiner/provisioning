@@ -1,3 +1,29 @@
+- name: create postman location
+  file: path=/opt/postman state=directory mode=0755
+  register: postmanloc
+
+- name: Download postman
+  get_url:
+    url: https://dl.pstmn.io/download/latest/linux64 
+    dest: /opt/postman/postman.tgz
+    mode: 0664
+  when: postmanloc.changed
+
+- name: Extract Postman
+  unarchive:
+    remote_src: yes
+    src: /opt/postman/postman.tgz
+    dest: /opt/postman
+  when: postmanloc.changed
+
+- name: create a postman symlink
+  file:
+    src: /opt/postman/Postman/Postman
+    dest: /usr/local/bin/postman
+    owner: root
+    group: root
+    state: link
+
 - name: install git-open
   git: >
     repo=https://github.com/paulirish/git-open.git
