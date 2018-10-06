@@ -5,7 +5,7 @@ docker_machine_version: "v0.15.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-minikube_version: "0.29.0"
+minikube_version: "0.30.0"
 mailgun_version: "master"
 doctl_version: "1.10.0"
 dep_version: "0.5.0"
