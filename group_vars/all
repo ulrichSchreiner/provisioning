@@ -267,6 +267,7 @@ fedora_packages:
     - kubectl
     - kwalletcli
     - make
+    - meld
     - mercurial
     - micro
     - nodejs
