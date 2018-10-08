@@ -246,6 +246,7 @@ fedora_packages:
     - clang
     - curl
     - dkms
+    - fuse-overlayfs
     - fwupd
     - fwupdate
     - fzf
@@ -272,6 +273,7 @@ fedora_packages:
     - micro
     - nodejs
     - patch
+    - podman
     - tmux
     - tmuxinator
     - vim
