@@ -4,7 +4,7 @@
 
 - name: Download postman
   get_url:
-    url: https://dl.pstmn.io/download/latest/linux64 
+    url: https://dl.pstmn.io/download/latest/linux64
     dest: /opt/postman/postman.tgz
     mode: 0664
   when: postmanloc.changed
@@ -59,7 +59,9 @@
   file: path={{localinstallation}}/bin state=directory mode=0755
 
 - name: install github products
-  include_tasks: lib/downloader.yml product={{p}}
+  include_tasks: lib/downloader.yml
+  vars:
+    product: "{{p}}"
   with_items: "{{gh_products}}"
   loop_control:
     loop_var: p
