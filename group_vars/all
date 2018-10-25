@@ -28,7 +28,14 @@ terraform_provider_ct_version: "0.2.1"
 vegeta_version: "11.3.0"
 go_swagger: "0.16.0"
 linuxkit_version: "0.6"
+dive_version: "0.0.7"
 gh_products:
+  -
+    name: "dive"
+    version: "{{dive_version}}"
+    url: "https://github.com/wagoodman/dive/releases/download/v{{dive_version}}"
+    package: "dive_{{dive_version}}_linux_amd64.tar.gz"
+    is: "tgz0"
   -
     name: "linuxkit"
     version: "{{linuxkit_version}}"
