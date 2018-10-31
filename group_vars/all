@@ -246,12 +246,17 @@ base_packages:
     - libpcap-dev
     - zsh
 
+fedora_modules:
+    - nodejs:10/default
+    - ripgrep:master/default
+
 fedora_packages:
-    - direnv
     - binutils
+    - buildah
     - bzr
     - clang
     - curl
+    - direnv
     - dkms
     - fuse-overlayfs
     - fwupd
@@ -269,6 +274,7 @@ fedora_packages:
     - htop
     - jid
     - jq
+    - libpcap-devel
     - libgomp
     - kernel-headers
     - kernel-devel
@@ -278,14 +284,11 @@ fedora_packages:
     - meld
     - mercurial
     - micro
-    - nodejs
     - patch
     - podman
     - tmux
     - tmuxinator
     - vim
-    - libpcap-devel
-    - ripgrep
     - skopeo
     - telepresence
     - tokei

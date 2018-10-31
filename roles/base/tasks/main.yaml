@@ -60,6 +60,10 @@
       with_fileglob:
         - "*.repo"
 
+    - name: install base modules
+      command: dnf -y module install {{ item }}
+      with_items: "{{ fedora_modules }}"
+
     - name: install base packages
       dnf: name={{fedora_packages}} state=present
 
