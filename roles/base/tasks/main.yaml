@@ -56,9 +56,9 @@
 - name: do fedora specific things
   block:
     - name: install some repos
-      copy: src={{item}} dest=/etc/yum.repos.d/{{item | basename }}
+      template: src={{item}} dest=/etc/yum.repos.d/{{item | basename }}
       with_fileglob:
-        - "*.repo"
+        - "../templates/*.repo"
 
     - name: install base modules
       command: dnf -y module install {{ item }}
