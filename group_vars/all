@@ -5,7 +5,7 @@ fedora_relase: 28
 golang_version: "1.11.2"
 goapp_version: "1.9.48"
 docker_compose_version: "1.23.0"
-docker_machine_version: "v0.15.0"
+docker_machine_version: "v0.16.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
