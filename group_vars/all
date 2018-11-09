@@ -5,7 +5,6 @@ fedora_relase: 28
 golang_version: "1.11.2"
 goapp_version: "1.9.48"
 docker_compose_version: "1.23.0"
-docker_machine_version: "v0.16.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
@@ -125,12 +124,6 @@ gh_products:
     version: "{{docker_compose_version}}"
     url: "https://github.com/docker/compose/releases/download/{{docker_compose_version}}"
     package: "docker-compose-{{ansible_system}}-{{ansible_machine}}"
-    is: "bin"
-  -
-    name: "docker-machine"
-    version: "{{docker_machine_version}}"
-    url: "https://github.com/docker/machine/releases/download/{{docker_machine_version}}"
-    package: "docker-machine-{{ansible_system}}-{{ansible_machine}}"
     is: "bin"
   -
     name: "minikube"
