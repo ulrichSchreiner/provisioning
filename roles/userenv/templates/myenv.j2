@@ -1,6 +1,6 @@
 export TERM=xterm-256color
 
-source ~/Dropbox/Entwicklung/environment
+source ~/ownCloud/Entwicklung/environment
 
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
@@ -16,7 +16,7 @@ docker run  \
     -v /etc/localtime:/etc/localtime:ro \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v `pwd`:/work \
-    -v $HOME/Dropbox/appconfig:/config \
+    -v $HOME/ownCloud/appconfig:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
     -v /var/run/dbus:/var/run/dbus:ro \
@@ -55,7 +55,7 @@ export NODE_PATH="$HOME/npm/lib/node_modules"
 # GOROOT is only required if not /usr/local/go, but leave it here
 export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:$PATH
 
-export ANSIBLE_CONFIG_DIR=$HOME/Dropbox/ansible-config
+export ANSIBLE_CONFIG_DIR=$HOME/ownCloud/ansible-config
 export EDITOR='vim'
 export GPG_TTY=$(tty)
 
