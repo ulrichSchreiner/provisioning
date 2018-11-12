@@ -281,6 +281,8 @@ fedora_packages:
     - meld
     - mercurial
     - micro
+    - owncloud-client
+    - owncloud-client-dolphin
     - patch
     - podman
     - tmux
