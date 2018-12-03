@@ -31,7 +31,7 @@ terraform_provider_ct_version: "0.2.1"
 vegeta_version: "11.3.0"
 go_swagger: "0.17.2"
 linuxkit_version: "0.6"
-dive_version: "0.0.7"
+dive_version: "0.4.0"
 gh_products:
   -
     name: "dive"
