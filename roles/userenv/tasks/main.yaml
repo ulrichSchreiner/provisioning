@@ -81,6 +81,11 @@
     repo=https://github.com/robbyrussell/oh-my-zsh.git
     dest=~/.oh-my-zsh
 
+- name: install zsh-peco-history
+  git: >
+    repo=https://github.com/jimeh/zsh-peco-history.git
+    dest=~/.oh-my-zsh/custom/plugins/zsh-peco-history
+
 - name: install kube-ps1
   git: >
     repo=https://github.com/jonmosco/kube-ps1.git
