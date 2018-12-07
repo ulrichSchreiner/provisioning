@@ -132,13 +132,6 @@ gh_products:
     package: "minikube-linux-amd64"
     is: "bin"
   -
-    name: "go"
-    version: "{{golang_version}}"
-    url: "https://dl.google.com/go"
-    package: "go{{golang_version}}.linux-amd64.tar.gz"
-    is: "tgz"
-    bundle: True
-  -
     name: "go_appengine"
     version: "{{goapp_version}}"
     url: "https://storage.googleapis.com/appengine-sdks/featured"
@@ -232,6 +225,7 @@ base_packages:
     - make
     - mercurial
     - nodejs
+    - npm
     - tar
     - tmux
     - tmuxinator
@@ -247,6 +241,34 @@ fedora_modules:
     - nodejs:10/default
     - ripgrep:master/default
 
+arch_packages:
+    - base-devel
+    - binutils
+    - bzr
+    - buildah
+    - clang
+    - curl
+    - fwupd
+    - fwupdate
+    - fzf
+    - gcc
+    - git-lfs
+    - grep
+    - go
+    - gzip
+    - htop
+    - jq
+    - make
+    - meld
+    - mercurial
+    - nodejs
+    - npm
+    - ripgrep
+    - tmux
+    - tokei
+    - vim
+    - zsh
+    
 fedora_packages:
     - binutils
     - buildah
@@ -317,3 +339,12 @@ gogetable_tools:
     version: "{{mailgun_version}}"
     url: https://github.com/mailgun/mailgun-go
     path: github.com/mailgun/mailgun-go
+
+old_gh_product:
+  -
+    name: "go"
+    version: "{{golang_version}}"
+    url: "https://dl.google.com/go"
+    package: "go{{golang_version}}.linux-amd64.tar.gz"
+    is: "tgz"
+    bundle: True

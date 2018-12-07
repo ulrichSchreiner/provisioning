@@ -66,5 +66,10 @@
 
     - name: install base packages
       dnf: name={{fedora_packages}} state=present
-
   when: ansible_distribution == "Fedora"
+
+- name: do arch specific things
+  block:
+    - name: install base packages
+      pacman: name={{arch_packages}} state=present
+  when: ansible_distribution == "Archlinux"
