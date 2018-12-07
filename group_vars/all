@@ -32,7 +32,14 @@ vegeta_version: "11.3.0"
 go_swagger: "0.17.2"
 linuxkit_version: "0.6"
 dive_version: "0.4.0"
+yay_version: "9.0.1"
 gh_products:
+  -
+    name: "yay"
+    version: "{{yay_version}}"
+    url: "https://github.com/Jguer/yay/releases/download/v{{yay_version}}"
+    package: "yay_{{yay_version}}_x86_64.tar.gz"
+    is: "tgz"
   -
     name: "dive"
     version: "{{dive_version}}"
@@ -257,6 +264,7 @@ arch_packages:
     - go
     - gzip
     - htop
+    - httpie
     - jq
     - make
     - meld
@@ -267,7 +275,15 @@ arch_packages:
     - tmux
     - tokei
     - vim
+    - xclip
+    - yarn
     - zsh
+
+aur_packages:
+    - direnv
+    - google-chrome
+    - kubectl-bin
+    - skopeo
     
 fedora_packages:
     - binutils

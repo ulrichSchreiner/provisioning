@@ -65,3 +65,11 @@
   with_items: "{{gh_products}}"
   loop_control:
     loop_var: p
+
+- name: do arch specific packages after gh-downloads becase wee need yay
+  block:
+    - name: install base aur packages
+      aur: name={{aur_packages}}
+      become: yes
+      become_user: aur_builder
+  when: ansible_distribution == "Archlinux"
