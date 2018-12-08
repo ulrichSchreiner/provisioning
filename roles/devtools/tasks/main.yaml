@@ -62,7 +62,8 @@
   include_tasks: lib/downloader.yml
   vars:
     product: "{{p}}"
-  with_items: "{{gh_products}}"
+  loop: "{{ gh_products }}"
+  when: p.condition | default(True)
   loop_control:
     loop_var: p
 

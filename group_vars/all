@@ -10,7 +10,7 @@ bfg_version: "1.12.13"
 my_distribution_release: xenial
 minikube_version: "0.30.0"
 mailgun_version: "master"
-doctl_version: "1.12.0"
+doctl_version: "1.12.1"
 dep_version: "0.5.0"
 helm_version: "2.9.1"
 pet_version: "0.3.0"
@@ -25,7 +25,6 @@ stern_version: "1.10.0"
 kail_version: "0.7.0"
 grv_version: "0.3.0"
 jj_version: "1.2.0"
-rke_version: "0.1.2"
 terraform_version: "0.11.7"
 terraform_provider_ct_version: "0.2.1"
 vegeta_version: "11.3.0"
@@ -35,11 +34,20 @@ dive_version: "0.4.0"
 yay_version: "9.0.1"
 gh_products:
   -
+    name: "go"
+    version: "{{golang_version}}"
+    url: "https://dl.google.com/go"
+    package: "go{{golang_version}}.linux-amd64.tar.gz"
+    is: "tgz"
+    bundle: True
+    condition: ansible_distribution != "Archlinux"
+  -
     name: "yay"
     version: "{{yay_version}}"
     url: "https://github.com/Jguer/yay/releases/download/v{{yay_version}}"
     package: "yay_{{yay_version}}_x86_64.tar.gz"
     is: "tgz"
+    condition: ansible_distribution == "Archlinux"
   -
     name: "dive"
     version: "{{dive_version}}"
@@ -70,12 +78,6 @@ gh_products:
     url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
     package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
     is: "tgz"
-  -
-    name: "rke"
-    version: "{{rke_version}}"
-    url: "https://github.com/rancher/rke/releases/download/v{{rke_version}}"
-    package: "rke_linux-amd64"
-    is: "bin"
   -
     name: "dep"
     version: "{{dep_version}}"
@@ -210,7 +212,7 @@ dropbox_keyserver: pgp.mit.edu
 
 liquidprompt_version: v_1.11
 autoenv_version: v0.2.0
-gitopen_version: v2.1.0 
+gitopen_version: v2.1.0
 
 base_packages:
     - apt-transport-https
@@ -285,7 +287,7 @@ aur_packages:
     - kubectl-bin
     - skopeo
     - tmuxinator
-    
+
 fedora_packages:
     - binutils
     - buildah
