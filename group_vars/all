@@ -284,6 +284,7 @@ aur_packages:
     - google-chrome
     - kubectl-bin
     - skopeo
+    - tmuxinator
     
 fedora_packages:
     - binutils
