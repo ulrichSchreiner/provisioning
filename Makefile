@@ -13,4 +13,4 @@ all: playbook ;
 	  --net host \
     	  -v $(ANSIBLE_CONFIG_DIR):/etc/ansible \
 	  -v `pwd`:/work ulrichschreiner/ansible playbook \
-	  -u `whoami` -v -i inventory $@.yaml
+	  -u `whoami` -i inventory $@.yaml
