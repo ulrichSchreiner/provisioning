@@ -50,7 +50,7 @@
       when: newsources is changed
 
     - name: install base packages
-      apt: name=["{{base_packages}}"] state=present
+      apt: name={{base_packages}} state=present
   when: ansible_distribution == "Ubuntu"
 
 - name: do fedora specific things
