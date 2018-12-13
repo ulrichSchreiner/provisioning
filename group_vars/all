@@ -262,12 +262,14 @@ arch_packages:
     - fzf
     - gcc
     - git-lfs
+    - gnome-keyring
     - grep
     - go
     - gzip
     - htop
     - httpie
     - jq
+    - libsecret
     - make
     - meld
     - mercurial
