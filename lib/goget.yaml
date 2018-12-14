@@ -10,7 +10,7 @@
   when: item_cloned is changed
 
 - name: get dependencies
-  shell: cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go get -u {{item.getpath|default("./...")}}
+  shell: cd $HOME/go/src/{{item.path}} && go get -u {{item.getpath|default("./...")}}
   when: item_cloned is changed
 
 - name: checkout version
@@ -18,5 +18,5 @@
   when: item_cloned is changed
 
 - name: install {{item.name}}
-  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && {{go_base}}/bin/go install {{item.install|default("./...")}}
+  shell: export GOPATH=$HOME/go && cd $HOME/go/src/{{item.path}} && go install {{item.install|default("./...")}}
   when: item_cloned is changed
