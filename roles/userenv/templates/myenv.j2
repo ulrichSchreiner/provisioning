@@ -5,6 +5,8 @@ source ~/ownCloud/Entwicklung/environment
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
 _atocker() {
+  CONFIG=$HOME/.config/atocker
+  mkdir -p $CONFIG
   DBPATH=$(echo $DBUS_SESSION_BUS_ADDRESS|cut -d '=' -f2)
 docker run  \
     --rm \
@@ -16,7 +18,7 @@ docker run  \
     -v /etc/localtime:/etc/localtime:ro \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v `pwd`:/work \
-    -v $HOME/ownCloud/appconfig:/config \
+    -v $CONFIG:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
     -v /var/run/dbus:/var/run/dbus:ro \
