@@ -1,3 +1,6 @@
+- name: display the product
+  debug: msg="Install {{product.name}}, version {{product.version}}"
+
 - name: create local product directory
   file: path="{{localinstallation}}/{{product.name}}-{{product.version}}" state=directory mode="0755"
   register: product_directory
