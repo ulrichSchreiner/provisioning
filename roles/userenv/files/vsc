@@ -2,6 +2,7 @@
 
 CFGPATH=$HOME/ownCloud/appconfig
 EXTPATH=$HOME/.config/vscode-extensions
+MOZPATH=$HOME/.config/vscode-mozilla
 mkdir -p $EXTPATH
 CFGPATH=$HOME/ownCloud/appconfig`pwd | cut --complement -d / -n -f 2,3`
 mkdir -p $CFGPATH
@@ -15,6 +16,7 @@ docker run -it -d --rm --net=host \
     -w `pwd` \
     -v $CFGPATH:/config \
     -v $EXTPATH:/config/vscode/.vscode \
+    -v $MOZPATH:/config/vscode-mozilla \
     -v $HOME/ownCloud/Entwicklung/git:/devhome/ownCloud/Entwicklung/git:ro \
     -v $HOME/ownCloud/Entwicklung/gnupg:/devhome/.gnupg \
     -v $XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR \
