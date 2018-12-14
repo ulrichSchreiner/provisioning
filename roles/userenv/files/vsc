@@ -5,6 +5,7 @@ EXTPATH=$HOME/.config/vscode-extensions
 MOZPATH=$HOME/.config/vscode-mozilla
 mkdir -p $EXTPATH
 mkdir -p $CFGPATH
+mkdir -p $MOZPATH
 DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=|," ' { print $2 } '`
 docker run -it -d --rm --net=host \
     --ipc=host \
