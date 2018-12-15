@@ -257,6 +257,7 @@ arch_packages:
     - buildah
     - clang
     - curl
+    - flatpak
     - fwupd
     - fwupdate
     - fzf
@@ -280,6 +281,7 @@ arch_packages:
     - tokei
     - vim
     - xclip
+    - xdg-desktop-portal-kde
     - yarn
     - zsh
 
