@@ -270,6 +270,7 @@ arch_packages:
     - htop
     - httpie
     - jq
+    - latte-dock
     - libsecret
     - make
     - meld
