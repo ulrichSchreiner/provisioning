@@ -23,7 +23,7 @@
   file: path=~/tools state=directory mode=0755
 
 - name: make the go directory a GOPATH enabled workspace
-  copy: src=goenv dest=~/go/.envrc mode=664
+  template: src=goenv.j2 dest=~/go/.envrc mode=664
 
 - name: install go tools
   include_tasks: lib/goget.yaml
