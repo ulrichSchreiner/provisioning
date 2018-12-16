@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# source the env to lookup the SSH_AUTH_SOCK 
+. "$HOME/.ssh/environment-`hostname -s`"
+
 CFGPATH=$HOME/ownCloud/appconfig
 EXTPATH=$HOME/.config/vscode-extensions
 MOZPATH=$HOME/.config/vscode-mozilla
