@@ -40,7 +40,6 @@ gh_products:
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
-    condition: "{{ansible_distribution != 'Archlinux'}}"
   -
     name: "yay"
     version: "{{yay_version}}"
