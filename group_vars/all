@@ -3,7 +3,7 @@
 fedora_relase: 28
 
 golang_version: "1.11.4"
-goapp_version: "1.9.48"
+goapp_version: "1.9.70"
 docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
