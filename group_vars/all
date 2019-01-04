@@ -32,6 +32,8 @@ go_swagger: "0.17.2"
 linuxkit_version: "0.6"
 dive_version: "0.6.0"
 yay_version: "9.0.1"
+reflex_version: "master"
+
 gh_products:
   -
     name: "go"
@@ -363,6 +365,11 @@ gogetable_tools:
     version: "{{mailgun_version}}"
     url: https://github.com/mailgun/mailgun-go
     path: github.com/mailgun/mailgun-go
+  -
+    name: reflex
+    version: "{{reflex_version}}"
+    url: https://github.com/cespare/reflex
+    path: github.com/cespare/reflex
 
 old_gh_product:
   -
