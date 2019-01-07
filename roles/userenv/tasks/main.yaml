@@ -48,6 +48,10 @@
   copy: src=vsc dest=/usr/local/bin/vsc mode=0755
   become: yes
 
+- name: create a vsr starter script
+  copy: src=vsr dest=/usr/local/bin/vsr mode=0755
+  become: yes
+
 - name: create a starter for chrome with remote debugging
   copy: src=chromedebug dest=/usr/local/bin/chromedebug mode=0755
   become: yes
