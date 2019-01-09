@@ -46,4 +46,4 @@ docker run -it -d --rm --net=host \
     -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
     -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
     -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
-    ulrichschreiner/vscode-ruest:latest "$@"
+    ulrichschreiner/vscode-rust:latest "$@"
