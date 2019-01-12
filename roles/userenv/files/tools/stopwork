@@ -1,0 +1,25 @@
+#!/bin/sh
+
+_stopwork() {
+  echo -e "lock|suspend|shutdown|reboot" | rofi -i -sep '|' -dmenu -p "Stop working?"
+}
+
+act=$(_stopwork)
+case $act in
+	lock)
+		loginctl lock-session
+    break
+		;;
+	suspend)
+		systemctl suspend
+		break
+		;;
+  shutdown)
+		systemctl shutdown
+		break
+		;;
+  reboot)
+		systemctl reboot
+		break
+		;;
+esac

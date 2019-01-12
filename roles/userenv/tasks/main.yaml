@@ -22,6 +22,14 @@
 - name: create local tools
   file: path=~/tools state=directory mode=0755
 
+- name: install some tool scripts
+  copy:
+    src: "{{ item }}"
+    dest: "~/bin"
+    mode: 0755
+  with_fileglob:
+    - "tools/*"
+
 - name: make the go directory a GOPATH enabled workspace
   template: src=goenv.j2 dest=~/go/.envrc mode=664
 

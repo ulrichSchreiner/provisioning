@@ -279,6 +279,7 @@ arch_packages:
     - nodejs
     - npm
     - ripgrep
+    - rofi
     - tmux
     - tokei
     - vim

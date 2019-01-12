@@ -20,7 +20,7 @@ docker run  \
     -v `pwd`:/work \
     -v $CONFIG:/config \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
-    -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+    -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent \
     -v /var/run/dbus:/var/run/dbus:ro \
     -v $DBPATH:/dbus \
     -e DBUS_SESSION_BUS_ADDRESS="unix:path=/dbus" \

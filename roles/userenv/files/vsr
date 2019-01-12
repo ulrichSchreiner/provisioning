@@ -28,7 +28,7 @@ docker run -it -d --rm --net=host \
     -e DISPLAY=unix$DISPLAY \
     -v $HOME/.gitconfig:/devhome/.gitconfig \
     -v $HOME/.kube:/devhome/.kube \
-    -v $SSH_AUTH_SOCK:/ssh-agent --env SSH_AUTH_SOCK=/ssh-agent \
+    -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent \
     -v $HOME/.git-credential-cache:/devhome/.git-credential-cache \
     -v /var/run/dbus:/var/run/dbus:ro \
     -v /run/docker.sock:/run/docker.sock:ro \
