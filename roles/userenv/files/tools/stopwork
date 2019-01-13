@@ -6,16 +6,16 @@ _stopwork() {
 
 act=$(_stopwork)
 case $act in
-	lock)
+  lock)
 		loginctl lock-session
-    break
+    		break
 		;;
-	suspend)
+  suspend)
 		systemctl suspend
 		break
 		;;
   shutdown)
-		systemctl shutdown
+		systemctl poweroff 
 		break
 		;;
   reboot)
