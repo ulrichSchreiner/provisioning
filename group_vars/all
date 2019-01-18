@@ -8,9 +8,8 @@ docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-minikube_version: "0.32.0"
-mailgun_version: "master"
-doctl_version: "1.12.2"
+minikube_version: "0.33.0"
+doctl_version: "1.13.0"
 dep_version: "0.5.0"
 helm_version: "2.9.1"
 pet_version: "0.3.0"
@@ -361,11 +360,6 @@ gogetable_tools:
     version: "ef6db91d284a0e7badaa1f0c404c30aa7dee3aed"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
-  -
-    name: mailguncli
-    version: "{{mailgun_version}}"
-    url: https://github.com/mailgun/mailgun-go
-    path: github.com/mailgun/mailgun-go
   -
     name: reflex
     version: "{{reflex_version}}"
