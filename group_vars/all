@@ -237,7 +237,6 @@ base_packages:
     - npm
     - tar
     - tmux
-    - tmuxinator
     - ttf-ancient-fonts
     - unzip
     - vim
@@ -293,7 +292,7 @@ aur_packages:
     - kubectl-bin
     - libpod
     - skopeo
-    - tmuxinator
+    - tmuxp
 
 fedora_packages:
     - binutils
