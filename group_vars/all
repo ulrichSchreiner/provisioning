@@ -276,6 +276,7 @@ arch_packages:
     - mercurial
     - nodejs
     - npm
+    - podman
     - ripgrep
     - rofi
     - tmux
@@ -290,7 +291,6 @@ aur_packages:
     - direnv
     - google-chrome
     - kubectl-bin
-    - libpod
     - skopeo
     - tmuxp
 
