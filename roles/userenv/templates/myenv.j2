@@ -49,7 +49,7 @@ alias ccat='highlight -O ansi'
 alias kubebox='docker pull astefanutti/kubebox && docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox'
 alias xclip="xclip -selection c"
 alias gdf="git difftool -x meld --dir-diff"
-alias vi="vim"
+alias vi="nvim"
 
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
@@ -58,7 +58,7 @@ export NODE_PATH="$HOME/npm/lib/node_modules"
 export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:~/.cargo/bin:$PATH
 
 export ANSIBLE_CONFIG_DIR=$HOME/ownCloud/ansible-config
-export EDITOR='vim'
+export EDITOR='nvim'
 export GPG_TTY=$(tty)
 
 function prev() {

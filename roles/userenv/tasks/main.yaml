@@ -135,23 +135,3 @@
 
 - name: copy terraform configuration
   copy: src=terraformrc dest=~/.terraformrc
-
-- name: create the folders for pathogen.vim
-  file: path=~/.vim/{{item}} state=directory mode=0755
-  with_items:
-    - autoload
-    - bundle
-
-- name: Download pathogen.vim
-  get_url:
-    url: https://tpo.pe/pathogen.vim
-    dest: ~/.vim/autoload/pathogen.vim
-    mode: 0644
-
-- name: install my vimrc
-  template: src=vimrc.j2 dest=~/.vimrc
-
-- name: install NERDTree
-  git:
-    repo: https://github.com/scrooloose/nerdtree.git
-    dest: ~/.vim/bundle/nerdtree

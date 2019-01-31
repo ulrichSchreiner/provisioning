@@ -239,7 +239,7 @@ base_packages:
     - tmux
     - ttf-ancient-fonts
     - unzip
-    - vim
+    - neovim
     - virtualbox
     - virtualbox-dkms
     - libpcap-dev
@@ -281,7 +281,7 @@ arch_packages:
     - rofi
     - tmux
     - tokei
-    - vim
+    - neovim
     - xclip
     - xdg-desktop-portal-kde
     - yarn
