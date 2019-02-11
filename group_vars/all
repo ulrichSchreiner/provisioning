@@ -283,6 +283,7 @@ arch_packages:
 aur_packages:
     - direnv
     - google-chrome
+    - gotop-bin
     - kubectl-bin
     - skopeo
     - tmuxp
