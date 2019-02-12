@@ -285,6 +285,7 @@ aur_packages:
     - google-chrome
     - gotop-bin
     - kubectl-bin
+    - lego
     - skopeo
     - tmuxp
 
