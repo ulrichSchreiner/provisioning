@@ -286,6 +286,7 @@ aur_packages:
     - gotop-bin
     - kubectl-bin
     - lego
+    - modd
     - skopeo
     - tmuxp
 
