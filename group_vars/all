@@ -261,7 +261,7 @@ arch_packages:
     - git-lfs
     - gnome-keyring
     - grep
-    - go
+    - go-pie
     - gzip
     - htop
     - httpie
@@ -289,6 +289,7 @@ aur_packages:
     - google-chrome
     - gotop-bin
     - kubectl-bin
+    - lazygit
     - lego
     - modd
     - skopeo
