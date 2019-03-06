@@ -105,14 +105,8 @@
 
 - name: install ktx
   git: >
-    repo=https://github.com/heptio/ktx.git
+    repo=https://github.com/ulrichSchreiner/ktx.git
     dest=~/tools/ktx
-
-- name: install ktx binary
-  file:
-    src: ~/tools/ktx/ktx
-    dest: ~/bin/ktx
-    state: link
 
 - name: install fubectl
   git: >
