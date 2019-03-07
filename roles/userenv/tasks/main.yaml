@@ -105,7 +105,7 @@
 
 - name: install ktx
   git: >
-    repo=https://github.com/ulrichSchreiner/ktx.git
+    repo=https://github.com/heptiolabs/ktx.git
     dest=~/tools/ktx
 
 - name: install fubectl
