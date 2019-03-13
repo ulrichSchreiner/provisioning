@@ -91,4 +91,7 @@
         line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
         create: yes
         validate: 'visudo -cf %s'
+    - lineinfile:
+        path: /etc/systemd/system.conf
+        line: 'DefaultTimeoutStopSec=30s'
   when: ansible_distribution == "Archlinux"
