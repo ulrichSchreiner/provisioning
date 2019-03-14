@@ -3,7 +3,7 @@
 # source the env to lookup the SSH_AUTH_SOCK
 . "$HOME/.ssh/environment-`hostname -s`"
 
-CFGPATH=$HOME/ownCloud/rustconfig
+CFGPATH=$HOME/Nextcloud/rustconfig
 EXTPATH=$HOME/.config/vscode-rust-extensions
 MOZPATH=$HOME/.config/vscode-rust-mozilla
 
@@ -22,8 +22,8 @@ docker run -it -d --rm --net=host \
     -v $CFGPATH:/config \
     -v $EXTPATH:/config/vscode/.vscode \
     -v $MOZPATH:/config/vsc-mozilla \
-    -v $HOME/ownCloud/Entwicklung/git:/devhome/ownCloud/Entwicklung/git:ro \
-    -v $HOME/ownCloud/Entwicklung/gnupg:/devhome/.gnupg \
+    -v $HOME/Nextcloud/Entwicklung/git:/devhome/Nextcloud/Entwicklung/git:ro \
+    -v $HOME/Nextcloud/Entwicklung/gnupg:/devhome/.gnupg \
     -v $XDG_RUNTIME_DIR:$XDG_RUNTIME_DIR \
     -e DISPLAY=unix$DISPLAY \
     -v $HOME/.gitconfig:/devhome/.gitconfig \

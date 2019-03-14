@@ -1,6 +1,6 @@
 export TERM=xterm-256color
 
-source ~/ownCloud/Entwicklung/environment
+source ~/Nextcloud/Entwicklung/environment
 
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
@@ -58,7 +58,7 @@ export NODE_PATH="$HOME/npm/lib/node_modules"
 # GOROOT is only required if not /usr/local/go, but leave it here
 export PATH=~/bin:~/go/bin:{{go_base}}/bin:{{goapp_base}}:~/npm/bin:~/.cargo/bin:$PATH
 
-export ANSIBLE_CONFIG_DIR=$HOME/ownCloud/ansible-config
+export ANSIBLE_CONFIG_DIR=$HOME/Nextcloud/ansible-config
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 
