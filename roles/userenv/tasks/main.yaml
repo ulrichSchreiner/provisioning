@@ -129,3 +129,12 @@
 
 - name: copy terraform configuration
   copy: src=terraformrc dest=~/.terraformrc
+
+- name: check for vagrant libvirt plugin
+  command: vagrant plugin list
+  register: vagrant_plugins
+  changed_when: false
+
+- name: install vagrant plugin for libvirt
+  command: vagrant plugin install vagrant-libvirt
+  when: vagrant_plugins.stdout.find('vagrant-libvirt') == -1

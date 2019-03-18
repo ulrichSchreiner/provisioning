@@ -275,18 +275,22 @@ arch_packages:
     - jq
     - latte-dock
     - libsecret
+    - libvirt
     - make
     - meld
     - mercurial
     - nextcloud-client
     - nodejs
     - npm
+    - ovmf
     - podman
+    - qemu
     - ripgrep
     - rofi
     - tmux
     - tokei
     - neovim
+    - vagrant
     - xclip
     - xdg-desktop-portal-kde
     - yarn
