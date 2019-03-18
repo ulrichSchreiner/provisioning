@@ -31,8 +31,15 @@ linuxkit_version: "0.6"
 dive_version: "0.7.0"
 yay_version: "9.0.1"
 reflex_version: "master"
+lab_version: "0.15.2"
 
 gh_products:
+  -
+    name: "lab"
+    version: "{{lab_version}}"
+    url: "https://github.com/zaquestion/lab/releases/download/v{{lab_version}}"
+    package: "lab_{{lab_version}}_linux_amd64.tar.gz"
+    is: "tgz0"
   -
     name: "go"
     version: "{{golang_version}}"
