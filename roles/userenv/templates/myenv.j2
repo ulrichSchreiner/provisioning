@@ -4,6 +4,8 @@ source ~/Nextcloud/Entwicklung/environment
 
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
+alias k3s="cd ~/tools/k3s && docker-compose up ${@}"
+
 _atocker() {
   CONFIG=$HOME/.config/atocker
   mkdir -p $CONFIG

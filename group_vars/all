@@ -298,7 +298,6 @@ aur_packages:
     - direnv
     - google-chrome
     - gotop-bin
-    - k3s-bin
     - kubectl-bin
     - lazygit
     - lego

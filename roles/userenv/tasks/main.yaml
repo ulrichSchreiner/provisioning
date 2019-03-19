@@ -130,3 +130,8 @@
 - name: copy terraform configuration
   copy: src=terraformrc dest=~/.terraformrc
 
+- name: create local k3s directory
+  file: path=~/tools/k3s state=directory mode=0755
+
+- name: copy k3s compose file
+  copy: src=k3s-compose.yml dest=~/tools/k3s/docker-compose.yml
