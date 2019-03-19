@@ -256,6 +256,7 @@ arch_packages:
     - buildah
     - clang
     - curl
+    - iptables
     - firefox
     - firefox-i18n-de
     - firefox-developer-edition
@@ -282,15 +283,12 @@ arch_packages:
     - nextcloud-client
     - nodejs
     - npm
-    - ovmf
     - podman
-    - qemu
     - ripgrep
     - rofi
     - tmux
     - tokei
     - neovim
-    - vagrant
     - xclip
     - xdg-desktop-portal-kde
     - yarn
@@ -300,6 +298,7 @@ aur_packages:
     - direnv
     - google-chrome
     - gotop-bin
+    - k3s-bin
     - kubectl-bin
     - lazygit
     - lego
