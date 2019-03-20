@@ -259,8 +259,6 @@ arch_packages:
     - iptables
     - firefox
     - firefox-i18n-de
-    - firefox-developer-edition
-    - firefox-developer-edition-i18n-de
     - flatpak
     - fwupd
     - fwupdate
