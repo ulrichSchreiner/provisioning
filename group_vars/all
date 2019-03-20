@@ -287,6 +287,8 @@ arch_packages:
     - tmux
     - tokei
     - neovim
+    - virtualbox
+    - virtualbox-host-modules-arch
     - xclip
     - xdg-desktop-portal-kde
     - yarn
