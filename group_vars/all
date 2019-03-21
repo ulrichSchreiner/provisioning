@@ -296,6 +296,7 @@ arch_packages:
 
 aur_packages:
     - direnv
+    - google-cloud-sdk
     - google-chrome
     - gotop-bin
     - kubectl-bin
