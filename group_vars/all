@@ -302,6 +302,7 @@ aur_packages:
     - kubectl-bin
     - lazygit
     - lego
+    - micro
     - modd
     - skopeo
     - tmuxp
