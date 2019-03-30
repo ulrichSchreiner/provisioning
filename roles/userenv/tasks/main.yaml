@@ -135,3 +135,18 @@
 
 - name: copy k3s compose file
   copy: src=k3s-compose.yml dest=~/tools/k3s/docker-compose.yml
+
+- name: copy my nanorc
+  copy: src=nanorc dest=~/.nanorc
+
+- name: create local micro plugins directory
+  file: path=~/.config/micro/plugins state=directory mode=0755
+
+- name: install filemanager plugin for micro
+  git: >
+    repo=https://github.com/NicolaiSoeborg/filemanager-plugin
+    dest=~/.config/micro/plugins/filemanager
+    
+- name: start filemanager when micro starts
+  lineinfile: dest=~/.config/micro/init.lua regexp="filemanager.toggle_tree" line="filemanager.toggle_tree()" create=yes state=present
+  
