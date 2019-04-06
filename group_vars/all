@@ -29,7 +29,6 @@ vegeta_version: "11.3.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.6"
 dive_version: "0.7.0"
-yay_version: "9.0.1"
 reflex_version: "master"
 lab_version: "0.15.2"
 
@@ -47,13 +46,6 @@ gh_products:
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
-  -
-    name: "yay"
-    version: "{{yay_version}}"
-    url: "https://github.com/Jguer/yay/releases/download/v{{yay_version}}"
-    package: "yay_{{yay_version}}_x86_64.tar.gz"
-    is: "tgz"
-    condition: "{{ansible_distribution == 'Archlinux'}}"
   -
     name: "dive"
     version: "{{dive_version}}"
@@ -292,6 +284,7 @@ arch_packages:
     - xclip
     - xdg-desktop-portal-kde
     - yarn
+    - yay
     - zsh
 
 aur_packages:
