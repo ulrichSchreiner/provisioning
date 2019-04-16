@@ -31,8 +31,15 @@ linuxkit_version: "0.6"
 dive_version: "0.7.0"
 reflex_version: "master"
 lab_version: "0.15.2"
+kind_version: "0.2.1"
 
 gh_products:
+  -
+    name: "kind"
+    version: "{{kind_version}}"
+    url: "https://github.com/kubernetes-sigs/kind/releases/download/{{kind_version}}"
+    package: "kind-linux-amd64"
+    is: "bin"
   -
     name: "lab"
     version: "{{lab_version}}"
