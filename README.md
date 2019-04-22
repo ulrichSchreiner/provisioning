@@ -2,7 +2,7 @@
 
 The machine needs:
 
- - to be a ubuntu/debian based system
+ - to be a ubuntu/debian/fedora/arch based system
  - a running SSH daemon
  - a running docker daemon
  - my userid with sudo-rights
