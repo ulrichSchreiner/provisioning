@@ -46,11 +46,7 @@ _sphinx() {
 alias sphinx=_sphinx
 
 __sshcode() {
-  export VSCODE_CONFIG_DIR="/tmp/code-`id -un`/User"
-  export VSCODE_EXTENSIONS_DIR="/tmp/code-`id -un`/extensions"
-  mkdir -p ${VSCODE_CONFIG_DIR}
-  mkdir -p ${VSCODE_EXTENSIONS_DIR}
-  $HOME/go/bin/sshcode "$@"
+  $HOME/go/bin/sshcode --skipsync "$@"
 }
 alias sshcode=__sshcode
 
