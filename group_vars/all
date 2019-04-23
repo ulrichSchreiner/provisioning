@@ -32,6 +32,7 @@ dive_version: "0.7.0"
 reflex_version: "master"
 lab_version: "0.15.2"
 kind_version: "0.2.1"
+sshcode: "0.5.0"
 
 gh_products:
   -
@@ -368,8 +369,13 @@ goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
   -
+    name: sshcode
+    version: "v0.5.0"
+    url: https://github.com/codercom/sshcode
+    path: github.com/codercom/sshcode
+  -
     name: goconvey
-    version: "ef6db91d284a0e7badaa1f0c404c30aa7dee3aed"
+    version: "68dc04aab96ae4326137d6b77330c224063a927e"
     url: https://github.com/smartystreets/goconvey.git
     path: github.com/smartystreets/goconvey
   -

@@ -45,6 +45,15 @@ _sphinx() {
 }
 alias sphinx=_sphinx
 
+__sshcode() {
+  export VSCODE_CONFIG_DIR="/tmp/code-`id -un`/User"
+  export VSCODE_EXTENSIONS_DIR="/tmp/code-`id -un`/extensions"
+  mkdir -p ${VSCODE_CONFIG_DIR}
+  mkdir -p ${VSCODE_EXTENSIONS_DIR}
+  $HOME/go/bin/sshcode "$@"
+}
+alias sshcode=__sshcode
+
 alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
 alias icafox="~/workspaces/ize0h88/dockers/icafox/icafox"
 alias ccat='highlight -O ansi'
