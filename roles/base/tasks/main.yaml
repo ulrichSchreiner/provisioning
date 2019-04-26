@@ -95,3 +95,22 @@
         path: /etc/systemd/system.conf
         line: 'DefaultTimeoutStopSec=30s'
   when: ansible_distribution == "Archlinux"
+
+# develop with docker you get after a few hours this error:
+#   neighbour: arp_cache: neighbor table overflow!
+# so we have to increase some values
+- sysctl:
+    name: net.ipv4.neigh.default.gc_thresh1
+    value: 8096
+    sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
+    reload: yes
+- sysctl:
+    name: net.ipv4.neigh.default.gc_thresh2
+    value: 12288
+    sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
+    reload: yes
+- sysctl:
+    name: net.ipv4.neigh.default.gc_thresh3
+    value: 16384
+    sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
+    reload: yes
