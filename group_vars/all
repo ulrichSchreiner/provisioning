@@ -33,7 +33,7 @@ reflex_version: "master"
 lab_version: "0.15.2"
 kind_version: "0.2.1"
 sshcode: "0.7.0"
-procs_version: "0.8.2"
+procs_version: "0.8.3"
 
 gh_products:
   -
