@@ -33,8 +33,16 @@ reflex_version: "master"
 lab_version: "0.15.2"
 kind_version: "0.2.1"
 sshcode: "0.7.0"
+procs_version: "0.8.2"
 
 gh_products:
+  -
+    name: "procs"
+    binary: "procs"
+    version: "{{procs_version}}"
+    url: "https://github.com/dalance/procs/releases/download/v{{procs_version}}"
+    package: "procs-v{{procs_version}}-x86_64-lnx.zip"
+    is: "zip"
   -
     name: "kind"
     version: "{{kind_version}}"
