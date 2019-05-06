@@ -156,3 +156,13 @@
 
 - name: start filemanager when micro starts
   lineinfile: dest=~/.config/micro/init.lua regexp="filemanager.toggle_tree" line="filemanager.toggle_tree()" create=yes state=present
+
+- name: terraform plugin directory
+  file: path=~/.terraform.d/plugins/linux_amd64/ state=directory mode=0755
+
+- name: symlink terraform ct plugin
+  file: >
+    src={{}}
+    src={{localinstallation}}/terraform-provider-ct-{{terraform_provider_ct_version}}/terraform-provider-ct
+    dest=~/.terraform.d/plugins/linux_amd64/terraform-provider-ct_v{{terraform_provider_ct_version}}
+    state=link
