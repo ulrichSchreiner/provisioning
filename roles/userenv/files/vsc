@@ -9,6 +9,10 @@ MOZPATH=$HOME/.config/vscode-mozilla
 mkdir -p $EXTPATH
 mkdir -p $CFGPATH
 mkdir -p $MOZPATH
+mkdir -p $EXTPATH/config/vscode/.vscode
+mkdir -p $CFGPATH/vscode
+mkdir -p $CFGPATH/vsc-mozilla
+mkdir -p $MOZPATH/vsc-mozilla
 DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=|," ' { print $2 } '`
 docker run -it -d --rm --net=host \
     --ipc=host \
