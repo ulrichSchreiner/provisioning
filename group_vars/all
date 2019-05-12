@@ -33,8 +33,15 @@ lab_version: "0.15.2"
 kind_version: "0.2.1"
 sshcode: "0.7.0"
 procs_version: "0.8.5"
+act_version: "0.1.2"
 
 gh_products:
+  -
+    name: "act"
+    version: "{{act_version}}"
+    url: "https://github.com/nektos/act/releases/download/v{{act_version}}"
+    package: "act_Linux_x86_64.tar.gz"
+    is: "tgz0"
   -
     name: "procs"
     binary: "procs"

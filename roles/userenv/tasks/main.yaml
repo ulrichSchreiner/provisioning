@@ -162,7 +162,12 @@
 
 - name: symlink terraform ct plugin
   file: >
-    src={{}}
     src={{localinstallation}}/terraform-provider-ct-{{terraform_provider_ct_version}}/terraform-provider-ct
     dest=~/.terraform.d/plugins/linux_amd64/terraform-provider-ct_v{{terraform_provider_ct_version}}
     state=link
+
+- name: symlink the wd (warp) state file
+  file:
+    src: ~/Nextcloud/Entwicklung/warprc
+    dest: ~/.warprc
+    state: link
