@@ -34,8 +34,16 @@ kind_version: "0.2.1"
 sshcode: "0.7.0"
 procs_version: "0.8.5"
 act_version: "0.1.2"
+kubeprompt_version: "1.0.6"
 
 gh_products:
+  -
+    name: "kube-prompt"
+    binary: "kube-prompt"
+    version: "{{kubeprompt_version}}"
+    url: "https://github.com/c-bata/kube-prompt/releases/download/v{{kubeprompt_version}}"
+    package: "kube-prompt_v{{kubeprompt_version}}_linux_amd64.zip"
+    is: "zip"
   -
     name: "act"
     version: "{{act_version}}"
