@@ -3,16 +3,12 @@
 # source the env to lookup the SSH_AUTH_SOCK
 . "$HOME/.ssh/environment-`hostname -s`"
 
-CFGPATH=$HOME/Nextcloud/rustconfig
-EXTPATH=$HOME/.config/vscode-rust-extensions
-MOZPATH=$HOME/.config/vscode-rust-mozilla
-
-mkdir -p $EXTPATH
+CFGPATH=$HOME/.config/vsc-insiders
 mkdir -p $CFGPATH
-mkdir -p $MOZPATH
-
+mkdir -p $CFGPATH/vscode
+mkdir -p $CFGPATH/vsc-mozilla
 DBUSPATH=`echo $DBUS_SESSION_BUS_ADDRESS | awk -F "=|," ' { print $2 } '`
-docker run -it -d --rm --net=host \
+docker run -it -d --rm --net=host --name $HOSTNAME \
     --ipc=host \
     --privileged \
     --security-opt=seccomp:unconfined \
@@ -20,7 +16,6 @@ docker run -it -d --rm --net=host \
     -v `pwd`:`pwd` \
     -w `pwd` \
     -v $CFGPATH:/config \
-    -v $EXTPATH:/config/vscode/.vscode \
     -v $MOZPATH:/config/vsc-mozilla \
     -v $HOME/Nextcloud/Entwicklung/git:/devhome/Nextcloud/Entwicklung/git:ro \
     -v $HOME/Nextcloud/Entwicklung/gnupg:/devhome/.gnupg \
@@ -46,4 +41,6 @@ docker run -it -d --rm --net=host \
     -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
     -e DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS \
     -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
-    ulrichschreiner/vscode-rust:latest "$@"
+    -e GOPATH=$HOME/go \
+    -e GO111MODULE=on \
+    quay.io/ulrichschreiner/vsc:insiders "$@"
