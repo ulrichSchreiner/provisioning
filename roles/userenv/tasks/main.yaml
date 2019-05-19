@@ -171,3 +171,9 @@
     src: ~/Nextcloud/Entwicklung/warprc
     dest: ~/.warprc
     state: link
+
+- name: symlink the vscode-insiders user settings
+  file:
+    src: ~/Nextcloud/appconfig/usersettings/insiders-settings.json
+    dest: "~/.config/Code - Insiders/User/settings.json"
+    state: link
