@@ -114,3 +114,17 @@
     value: 16384
     sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
     reload: yes
+
+- name: enable userns for podman
+  sysctl:
+    name: kernel.unprivileged_userns_clone
+    value: 1
+    sysctl_file: /etc/sysctl.d/podman.conf
+    reload: yes
+
+- name: set subuid/subgid
+  lineinfile: dest=/etc/{{item}} state=present line="usc:100000:65536"
+  loop:
+    - subuid
+    - subgid
+

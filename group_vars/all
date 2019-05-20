@@ -302,6 +302,7 @@ arch_packages:
     - podman
     - ripgrep
     - rofi
+    - slirp4netns
     - tmux
     - tokei
     - neovim
