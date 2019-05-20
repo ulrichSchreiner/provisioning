@@ -285,6 +285,7 @@ arch_packages:
     - grep
     - go-pie
     - gzip
+    - highlight
     - htop
     - httpie
     - jq

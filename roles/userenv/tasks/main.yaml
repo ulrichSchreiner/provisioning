@@ -108,6 +108,11 @@
     repo=https://github.com/romkatv/powerlevel10k.git
     dest=~/.oh-my-zsh/custom/themes/powerlevel10k
 
+- name: install autosuggestion
+  git: >
+    repo=https://github.com/zsh-users/zsh-autosuggestions.git
+    dest=~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
 - name: install kube-ps1
   git: >
     repo=https://github.com/jonmosco/kube-ps1.git
