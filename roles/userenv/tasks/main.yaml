@@ -172,8 +172,8 @@
     dest: ~/.warprc
     state: link
 
-- name: symlink the vscode-insiders user settings
-  file:
-    src: ~/Nextcloud/appconfig/usersettings/insiders/User
-    dest: "~/.config/Code - Insiders/User"
-    state: link
+- name: create local vscode config settings
+  include: vscode.yaml
+  loop:
+    - "Code - Insiders"
+    - "Code"

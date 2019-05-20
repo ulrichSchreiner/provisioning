@@ -1,0 +1,17 @@
+- name: create local Code config directory   
+  file:
+    path: "~/.config/{{item}}"
+    state: directory
+    mode: 0755
+
+- name: create sync Code user-config directory     
+  file:
+    path: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
+    state: directory
+    mode: 0755
+
+- name: symlink the vscode user settings
+  file:
+    src: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
+    dest: "~/.config/{{item}}/User"
+    state: link
