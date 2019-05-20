@@ -123,7 +123,7 @@
     reload: yes
 
 - name: set subuid/subgid
-  lineinfile: dest=/etc/{{item}} state=present line="usc:100000:65536"
+  lineinfile: dest=/etc/{{item}} state=present line="usc:100000:65536" create=true
   loop:
     - subuid
     - subgid
