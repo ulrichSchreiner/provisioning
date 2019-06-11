@@ -32,7 +32,7 @@ reflex_version: "master"
 lab_version: "0.15.2"
 kind_version: "0.3.0"
 sshcode: "0.8.0"
-procs_version: "0.8.5"
+procs_version: "0.8.6"
 act_version: "0.1.2"
 kubeprompt_version: "1.0.6"
 
