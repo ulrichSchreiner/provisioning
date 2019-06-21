@@ -325,6 +325,7 @@ aur_packages:
     - lego
     - micro
     - modd
+    - ripgrep-all
     - skopeo
     - tmuxp
 
