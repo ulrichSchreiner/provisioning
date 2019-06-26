@@ -8,7 +8,7 @@ docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-minikube_version: "1.1.0"
+minikube_version: "1.2.0"
 doctl_version: "1.20.1"
 dep_version: "0.5.0"
 helm_version: "2.14.1"
@@ -32,7 +32,7 @@ reflex_version: "master"
 lab_version: "0.15.2"
 kind_version: "0.3.0"
 sshcode: "0.8.0"
-procs_version: "0.8.7"
+procs_version: "0.8.8"
 act_version: "0.1.2"
 kubeprompt_version: "1.0.6"
 
