@@ -185,3 +185,9 @@
   loop:
     - "Code - Insiders"
     - "Code"
+
+- name: symlink the gcloud config
+  file:
+    src: ~/Nextcloud/Entwicklung/gcloud
+    dest: ~/.config/gcloud
+    state: link
