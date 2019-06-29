@@ -304,6 +304,8 @@ arch_packages:
     - slirp4netns
     - tmux
     - tokei
+    - typescript
+    - ts-node
     - neovim
     - virtualbox
     - virtualbox-host-modules-arch
