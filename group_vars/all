@@ -317,6 +317,7 @@ arch_packages:
 
 aur_packages:
     - direnv
+    - dnscontrol
     - google-chrome
     - gotop-bin
     - kubectl-bin
