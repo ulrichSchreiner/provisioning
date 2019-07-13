@@ -8,7 +8,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 minikube_version: "1.2.0"
-doctl_version: "1.20.1"
+doctl_version: "1.21.0"
 dep_version: "0.5.0"
 helm_version: "2.14.1"
 pet_version: "0.3.0"
