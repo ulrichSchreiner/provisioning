@@ -191,3 +191,9 @@
     src: ~/Nextcloud/Entwicklung/gcloud
     dest: ~/.config/gcloud
     state: link
+
+- name: install krew as a concrect user
+  block:
+    - name: install krew
+      aur: name=krew-bin
+  when: ansible_distribution == "Archlinux"
