@@ -59,8 +59,8 @@
   copy: src=vsc dest=/usr/local/bin/vsc mode=0755
   become: yes
 
-- name: create a insiders starter script
-  copy: src=insiders dest=/usr/local/bin/insiders mode=0755
+- name: create a vsr(emote) starter script
+  copy: src=vsr dest=/usr/local/bin/vsr mode=0755
   become: yes
 
 - name: create a starter for chrome with remote debugging
