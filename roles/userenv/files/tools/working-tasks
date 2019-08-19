@@ -1,0 +1,33 @@
+#!/bin/sh
+
+_stopwork() {
+  echo -e "VSCode Go|VSCode Remote|lock|suspend|shutdown|reboot" | rofi -i -sep '|' -dmenu -p "Working?"
+}
+
+act=$(_stopwork)
+case $act in
+  lock)
+		loginctl lock-session
+    break
+		;;
+  suspend)
+		systemctl suspend
+		break
+		;;
+  shutdown)
+		systemctl poweroff
+		break
+		;;
+  reboot)
+		systemctl reboot
+		break
+		;;
+  "VSCode Go")
+		/usr/local/bin/vsc
+		break
+		;;
+  "VSCode Remote")
+		/usr/local/bin/vsr
+		break
+		;;
+esac
