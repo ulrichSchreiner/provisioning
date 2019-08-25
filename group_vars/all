@@ -328,6 +328,7 @@ aur_packages:
     - dnscontrol
     - google-chrome
     - gotop-bin
+    - keyleds
     - kubectl-bin
     - kubefwd-bin
     - lazygit
