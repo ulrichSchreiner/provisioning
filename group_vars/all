@@ -279,6 +279,7 @@ arch_packages:
     - buildah
     - clang
     - curl
+    - exa
     - iptables
     - firefox
     - firefox-i18n-de
@@ -299,6 +300,7 @@ arch_packages:
     - latte-dock
     - libsecret
     - libvirt
+    - lsd
     - make
     - meld
     - mercurial
@@ -326,8 +328,10 @@ arch_packages:
 aur_packages:
     - direnv
     - dnscontrol
+    - fd
     - google-chrome
     - gotop-bin
+    - hyperfine
     - keyleds
     - kubectl-bin
     - kubefwd-bin
@@ -335,6 +339,7 @@ aur_packages:
     - lego
     - micro
     - modd
+    - nerd-fonts-complete
     - ripgrep-all
     - skopeo
     - tmuxp
