@@ -274,6 +274,7 @@ fedora_modules:
 
 arch_packages:
     - base-devel
+    - bat
     - binutils
     - bzr
     - buildah
