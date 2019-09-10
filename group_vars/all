@@ -330,7 +330,7 @@ aur_packages:
     - direnv
     - dnscontrol
     - fd
-    - google-chrome
+    - aur/google-chrome
     - gotop-bin
     - hyperfine
     - keyleds
