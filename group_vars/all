@@ -36,6 +36,7 @@ procs_version: "0.8.9"
 act_version: "0.1.2"
 kubeprompt_version: "1.0.6"
 drone_cli_version: "1.1.2"
+pulumi_version: "1.2.0"
 
 gh_products:
   -
@@ -224,6 +225,13 @@ gh_products:
     url: "https://github.com/davecheney/httpstat/releases/download/v{{httpstat_version}}"
     package: "httpstat-linux-amd64-v{{httpstat_version}}"
     is: "bin"
+  -
+    name: "pulumi"
+    version: "{{pulumi_version}}"
+    url: "https://get.pulumi.com/releases/sdk"
+    package: "pulumi-v{{pulumi_version}}-linux-x64.tar.gz"
+    is: "tgz"
+    bundle: True
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 packagecloud_key_url: https://packagecloud.io/gpg.key
