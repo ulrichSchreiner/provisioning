@@ -338,6 +338,7 @@ aur_packages:
     - direnv
     - dnscontrol
     - fd
+    - act
     - aur/google-chrome
     - gotop-bin
     - hyperfine
