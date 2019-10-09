@@ -340,6 +340,7 @@ aur_packages:
     - fd
     - act
     - aur/google-chrome
+    - plasma5-applets-eventcalendar
     - gotop-bin
     - hyperfine
     - keyleds
