@@ -7,10 +7,10 @@ all: playbook ;
 # --ask-become-pass --ask-pass to the invocation of the playbook
 
 %:
-	 @docker run -it --rm \
+	 @docker run -it --rm --init \
 	  -v $(SSH_AUTH_SOCK):/ssh-agent \
 	  --env SSH_AUTH_SOCK=/ssh-agent \
 	  --net host \
     	  -v $(ANSIBLE_CONFIG_DIR):/etc/ansible \
 	  -v `pwd`:/work ulrichschreiner/ansible playbook \
-	  -u `whoami` -i inventory $@.yaml
+	  -v -u `whoami` -i inventory $@.yaml

@@ -25,6 +25,10 @@
     already_here: "{{ std.stat.exists|default(False) }}"
   when: std.stat is defined
 
+- name: show download
+  debug:
+    msg: URL "{{product.url}}/{{product.package}}"
+
 - name: download product
   get_url: >
     url={{product.url}}/{{product.package}}
