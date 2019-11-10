@@ -1,7 +1,7 @@
 #!/bin/sh
 
 _stopwork() {
-  echo -e "VSCode Go|VSCode Remote|lock|suspend|shutdown|reboot" | rofi -i -sep '|' -dmenu -p "Working?"
+  echo -e "VSCode Remote|VSCode Go|lock|suspend|shutdown|reboot" | rofi -i -sep '|' -dmenu -p "Working?"
 }
 
 act=$(_stopwork)
@@ -23,11 +23,11 @@ case $act in
 		break
 		;;
   "VSCode Go")
-		/usr/local/bin/vsc
+		/usr/local/bin/vsc-go
 		break
 		;;
   "VSCode Remote")
-		/usr/local/bin/vsr
+		/usr/local/bin/vsc
 		break
 		;;
 esac

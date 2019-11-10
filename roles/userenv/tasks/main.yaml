@@ -59,8 +59,8 @@
   copy: src=vsc dest=/usr/local/bin/vsc mode=0755
   become: yes
 
-- name: create a vsr(emote) starter script
-  copy: src=vsr dest=/usr/local/bin/vsr mode=0755
+- name: create a vsc-go starter script
+  copy: src=vsc_go dest=/usr/local/bin/vsc-go mode=0755
   become: yes
 
 - name: create a starter for chrome with remote debugging
