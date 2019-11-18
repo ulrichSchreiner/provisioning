@@ -5,7 +5,7 @@
 # TODO: remove this here???
 xhost local:root
 
-docker run -it -d --rm --net=host \
+docker run --init -it -d --rm --net=host \
     --ipc=host \
     --privileged \
     --security-opt=seccomp:unconfined \
