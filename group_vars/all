@@ -294,7 +294,6 @@ arch_packages:
     - firefox-i18n-de
     - flatpak
     - fwupd
-    - fwupdate
     - fzf
     - gcc
     - git-lfs
@@ -416,7 +415,7 @@ goapp_base: "{{localinstallation}}/go_appengine"
 gogetable_tools:
   -
     name: sshcode
-    version: "v0.5.0"
+    version: "v{{sshcode}}"
     url: https://github.com/codercom/sshcode
     path: github.com/codercom/sshcode
   -

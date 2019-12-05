@@ -3,6 +3,7 @@
       repo={{item.url}}
       dest=~/go/src/{{item.path}}
       version={{item.version}}
+      force=yes
   register: item_cloned
 
 - name: checkout version
