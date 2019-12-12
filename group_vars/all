@@ -7,7 +7,7 @@ docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-minikube_version: "1.6.0"
+minikube_version: "1.6.1"
 doctl_version: "1.33.1"
 dep_version: "0.5.0"
 helm_version: "2.16.1"
