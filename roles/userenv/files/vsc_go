@@ -50,4 +50,5 @@ docker run --init -it -d --rm --net=host \
     -e XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR \
     -e GOPATH=$HOME/go \
     -e GO111MODULE=on \
+    -e TZ=Europe/Berlin \
     quay.io/ulrichschreiner/vsc "$@"

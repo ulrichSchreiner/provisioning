@@ -33,5 +33,6 @@ docker run --init -it -d --rm --net=host \
     -e HOSTUID=`id -u` \
     -e HOSTGID=`id -g` \
     -e DISABLE_GPU=--disable-gpu \
+    -e TZ=Europe/Berlin \
     -w $PWD \
     quay.io/ulrichschreiner/vsc-thin:latest "$@"
