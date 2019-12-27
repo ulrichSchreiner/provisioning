@@ -349,7 +349,6 @@ aur_packages:
     - micro
     - modd
     - nerd-fonts-complete
-    - ripgrep-all
     - skopeo
     - tmuxp
 
