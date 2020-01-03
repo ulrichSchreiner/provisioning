@@ -339,6 +339,7 @@ aur_packages:
     - fd
     - act
     - aur/google-chrome
+    - bandwhich-bin
     - plasma5-applets-eventcalendar
     - gotop-bin
     - hyperfine
