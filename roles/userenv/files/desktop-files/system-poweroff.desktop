@@ -1,0 +1,20 @@
+[Desktop Entry]
+Comment[de_DE]=
+Comment=
+Exec=/usr/bin/systemctl poweroff
+GenericName[de_DE]=
+GenericName=
+Icon=system-shutdown
+MimeType=
+Name[de_DE]=Poweroff system
+Name=Poweroff system
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

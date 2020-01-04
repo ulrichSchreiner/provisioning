@@ -202,3 +202,11 @@
   git: >
     repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest=~/tools/zsh-syntax-highlighting
+
+- name: install desktop files
+  copy:
+    src: "{{ item }}"
+    dest: "~/.local/share/applications"
+    mode: 0600
+  with_fileglob:
+    - "desktop-files/*.desktop"

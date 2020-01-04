@@ -1,0 +1,21 @@
+[Desktop Entry]
+Comment[de_DE]=
+Comment=
+Exec=/usr/bin/loginctl lock-session
+GenericName[de_DE]=
+GenericName=
+Icon=system-lock-screen
+MimeType=
+Name[de_DE]=Lock display
+Name=Lock display
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+~
