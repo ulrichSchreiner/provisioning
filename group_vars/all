@@ -350,8 +350,10 @@ aur_packages:
     - micro
     - modd
     - nerd-fonts-complete
+    - otf-fira-code
     - skopeo
     - tmuxp
+    - aur/visual-studio-code-bin
 
 fedora_packages:
     - binutils

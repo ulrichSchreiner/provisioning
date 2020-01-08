@@ -61,7 +61,6 @@ alias gtp='gotop -p -s -b -c monokai'
 alias history='omz_history -E | tac | fzf'
 alias fuck='sudo $(fc -ln -1)'
 alias ls='lsd'
-alias code='/usr/local/bin/vsc'
 
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
@@ -86,3 +85,6 @@ zle -N pet-select
 bindkey '^s' pet-select
 
 export CDPATH=.:~/go/src/gitlab.com/globalsafetrack:~/workspaces/ulrichSchreiner:~/workspaces:~/go/src/git.f-i-ts.de/devops:~/go/src/git.f-i-ts.de/cloud-native
+
+# source ssh-environment to get SSH_AUTH_SOCK
+. "$HOME/.ssh/environment-`hostname -s`"
