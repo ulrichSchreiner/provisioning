@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.13.5"
+golang_version: "1.13.6"
 docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
@@ -282,6 +282,7 @@ fedora_modules:
 
 arch_packages:
     - base-devel
+    - bandwhich
     - bat
     - binutils
     - bzr
@@ -339,7 +340,6 @@ aur_packages:
     - fd
     - act
     - aur/google-chrome
-    - bandwhich-bin
     - plasma5-applets-eventcalendar
     - gotop-bin
     - hyperfine
