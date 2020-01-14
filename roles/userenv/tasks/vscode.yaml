@@ -15,3 +15,16 @@
     src: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
     dest: "~/.config/{{item}}/User"
     state: link
+
+- name: install extensions
+  command: /usr/bin/code --install-extension {{ext_item}}
+  loop:
+    - stkb.rewrap
+    - mutantdino.resourcemonitor
+    - ms-vscode-remote.remote-containers
+    - ms-vscode-remote.vscode-remote-extensionpack
+    - ms-vsliveshare.vsliveshare
+    - ms-vsliveshare.vsliveshare-audio
+    - ms-vsliveshare.vsliveshare-pack
+  loop_control:
+    loop_var: ext_item

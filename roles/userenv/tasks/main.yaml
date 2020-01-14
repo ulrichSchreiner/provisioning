@@ -183,7 +183,6 @@
 - name: create local vscode config settings
   include: vscode.yaml
   loop:
-    - "Code - Insiders"
     - "Code"
 
 - name: symlink the gcloud config
