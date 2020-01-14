@@ -320,6 +320,7 @@ arch_packages:
     - podman
     - ripgrep
     - rofi
+    - s3fs-fuse
     - slirp4netns
     - tmux
     - tokei
@@ -438,3 +439,8 @@ old_gh_product:
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
+
+s3_music_key: "{{ lookup('ini', 'key section=s3_music file=/etc/ansible/environment.ini') }}"
+s3_music_secret: "{{ lookup('ini', 'secret section=s3_music file=/etc/ansible/environment.ini') }}"
+s3_music_bucket: "{{ lookup('ini', 'name section=s3_music file=/etc/ansible/environment.ini') }}"
+s3_music_mount: /mnt/s3/music

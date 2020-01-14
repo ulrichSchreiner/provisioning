@@ -128,3 +128,25 @@
     - subuid
     - subgid
 
+- name: create s3fs credentials file
+  template: src=passwd-s3fs.j2 dest=/etc/passwd-s3fs mode=0600
+  when: s3_music_key is defined
+
+- name: check if s3 music mountpoint exists
+  stat: path="{{ s3_music_mount }}"
+  register: s3_dir
+  changed_when: False
+  when: s3_music_key is defined
+
+- name: s3 music mountpoint
+  file: path={{ s3_music_mount }} state=directory mode=0777
+  when: s3_music_key is defined and s3_dir.stat.exists is defined and not s3_dir.stat.exists
+
+- name: s3fs mount
+  mount: >
+    name={{ s3_music_mount }}
+    src='{{ s3_music_bucket }}'
+    fstype=fuse.s3fs
+    opts=_netdev,allow_other
+    state=mounted
+  when: s3_music_key is defined
