@@ -285,6 +285,7 @@ arch_packages:
     - bandwhich
     - bat
     - binutils
+    - broot
     - bzr
     - buildah
     - clang
@@ -342,6 +343,7 @@ aur_packages:
     - act
     - aur/google-chrome
     - plasma5-applets-eventcalendar
+    - glow-bin
     - gotop-bin
     - hyperfine
     - keyleds
