@@ -317,7 +317,6 @@ arch_packages:
     - nextcloud-client
     - nodejs
     - npm
-    - opera
     - podman
     - ripgrep
     - rofi
