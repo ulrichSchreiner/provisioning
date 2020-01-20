@@ -325,6 +325,7 @@ arch_packages:
     - slirp4netns
     - tmux
     - tokei
+    - translate-shell
     - typescript
     - ts-node
     - neovim
