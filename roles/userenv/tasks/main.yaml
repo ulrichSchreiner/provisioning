@@ -209,3 +209,9 @@
     mode: 0600
   with_fileglob:
     - "desktop-files/*.desktop"
+
+- name: install broot
+  file:
+    src: ~/Nextcloud/Entwicklung/broot
+    dest: ~/.config/broot
+    state: link
