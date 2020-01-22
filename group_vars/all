@@ -22,8 +22,7 @@ stern_version: "1.11.0"
 kail_version: "0.12.0"
 grv_version: "0.3.0"
 jj_version: "1.2.0"
-terraform_version: "0.11.13"
-terraform_provider_ct_version: "0.3.1"
+terraform_provider_ct_version: "0.4.0"
 vegeta_version: "11.3.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.6"
@@ -138,13 +137,6 @@ gh_products:
     version: "2.2.4"
     url: "https://bin.equinox.io/c/4VmDzA7iaHb"
     package: "ngrok-stable-linux-amd64.zip"
-    is: "zip"
-  -
-    name: "terraform"
-    binary: "terraform"
-    version: "{{terraform_version}}"
-    url: "https://releases.hashicorp.com/terraform/{{terraform_version}}"
-    package: "terraform_{{terraform_version}}_linux_amd64.zip"
     is: "zip"
   -
     name: "jj"
@@ -322,6 +314,7 @@ arch_packages:
     - rofi
     - s3fs-fuse
     - slirp4netns
+    - terraform
     - tmux
     - tokei
     - translate-shell
