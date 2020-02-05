@@ -3,38 +3,22 @@
 fedora_relase: 28
 
 golang_version: "1.13.7"
-docker_compose_version: "1.23.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-minikube_version: "1.6.2"
-dep_version: "0.5.0"
 helm_version: "2.16.1"
 helm3_version: "3.0.3"
-pet_version: "0.3.0"
-httplab_version: "0.4.0"
-gotty_version: "1.0.1"
-peco_version: "0.5.3"
-glide_version: "0.13.1"
-httpstat_version: "1.0.0"
-stern_version: "1.11.0"
-kail_version: "0.12.0"
-grv_version: "0.3.0"
 jj_version: "1.2.0"
 terraform_provider_ct_version: "0.4.0"
-vegeta_version: "11.3.0"
 go_swagger: "0.19.0"
-linuxkit_version: "0.6"
-dive_version: "0.7.0"
+linuxkit_version: "0.7"
 reflex_version: "master"
 lab_version: "0.15.2"
-kind_version: "0.7.0"
 sshcode: "0.9.0"
 procs_version: "0.9.5"
 act_version: "0.1.2"
 kubeprompt_version: "1.0.6"
 drone_cli_version: "1.2.1"
-pulumi_version: "1.9.1"
 
 gh_products:
   -
@@ -64,12 +48,6 @@ gh_products:
     package: "procs-v{{procs_version}}-x86_64-lnx.zip"
     is: "zip"
   -
-    name: "kind"
-    version: "{{kind_version}}"
-    url: "https://github.com/kubernetes-sigs/kind/releases/download/v{{kind_version}}"
-    package: "kind-linux-amd64"
-    is: "bin"
-  -
     name: "lab"
     version: "{{lab_version}}"
     url: "https://github.com/zaquestion/lab/releases/download/v{{lab_version}}"
@@ -83,12 +61,6 @@ gh_products:
     is: "tgz"
     bundle: True
   -
-    name: "dive"
-    version: "{{dive_version}}"
-    url: "https://github.com/wagoodman/dive/releases/download/v{{dive_version}}"
-    package: "dive_{{dive_version}}_linux_amd64.tar.gz"
-    is: "tgz0"
-  -
     name: "linuxkit"
     version: "{{linuxkit_version}}"
     url: "https://github.com/linuxkit/linuxkit/releases/download/v{{linuxkit_version}}"
@@ -101,54 +73,17 @@ gh_products:
     package: "swagger_linux_amd64"
     is: "bin"
   -
-    name: "vegeta"
-    version: "{{vegeta_version}}"
-    url: "https://github.com/tsenart/vegeta/releases/download/cli%2Fv{{vegeta_version}}"
-    package: "vegeta-{{vegeta_version}}-linux-amd64.tar.gz"
-    is: "tgz0"
-  -
     name: "terraform-provider-ct"
     version: "{{terraform_provider_ct_version}}"
     url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
     package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
     is: "tgz"
   -
-    name: "dep"
-    version: "{{dep_version}}"
-    url: "https://github.com/golang/dep/releases/download/v{{dep_version}}"
-    package: "dep-linux-amd64"
-    is: "bin"
-  -
-    name: "stern"
-    version: "{{stern_version}}"
-    url: "https://github.com/wercker/stern/releases/download/{{stern_version}}"
-    package: "stern_linux_amd64"
-    is: "bin"
-  -
-    name: "gview"
-    version: "{{grv_version}}"
-    url: "https://github.com/rgburke/grv/releases/download/v{{grv_version}}"
-    package: "grv_v{{grv_version}}_linux64"
-    is: "bin"
-  -
-    name: "ngrok"
-    binary: "ngrok"
-    version: "2.2.4"
-    url: "https://bin.equinox.io/c/4VmDzA7iaHb"
-    package: "ngrok-stable-linux-amd64.zip"
-    is: "zip"
-  -
     name: "jj"
     version: "{{jj_version}}"
     url: "https://github.com/tidwall/jj/releases/download/v{{jj_version}}"
     package: "jj-{{jj_version}}-linux-amd64.tar.gz"
     is: "tgz"
-  -
-    name: "kail"
-    version: "{{kail_version}}"
-    url: "https://github.com/boz/kail/releases/download/v{{kail_version}}"
-    package: "kail_{{kail_version}}_linux_amd64.tar.gz"
-    is: "tgz0"
   -
     name: "helm"
     version: "{{helm_version}}"
@@ -162,61 +97,6 @@ gh_products:
     url: "https://get.helm.sh"
     package: "helm-v{{helm3_version}}-linux-amd64.tar.gz"
     is: "tgz"
-  -
-    name: "docker-compose"
-    version: "{{docker_compose_version}}"
-    url: "https://github.com/docker/compose/releases/download/{{docker_compose_version}}"
-    package: "docker-compose-{{ansible_system}}-{{ansible_machine}}"
-    is: "bin"
-  -
-    name: "minikube"
-    version: "{{minikube_version}}"
-    url: "https://storage.googleapis.com/minikube/releases/v{{minikube_version}}"
-    package: "minikube-linux-amd64"
-    is: "bin"
-  -
-    name: "pet"
-    version: "{{pet_version}}"
-    url: "https://github.com/knqyf263/pet/releases/download/v{{pet_version}}"
-    package: "pet_{{pet_version}}_linux_amd64.tar.gz"
-    is: "tgz0"
-  -
-    name: "httplab"
-    version: "{{httplab_version}}"
-    url: "https://github.com/gchaincl/httplab/releases/download/v{{httplab_version}}"
-    package: "httplab_{{httplab_version}}_linux_amd64.tar.gz"
-    is: "tgz0"
-  -
-    name: "gotty"
-    version: "{{gotty_version}}"
-    url: "https://github.com/yudai/gotty/releases/download/v{{gotty_version}}"
-    package: "gotty_linux_amd64.tar.gz"
-    is: "tgz0"
-  -
-    name: "peco"
-    version: "{{peco_version}}"
-    url: "https://github.com/peco/peco/releases/download/v{{peco_version}}"
-    package: "peco_linux_amd64.tar.gz"
-    is: "tgz"
-  -
-    name: "glide"
-    version: "{{glide_version}}"
-    url: "https://github.com/Masterminds/glide/releases/download/v{{glide_version}}"
-    package: "glide-v{{glide_version}}-linux-amd64.tar.gz"
-    is: "tgz"
-  -
-    name: "httpstat"
-    version: "{{httpstat_version}}"
-    url: "https://github.com/davecheney/httpstat/releases/download/v{{httpstat_version}}"
-    package: "httpstat-linux-amd64-v{{httpstat_version}}"
-    is: "bin"
-  -
-    name: "pulumi"
-    version: "{{pulumi_version}}"
-    url: "https://get.pulumi.com/releases/sdk"
-    package: "pulumi-v{{pulumi_version}}-linux-x64.tar.gz"
-    is: "tgz"
-    bundle: True
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 packagecloud_key_url: https://packagecloud.io/gpg.key
@@ -325,24 +205,36 @@ arch_packages:
 aur_packages:
     - direnv
     - dnscontrol
+    - aur/docker-compose-bin
     - aur/doctl-bin
     - fd
     - act
     - aur/google-chrome
+    - aur/gotty-bin
+    - aur/httplab
+    - aur/httpstat-go
     - plasma5-applets-eventcalendar
     - glow-bin
     - gotop-bin
     - hyperfine
+    - aur/kail
     - keyleds
+    - aur/kind-bin
     - kubectl-bin
     - kubefwd-bin
     - lego
     - micro
+    - aur/minikube-bin
     - modd
     - nerd-fonts-complete
+    - aur/ngrok
     - otf-fira-code
+    - aur/peco
+    - aur/pulumi-bin
     - skopeo
+    - aur/stern-bin
     - tmuxp
+    - aur/vegeta-bin
     - aur/visual-studio-code-bin
 
 fedora_packages:
