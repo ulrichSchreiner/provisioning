@@ -16,16 +16,8 @@ reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.9.0"
 act_version: "0.1.2"
-kubeprompt_version: "1.0.6"
 
 gh_products:
-  -
-    name: "kube-prompt"
-    binary: "kube-prompt"
-    version: "{{kubeprompt_version}}"
-    url: "https://github.com/c-bata/kube-prompt/releases/download/v{{kubeprompt_version}}"
-    package: "kube-prompt_v{{kubeprompt_version}}_linux_amd64.zip"
-    is: "zip"
   -
     name: "act"
     version: "{{act_version}}"
@@ -208,6 +200,7 @@ aur_packages:
     - aur/kind-bin
     - kubectl-bin
     - kubefwd-bin
+    - aur/kube-prompt
     - lego
     - micro
     - aur/minikube-bin
