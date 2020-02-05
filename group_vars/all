@@ -18,15 +18,8 @@ sshcode: "0.9.0"
 procs_version: "0.9.5"
 act_version: "0.1.2"
 kubeprompt_version: "1.0.6"
-drone_cli_version: "1.2.1"
 
 gh_products:
-  -
-    name: "drone"
-    version: "{{drone_cli_version}}"
-    url: "https://github.com/drone/drone-cli/releases/download/v{{drone_cli_version}}"
-    package: "drone_linux_amd64.tar.gz"
-    is: "tgz0"
   -
     name: "kube-prompt"
     binary: "kube-prompt"
@@ -207,6 +200,7 @@ aur_packages:
     - dnscontrol
     - aur/docker-compose-bin
     - aur/doctl-bin
+    - aur/drone-cli
     - fd
     - act
     - aur/google-chrome
