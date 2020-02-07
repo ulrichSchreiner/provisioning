@@ -191,6 +191,12 @@
     dest: ~/.config/gcloud
     state: link
 
+- name: symlink for vscode remote configurations
+  file:
+    src: ~/Nextcloud/vscode
+    dest: ~/.config/vscode
+    state: link
+
 - name: install krew as a concrect user
   block:
     - name: install krew
