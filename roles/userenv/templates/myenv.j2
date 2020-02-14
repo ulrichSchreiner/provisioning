@@ -77,18 +77,6 @@ export ANSIBLE_CONFIG_DIR=$HOME/Nextcloud/ansible-config
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 
-function prev() {
-  PREV=$(fc -lrn | head -n 1)
-  sh -c "pet new `printf %q "$PREV"`"
-}
-function pet-select() {
-  BUFFER=$(pet search --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle redisplay
-}
-zle -N pet-select
-bindkey '^s' pet-select
-
 export CDPATH=.:~/go/src/gitlab.com/globalsafetrack:~/workspaces/ulrichSchreiner:~/workspaces:~/go/src/git.f-i-ts.de/devops:~/go/src/git.f-i-ts.de/cloud-native
 
 # source ssh-environment to get SSH_AUTH_SOCK
