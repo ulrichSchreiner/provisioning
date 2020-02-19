@@ -59,7 +59,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # USC: the zsc-peco-history can be added too
-plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore go golang gpg-agent kubectl ripgrep ssh-agent systemd tmux tmuxinator wd web-search)
+plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore go golang gpg-agent kubectl kube-ps1 ripgrep ssh-agent systemd tmux tmuxinator wd web-search)
 
 zstyle :omz:plugins:ssh-agent identities id_rsa id_dsa google_compute_engine
 zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -73,6 +73,9 @@ source ~/tools/z/z.sh
 export GIT_PS1_SHOWUPSTREAM="auto,verbose"
 export GIT_PS1_SHOWDIRTYSTATE=1
 
+PROMPT='$(kube_ps1) '$PROMPT
+KUBE_PS1_PREFIX=[
+KUBE_PS1_SUFFIX=]
 #PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
 
 # export MANPATH="/usr/local/man:$MANPATH"
