@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -7,12 +14,10 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="agnoster"
-#ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext dir_writable dir vcs)
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -59,7 +64,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # USC: the zsc-peco-history can be added too
-plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore go golang gpg-agent kubectl kube-ps1 ripgrep ssh-agent systemd tmux tmuxinator wd web-search)
+plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore go golang gpg-agent kubectl ripgrep ssh-agent systemd tmux tmuxinator wd web-search)
 
 zstyle :omz:plugins:ssh-agent identities id_rsa id_dsa google_compute_engine
 zstyle :omz:plugins:ssh-agent agent-forwarding on
@@ -73,9 +78,6 @@ source ~/tools/z/z.sh
 export GIT_PS1_SHOWUPSTREAM="auto,verbose"
 export GIT_PS1_SHOWDIRTYSTATE=1
 
-PROMPT='$(kube_ps1) '$PROMPT
-KUBE_PS1_PREFIX=[
-KUBE_PS1_SUFFIX=]
 #PROMPT="$fg[cyan]%}$USER@%{$fg[blue]%}%m ${PROMPT}"
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -113,12 +115,6 @@ fi
 # disable shared history
 unsetopt share_history
 
-KUBE_PS1_SYMBOL_ENABLE=false
-KUBE_PS1_CTX_COLOR=226
-KUBE_PS1_NS_COLOR=75
-#source ~/tools/kube-ps1/kube-ps1.sh
-#PROMPT='$(kube_ps1) '$PROMPT
-
 # next two settings needed because ktx uses bash-completion
 autoload bashcompinit
 bashcompinit
@@ -139,3 +135,6 @@ if [ -f '/home/usc/tools/google-cloud-sdk/path.zsh.inc' ]; then . '/home/usc/too
 if [ -f '/home/usc/tools/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/usc/tools/google-cloud-sdk/completion.zsh.inc'; fi
 
 source /home/usc/.config/broot/launcher/bash/br
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
