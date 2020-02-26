@@ -15,7 +15,7 @@ linuxkit_version: "0.7"
 reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
-act_version: "0.2.3"
+act_version: "0.2.4"
 
 gh_products:
   -
