@@ -15,15 +15,8 @@ linuxkit_version: "0.7"
 reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
-act_version: "0.2.5"
 
 gh_products:
-  -
-    name: "act"
-    version: "{{act_version}}"
-    url: "https://github.com/nektos/act/releases/download/v{{act_version}}"
-    package: "act_Linux_x86_64.tar.gz"
-    is: "tgz0"
   -
     name: "lab"
     version: "{{lab_version}}"
