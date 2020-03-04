@@ -175,6 +175,7 @@ arch_packages:
     - zsh
 
 aur_packages:
+    - cfssl
     - direnv
     - dnscontrol
     - aur/docker-compose-bin
