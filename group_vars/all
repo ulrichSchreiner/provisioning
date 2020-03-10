@@ -163,6 +163,7 @@ arch_packages:
     - tmux
     - tokei
     - translate-shell
+    - tree
     - typescript
     - ts-node
     - neovim
