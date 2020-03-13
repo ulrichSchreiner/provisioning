@@ -154,6 +154,7 @@ arch_packages:
     - nextcloud-client
     - nodejs
     - npm
+    - osquery
     - podman
     - ripgrep
     - rofi
