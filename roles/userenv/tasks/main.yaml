@@ -198,12 +198,6 @@
     dest: ~/.config/vscode
     state: link
 
-- name: install krew as a concrect user
-  block:
-    - name: install krew
-      aur: name=krew-bin
-  when: ansible_distribution == "Archlinux"
-
 - name: install zsh syntax highlighter
   git: >
     repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
