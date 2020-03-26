@@ -203,7 +203,8 @@ aur_packages:
     - micro
     - aur/minikube-bin
     - modd
-    - nerd-fonts-complete
+    - nerd-fonts-fira-code
+    - nerd-fonts-fira-mono
     - aur/ngrok
     - otf-fira-code
     - aur/peco
