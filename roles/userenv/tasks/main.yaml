@@ -112,6 +112,12 @@
     dest: ~/.p10k.zsh
     state: link
 
+- name: symlink pulimi state
+  file:
+    src: ~/Nextcloud/pulumi-state
+    dest: ~/.pulumi
+    state: link
+
 - name: install autosuggestion
   git: >
     repo=https://github.com/zsh-users/zsh-autosuggestions.git
