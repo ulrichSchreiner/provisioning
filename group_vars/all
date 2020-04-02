@@ -196,6 +196,7 @@ aur_packages:
     - aur/kail
     - keyleds
     - aur/kind-bin
+    - aur/krew-bin
     - kubectl-bin
     - kubefwd-bin
     - aur/kube-prompt
