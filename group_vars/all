@@ -142,6 +142,7 @@ arch_packages:
     - htop
     - httpie
     - jq
+    - k9s
     - kubectx
     - latte-dock
     - libsecret
