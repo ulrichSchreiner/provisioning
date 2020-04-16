@@ -1,0 +1,2 @@
+export GOPROXY=
+export COMMONDIR=$HOME/go/src/github.com/metal-stack/builder

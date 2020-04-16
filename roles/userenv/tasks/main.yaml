@@ -222,3 +222,14 @@
     src: ~/Nextcloud/Entwicklung/broot
     dest: ~/.config/broot
     state: link
+
+- name: create envrc for cloudnative
+  copy: 
+    src: cloudnative-envrc 
+    dest: ~/go/src/git.f-i-ts.de/cloud-native/.envrc
+
+- name: install cloudctl from my local build
+  file:
+    src: ~/go/src/git.f-i-ts.de/cloud-native/cloudctl/bin/cloudctl
+    dest: ~/bin/cloudctl
+    state: link    
