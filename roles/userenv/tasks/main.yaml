@@ -232,4 +232,30 @@
   file:
     src: ~/go/src/git.f-i-ts.de/cloud-native/cloudctl/bin/cloudctl
     dest: ~/bin/cloudctl
-    state: link    
+    state: link
+
+- name: create cloudctl config directory
+  file: path=~/.cloudctl state=directory mode=0755
+
+
+- name: install cloudctl config
+  file:
+    src: ~/Nextcloud/Entwicklung/cloudctl-config.yaml
+    dest: ~/.cloudctl/config.yaml
+    state: link
+
+- name: install metalctl from my local build
+  file:
+    src: ~/go/src/github.com/metal-stack/metalctl/bin/metalctl
+    dest: ~/bin/metalctl
+    state: link
+
+- name: create metalctl config directory
+  file: path=~/.metalctl state=directory mode=0755
+
+
+- name: install metalctl config
+  file:
+    src: ~/Nextcloud/Entwicklung/metalctl-config.yaml
+    dest: ~/.metalctl/config.yaml
+    state: link
