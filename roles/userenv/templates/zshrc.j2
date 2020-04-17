@@ -141,3 +141,11 @@ source /home/usc/.config/broot/launcher/bash/br
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+compdef _cloudctl cloudctl
+. <(cloudctl zsh-completion)
+
+compdef _metalctl metalctl
+. <(metalctl zsh-completion)
+
+rm -f ~/.zcompdump*
