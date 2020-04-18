@@ -223,20 +223,30 @@
     dest: ~/.config/broot
     state: link
 
-- name: create envrc for cloudnative
-  copy: 
-    src: cloudnative-envrc 
-    dest: ~/go/src/git.f-i-ts.de/cloud-native/.envrc
+- name: Check for ~/go/src/git.f-i-ts.de/cloud-native/ exists
+  stat: path=~/go/src/git.f-i-ts.de/cloud-native/
+  register: cnative
 
-- name: install cloudctl from my local build
-  file:
-    src: ~/go/src/git.f-i-ts.de/cloud-native/cloudctl/bin/cloudctl
-    dest: ~/bin/cloudctl
-    state: link
+- name: Check for ~/go/src/github.com/metal-stack/metalctl/ exists
+  stat: path=~/go/src/github.com/metal-stack/metalctl/
+  register: mtctl
+
+- name: do cloudnative things
+  block:
+    - name: create envrc for cloudnative
+      copy:
+        src: cloudnative-envrc
+        dest: ~/go/src/git.f-i-ts.de/cloud-native/.envrc
+
+    - name: install cloudctl from my local build
+      file:
+        src: ~/go/src/git.f-i-ts.de/cloud-native/cloudctl/bin/cloudctl
+        dest: ~/bin/cloudctl
+        state: link
+  when: cnative.stat.exists
 
 - name: create cloudctl config directory
   file: path=~/.cloudctl state=directory mode=0755
-
 
 - name: install cloudctl config
   file:
@@ -249,6 +259,7 @@
     src: ~/go/src/github.com/metal-stack/metalctl/bin/metalctl
     dest: ~/bin/metalctl
     state: link
+  when: mtctl.stat.exists
 
 - name: create metalctl config directory
   file: path=~/.metalctl state=directory mode=0755
