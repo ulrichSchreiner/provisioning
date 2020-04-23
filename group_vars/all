@@ -192,6 +192,7 @@ aur_packages:
     - aur/httpstat-go
     - plasma5-applets-eventcalendar
     - glow-bin
+    - golangci-lint-bin
     - gotop-bin
     - hyperfine
     - aur/kail
