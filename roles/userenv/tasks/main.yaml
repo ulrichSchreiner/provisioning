@@ -243,6 +243,7 @@
         src: ~/go/src/git.f-i-ts.de/cloud-native/cloudctl/bin/cloudctl
         dest: ~/bin/cloudctl
         state: link
+        force: yes
   when: cnative.stat.exists
 
 - name: create cloudctl config directory
@@ -259,6 +260,7 @@
     src: ~/go/src/github.com/metal-stack/metalctl/bin/metalctl
     dest: ~/bin/metalctl
     state: link
+    force: yes
   when: mtctl.stat.exists
 
 - name: create metalctl config directory
