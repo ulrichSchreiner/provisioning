@@ -17,7 +17,7 @@
     state: link
 
 - name: install extensions
-  command: /usr/bin/code --install-extension {{ext_item}}
+  command: /usr/bin/code --force --install-extension {{ext_item}}
   loop:
     - stkb.rewrap
     - mutantdino.resourcemonitor
