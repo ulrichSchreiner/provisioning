@@ -196,6 +196,7 @@ aur_packages:
     - gotop-bin
     - hyperfine
     - aur/kail
+    - kernel-modules-hook
     - keyleds
     - aur/kind-bin
     - aur/krew-bin
