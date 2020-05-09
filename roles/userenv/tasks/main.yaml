@@ -227,10 +227,6 @@
   stat: path=~/go/src/git.f-i-ts.de/cloud-native/
   register: cnative
 
-- name: Check for ~/go/src/github.com/metal-stack/metalctl/ exists
-  stat: path=~/go/src/github.com/metal-stack/metalctl/
-  register: mtctl
-
 - name: do cloudnative things
   block:
     - name: create envrc for cloudnative
@@ -254,14 +250,6 @@
     src: ~/Nextcloud/Entwicklung/cloudctl-config.yaml
     dest: ~/.cloudctl/config.yaml
     state: link
-
-- name: install metalctl from my local build
-  file:
-    src: ~/go/src/github.com/metal-stack/metalctl/bin/metalctl
-    dest: ~/bin/metalctl
-    state: link
-    force: yes
-  when: mtctl.stat.exists
 
 - name: create metalctl config directory
   file: path=~/.metalctl state=directory mode=0755

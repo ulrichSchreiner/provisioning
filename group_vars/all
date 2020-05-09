@@ -204,6 +204,7 @@ aur_packages:
     - kubefwd-bin
     - aur/kube-prompt
     - lego
+    - metalctl-bin
     - micro
     - aur/minikube-bin
     - modd
