@@ -203,7 +203,7 @@ aur_packages:
     - kubectl-bin
     - kubefwd-bin
     - aur/kube-prompt
-    - lego
+    - lego-bin
     - metalctl-bin
     - micro
     - aur/minikube-bin
