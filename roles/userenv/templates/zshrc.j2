@@ -150,13 +150,15 @@ fi
 typeset -g POWERLEVEL9K_METALCTL_SHOW_ON_COMMAND='metalctl'
 function prompt_metalctl() {
   local ctx=$(metalctl context |grep "*"|cut -d" " -f1)
-  p10k segment -i '⭐' -f blue -t ${ctx}
+  local u=$(metalctl context |grep "*"|cut -f2)
+  p10k segment -i '⭐' -f blue -t "${ctx} (${u// /})"
 }
 
 typeset -g POWERLEVEL9K_CLOUDCTL_SHOW_ON_COMMAND='cloudctl'
 function prompt_cloudctl() {
   local ctx=$(cloudctl context |grep "*"|cut -d" " -f1)
-  p10k segment -i '⭐' -f blue -t ${ctx}
+  local u=$(metalctl context |grep "*"|cut -f2)
+  p10k segment -i '⭐' -f blue -t "${ctx} (${u// /})"
 }
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(metalctl cloudctl)
 
