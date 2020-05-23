@@ -160,5 +160,11 @@ function prompt_cloudctl() {
   local u=$(metalctl context |grep "*"|cut -f2)
   p10k segment -i '⭐' -f blue -t "${ctx} (${u// /})"
 }
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(metalctl cloudctl)
+
+if type "cloudctl" > /dev/null; then
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(cloudctl)
+fi
+if type "metalctl" > /dev/null; then
+  POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(metalctl)
+fi
 
