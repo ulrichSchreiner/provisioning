@@ -161,6 +161,7 @@ arch_packages:
     - ripgrep
     - rofi
     - s3fs-fuse
+    - skim
     - slirp4netns
     - terraform
     - tmux
