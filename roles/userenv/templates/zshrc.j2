@@ -65,11 +65,11 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # USC: the zsc-peco-history can be added too
-plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore go golang gpg-agent kubectl ripgrep ssh-agent systemd tmux tmuxinator wd web-search urltools)
+plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore gpg-agent kubectl ripgrep ssh-agent systemd tmux tmuxinator wd web-search urltools)
 
 #export SSH_ASKPASS=/usr/bin/ksshaskpass
 
-zstyle :omz:plugins:ssh-agent identities id_rsa id_ed25519 google_compute_engine
+zstyle :omz:plugins:ssh-agent identities id_ed25519
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 source $ZSH/oh-my-zsh.sh
