@@ -98,6 +98,17 @@
       template: src=v4l2loopback.conf.j2 dest=/etc/modprobe.d/v4l2loopback.conf
     - name: load v4l2
       template: src=v4l2loopback.load.j2 dest=/etc/modules-load.d/v4l2loopback.conf
+    - name: Change file ownership, group and permissions of howdy install so SDDM can execute it
+      file:
+        path: /lib/security/howdy/
+        owner: root
+        group: root
+        mode: '0755'
+    - name: Ensure we can login with howdy/face recognition
+      lineinfile:
+        path: /etc/pam.d/system-auth
+        insertafter: '^#%PAM-1.0'
+        line: auth      sufficient pam_python.so /lib/security/howdy/pam.py
   when: ansible_distribution == "Archlinux"
 
 # develop with docker you get after a few hours this error:

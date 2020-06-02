@@ -190,6 +190,7 @@ aur_packages:
     - act
     - aur/google-chrome
     - aur/gotty-bin
+    - aur/howdy
     - aur/httplab
     - aur/httpstat-go
     - plasma5-applets-eventcalendar
