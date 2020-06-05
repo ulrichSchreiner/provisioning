@@ -209,6 +209,11 @@
     repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest=~/tools/zsh-syntax-highlighting
 
+- name: install zsh syntax highlighter
+  git: >
+    repo=https://github.com/bigH/git-fuzzy
+    dest=~/tools/git-fuzzy
+
 - name: install desktop files
   copy:
     src: "{{ item }}"
