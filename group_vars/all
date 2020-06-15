@@ -8,7 +8,6 @@ bfg_version: "1.12.13"
 my_distribution_release: xenial
 helm_version: "2.16.3"
 helm3_version: "3.2.3"
-jj_version: "1.2.0"
 terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
@@ -47,12 +46,6 @@ gh_products:
     version: "{{terraform_provider_ct_version}}"
     url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
     package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
-    is: "tgz"
-  -
-    name: "jj"
-    version: "{{jj_version}}"
-    url: "https://github.com/tidwall/jj/releases/download/v{{jj_version}}"
-    package: "jj-{{jj_version}}-linux-amd64.tar.gz"
     is: "tgz"
   -
     name: "helm"
@@ -198,6 +191,7 @@ aur_packages:
     - golangci-lint-bin
     - gotop-bin
     - hyperfine
+    - aur/jj-bin
     - aur/kail
     - kernel-modules-hook
     - keyleds
