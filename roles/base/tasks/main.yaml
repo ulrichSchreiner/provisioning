@@ -96,7 +96,7 @@
       become_user: aur_builder
       shell: chmod -R 755 ~/.cache/yay
     - name: install base aur packages
-      aur: name={{aur_packages}} skip_installed=yes
+      aur: name={{aur_packages}} state=present
       become: yes
       become_user: aur_builder
     - lineinfile:
