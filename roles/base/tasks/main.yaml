@@ -100,6 +100,9 @@
       become: yes
       become_user: aur_builder
     - lineinfile:
+        path: /etc/systemd/journald.conf
+        line: 'ForwardToWall=no'
+    - lineinfile:
         path: /etc/systemd/system.conf
         line: 'DefaultTimeoutStopSec=30s'
     - name: install modconfig for v4l2
