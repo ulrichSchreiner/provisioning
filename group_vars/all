@@ -215,7 +215,7 @@ aur_packages:
     - skopeo
     - aur/stern-bin
     - tmuxp
-    - aur/v4l2loopback-dkms
+    - community/v4l2loopback-dkms
     - aur/vegeta-bin
     - aur/visual-studio-code-bin
 
