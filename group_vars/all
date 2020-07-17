@@ -192,6 +192,7 @@ aur_packages:
     - golangci-lint-bin
     - gotop-bin
     - hyperfine
+    - aur/icdiff
     - aur/jj-bin
     - aur/kail
     - kernel-modules-hook
