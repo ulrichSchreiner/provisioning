@@ -142,11 +142,6 @@ source /home/usc/.config/broot/launcher/bash/br
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if type "cloudctl" > /dev/null; then
-  compdef _cloudctl cloudctl
-  . <(cloudctl zsh-completion)
-fi
-
 typeset -g POWERLEVEL9K_METALCTL_SHOW_ON_COMMAND='metalctl'
 function prompt_metalctl() {
   local ctx=$(metalctl context |grep "*"|cut -d" " -f1)

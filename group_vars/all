@@ -175,6 +175,7 @@ arch_packages:
 aur_packages:
     - aur/aura-bin
     - cfssl
+    - aur/cloudctl-bin
     - direnv
     - dnscontrol
     - aur/docker-compose-bin
@@ -203,7 +204,7 @@ aur_packages:
     - kubefwd-bin
     - aur/kube-prompt
     - lego-bin
-    - metalctl-bin
+    - aur/metalctl-bin
     - micro
     - aur/minikube-bin
     - modd
