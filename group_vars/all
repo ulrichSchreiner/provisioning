@@ -211,9 +211,8 @@ aur_packages:
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
     - aur/ngrok
-    - otf-fira-code
     - aur/peco
-    - aur/pulumi-bin
+    - aur/pulumi
     - skopeo
     - aur/stern-bin
     - tmuxp
