@@ -55,6 +55,10 @@
 - name: enable mouse in tmux
   lineinfile: dest=~/.tmux.conf regexp="set -g mouse on" line="set -g mouse on" create=yes state=present
 
+- name: create a wrapper for openapi-cli
+  copy: src=openapi-cli dest=/usr/local/bin/openapi-cli mode=0755
+  become: yes
+
 - name: create a vsc starter script
   copy: src=vsc dest=/usr/local/bin/vsc mode=0755
   become: yes
