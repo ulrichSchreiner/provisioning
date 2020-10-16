@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.15.2"
+golang_version: "1.15.3"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
@@ -217,7 +217,6 @@ aur_packages:
     - aur/stern-bin
     - tmuxp
     - community/v4l2loopback-dkms
-    - aur/vegeta-bin
     - aur/visual-studio-code-bin
 
 fedora_packages:
