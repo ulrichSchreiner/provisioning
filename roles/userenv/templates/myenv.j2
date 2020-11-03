@@ -52,7 +52,6 @@ alias sshcode=__sshcode
 
 alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
 alias icafox="~/workspaces/ize0h88/dockers/icafox/icafox"
-alias cat='bat -p'
 alias kubebox='docker pull astefanutti/kubebox && docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox'
 alias xclip="xclip -selection c"
 alias gdf="git difftool -x meld --dir-diff"
@@ -69,6 +68,7 @@ alias m=metalctl
 alias o=xdg-open
 alias pacbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias docker-make="docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -v $(pwd):$(pwd) -w $(pwd) metalstack/docker-make $@"
+alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
