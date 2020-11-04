@@ -308,7 +308,4 @@ s3_music_bucket: "{{ lookup('ini', 'name section=s3_music file=/etc/ansible/envi
 s3_music_mount: /mnt/s3/music
 
 nextcloud_ignore:
-  - "*/kube/http-cache/*"
-  - "*/kube/http-cache"
-  - "*/kube/cache/*"
-  - "*/kube/cache"
+  - "http-cache/"
