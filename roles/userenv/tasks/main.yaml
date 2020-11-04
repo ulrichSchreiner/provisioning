@@ -254,3 +254,7 @@
     src: ~/Nextcloud/Entwicklung/metalctl-config.yaml
     dest: ~/.metalctl/config.yaml
     state: link
+
+- name: set ignore pattern for nextcloud client
+  lineinfile: dest=~/.config/Nextcloud/sync-exclude.lst line="{{ item }}" state=present
+  with_items: "{{ nextcloud_ignore }}"
