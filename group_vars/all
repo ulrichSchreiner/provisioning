@@ -7,7 +7,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 helm_version: "2.16.12"
-helm3_version: "3.3.3"
+helm3_version: "3.4.1"
 terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
@@ -118,6 +118,7 @@ arch_packages:
     - buildah
     - clang
     - curl
+    - doctl
     - exa
     - iptables
     - firefox
@@ -178,7 +179,6 @@ aur_packages:
     - aur/cloudctl-bin
     - direnv
     - aur/docker-compose-bin
-    - aur/doctl-bin
     - aur/drone-cli
     - fd
     - act
