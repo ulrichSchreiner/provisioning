@@ -14,7 +14,7 @@ linuxkit_version: "0.7"
 reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
-
+dasel_version: "1.6.1"
 gh_products:
   -
     name: "lab"
@@ -34,6 +34,13 @@ gh_products:
     version: "{{linuxkit_version}}"
     url: "https://github.com/linuxkit/linuxkit/releases/download/v{{linuxkit_version}}"
     package: "linuxkit-linux-amd64"
+    is: "bin"
+    absent: true
+  -
+    name: "dasel"
+    version: "{{dasel_version}}"
+    url: "https://github.com/TomWright/dasel/releases/download/v{{dasel_version}}"
+    package: "dasel_linux_amd64"
     is: "bin"
   -
     name: "swagger"
