@@ -90,6 +90,8 @@
         line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
         create: yes
         validate: 'visudo -cf %s'
+    - name: remove old packages
+      pacman: name={{absent_packages}} state=absent
     - name: Recursively remove directory
       become: yes
       become_user: aur_builder
@@ -98,6 +100,9 @@
       aur: name={{aur_packages}} state=present aur_only=yes
       become: yes
       become_user: aur_builder
+      async: 3600
+      poll: 0
+      register: aur_installs
     - lineinfile:
         path: /etc/systemd/journald.conf
         line: 'ForwardToWall=no'

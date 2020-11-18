@@ -1,0 +1,9 @@
+- name: Wait for package installer
+  become: yes
+  become_user: aur_builder
+  async_status:
+    jid: "{{ aur_installs.ansible_job_id }}"
+  register: job_result
+  until: job_result.finished
+  retries: 360
+  delay: 10
