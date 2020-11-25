@@ -15,7 +15,15 @@ reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
 dasel_version: "1.6.1"
+operator_sdk_version: "1.2.0"
+
 gh_products:
+  -
+    name: "operator-sdk"
+    version: "{{operator_sdk_version}}"
+    url: "https://github.com/operator-framework/operator-sdk/releases/download/v{{operator_sdk_version}}"
+    package: "operator-sdk-v{{operator_sdk_version}}-x86_64-linux-gnu"
+    is: "bin"
   -
     name: "lab"
     version: "{{lab_version}}"
@@ -125,6 +133,7 @@ arch_packages:
     - buildah
     - clang
     - curl
+    - docker-compose
     - doctl
     - exa
     - iptables
@@ -145,6 +154,8 @@ arch_packages:
     - jq
     - k9s
     - kubectx
+    - kubectl
+    - kustomize
     - latte-dock
     - libsecret
     - libvirt
@@ -153,6 +164,7 @@ arch_packages:
     - make
     - meld
     - mercurial
+    - minikube
     - mypaint
     - nextcloud-client
     - nodejs
@@ -185,7 +197,6 @@ aur_packages:
     - cfssl
     - aur/cloudctl-bin
     - direnv
-    - aur/docker-compose-bin
     - aur/drone-cli
     - fd
     - act
@@ -206,12 +217,10 @@ aur_packages:
     - keyleds
     - aur/kind-bin
     - aur/krew-bin
-    - kubectl-bin
     - kubefwd-bin
     - aur/kube-prompt
     - lego-bin
     - aur/metalctl-bin
-    - aur/minikube-bin
     - modd
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
