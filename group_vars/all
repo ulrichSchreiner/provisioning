@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.15.5"
+golang_version: "1.15.6"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
@@ -300,11 +300,6 @@ gogetable_tools:
     version: "v{{sshcode}}"
     url: https://github.com/codercom/sshcode
     path: github.com/codercom/sshcode
-  -
-    name: goconvey
-    version: "68dc04aab96ae4326137d6b77330c224063a927e"
-    url: https://github.com/smartystreets/goconvey.git
-    path: github.com/smartystreets/goconvey
   -
     name: reflex
     version: "{{reflex_version}}"
