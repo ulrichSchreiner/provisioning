@@ -196,7 +196,7 @@ aur_packages:
     - aur/aura-bin
     - cfssl
     - aur/cloudctl-bin
-    - direnv
+    - direnv-bin
     - aur/drone-cli
     - fd
     - act
