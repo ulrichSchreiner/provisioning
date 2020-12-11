@@ -10,11 +10,11 @@
     state: directory
     mode: 0755
 
-- name: symlink the vscode user settings
-  file:
-    src: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
-    dest: "~/.config/{{item}}/User"
-    state: link
+    #- name: symlink the vscode user settings
+    #  file:
+    #    src: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
+    #    dest: "~/.config/{{item}}/User"
+    #    state: link
 
 - name: install extensions
   command: /usr/bin/code --force --install-extension {{ext_item}}
