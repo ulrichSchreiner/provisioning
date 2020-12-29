@@ -15,14 +15,14 @@ reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
 dasel_version: "1.6.1"
-operator_sdk_version: "1.2.0"
+operator_sdk_version: "1.3.0"
 
 gh_products:
   -
     name: "operator-sdk"
     version: "{{operator_sdk_version}}"
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v{{operator_sdk_version}}"
-    package: "operator-sdk-v{{operator_sdk_version}}-x86_64-linux-gnu"
+    package: "operator-sdk_linux_amd64"
     is: "bin"
   -
     name: "lab"
