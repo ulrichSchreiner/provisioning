@@ -228,6 +228,7 @@ aur_packages:
     - aur/peco
     - aur/pulumi
     - skopeo
+    - aur/kubetail
     - aur/stern-bin
     - tmuxp
     - community/v4l2loopback-dkms
