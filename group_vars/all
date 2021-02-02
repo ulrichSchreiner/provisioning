@@ -197,6 +197,7 @@ aur_packages:
     - cfssl
     - aur/cloudctl-bin
     - direnv-bin
+    - aur/drawio-desktop-bin
     - aur/drone-cli
     - fd
     - act
