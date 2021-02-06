@@ -124,6 +124,7 @@ fedora_modules:
     - ripgrep:master/default
 
 arch_packages:
+    - community/argocd-cli
     - base-devel
     - bandwhich
     - bat
