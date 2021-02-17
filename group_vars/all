@@ -188,6 +188,7 @@ arch_packages:
     - virtualbox
     - virtualbox-host-modules-arch
     - xclip
+    - xdg-desktop-portal
     - xdg-desktop-portal-kde
     - community/xh
     - yarn
