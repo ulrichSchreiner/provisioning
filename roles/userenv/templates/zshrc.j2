@@ -67,7 +67,7 @@ HIST_STAMPS="dd.mm.yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 #
 # USC: the zsc-peco-history can be added too
-plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore gpg-agent kubectl ripgrep ssh-agent systemd tmux tmuxinator wd web-search urltools)
+plugins=(archlinux copydir copyfile docker docker-compose doctl git git-extras gitfast gitignore gpg-agent kubectl npm ripgrep ssh-agent sudo systemd tmux tmuxinator wd web-search urltools)
 
 #export SSH_ASKPASS=/usr/bin/ksshaskpass
 
@@ -165,3 +165,4 @@ if type "metalctl" > /dev/null; then
   POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=(metalctl)
 fi
 
+autoload zmv zcalc
