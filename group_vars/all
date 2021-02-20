@@ -236,7 +236,7 @@ aur_packages:
     - tmuxp
     - community/v4l2loopback-dkms
     - aur/visual-studio-code-bin
-    - aur/pamac-all
+    - aur/pamac-aur
 
 absent_packages:
   - micro
