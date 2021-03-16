@@ -209,6 +209,7 @@ aur_packages:
     - aur/httplab
     - aur/httpstat-go
     - plasma5-applets-eventcalendar
+    - go-crane-bin
     - glow-bin
     - golangci-lint-bin
     - gotop-bin
