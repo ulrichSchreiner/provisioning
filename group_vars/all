@@ -240,6 +240,8 @@ aur_packages:
 
 absent_packages:
   - micro
+  - tmuxinator
+  - ruby-xdg
 
 fedora_packages:
     - binutils
