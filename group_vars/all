@@ -242,6 +242,7 @@ absent_packages:
   - micro
   - tmuxinator
   - ruby-xdg
+  - direnv
 
 fedora_packages:
     - binutils
