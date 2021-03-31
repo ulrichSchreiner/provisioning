@@ -15,7 +15,7 @@ reflex_version: "master"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
 dasel_version: "1.6.1"
-operator_sdk_version: "1.3.0"
+operator_sdk_version: "1.5.0"
 
 gh_products:
   -
