@@ -232,9 +232,9 @@ aur_packages:
     - aur/pulumi-bin
     - skopeo
     - aur/kubetail
-    - aur/stern-bin
     - tmuxp
     - community/v4l2loopback-dkms
+    - aur/up-bin
     - aur/visual-studio-code-bin
     - aur/pamac-aur
 
@@ -243,6 +243,7 @@ absent_packages:
   - tmuxinator
   - ruby-xdg
   - direnv
+  - stern-bin
 
 fedora_packages:
     - binutils
