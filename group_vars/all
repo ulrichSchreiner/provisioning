@@ -177,6 +177,7 @@ arch_packages:
     - s3fs-fuse
     - skim
     - slirp4netns
+    - sshfs
     - terraform
     - tmux
     - tokei
