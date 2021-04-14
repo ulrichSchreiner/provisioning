@@ -233,6 +233,7 @@ aur_packages:
     - skopeo
     - aur/kubetail
     - tmuxp
+    - aur/topgrade
     - community/v4l2loopback-dkms
     - aur/up-bin
     - aur/visual-studio-code-bin
