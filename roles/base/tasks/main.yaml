@@ -69,6 +69,9 @@
 
 - name: do arch specific things
   block:
+    - name: install german mirrors
+      template: src=pacman-mirrorlist.j2 dest=/etc/pacman.d/mirrorlist mode=0644
+
     - name: install base packages
       pacman: name={{arch_packages}} state=present
     - name: Add the flathub flatpak repository remote to the user installation
@@ -103,12 +106,6 @@
       async: 3600
       poll: 0
       register: aur_installs
-    - lineinfile:
-        path: /etc/systemd/journald.conf
-        line: 'ForwardToWall=no'
-    - lineinfile:
-        path: /etc/systemd/system.conf
-        line: 'DefaultTimeoutStopSec=30s'
     - name: install modconfig for v4l2
       template: src=v4l2loopback.conf.j2 dest=/etc/modprobe.d/v4l2loopback.conf
     - name: load v4l2
@@ -174,3 +171,17 @@
     opts=_netdev,allow_other
     state=mounted
   when: s3_music_key is defined
+
+- name: systemd settings
+  file: path=/etc/systemd/{{item}}/ state=directory mode=0755
+  loop:
+    - system.conf.d
+    - timesyncd.conf.d
+    - journald.conf.d
+
+- name: create ntp settings
+  template: src=ntp.conf.j2 dest=/etc/systemd/timesyncd.conf.d/ntp.conf mode=0644
+- name: create system settings
+  template: src=system.conf.j2 dest=/etc/systemd/system.conf.d/system.conf mode=0644
+- name: create journal settings
+  template: src=journal.conf.j2 dest=/etc/systemd/journald.conf.d/journal.conf mode=0644

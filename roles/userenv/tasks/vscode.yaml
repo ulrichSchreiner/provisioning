@@ -1,10 +1,10 @@
-- name: create local Code config directory   
+- name: create local Code config directory
   file:
     path: "~/.config/{{item}}"
     state: directory
     mode: 0755
 
-- name: create sync Code user-config directory     
+- name: create sync Code user-config directory
   file:
     path: "~/Nextcloud/appconfig/usersettings/{{item}}/User"
     state: directory
@@ -23,7 +23,6 @@
     - mutantdino.resourcemonitor
     - eamodio.gitlens
     - mhutchie.git-graph
-    - GitLab.gitlab-workflow
     - vscode-snippet.Snippet
     - ms-vscode-remote.remote-containers
     - ms-vscode-remote.vscode-remote-extensionpack
