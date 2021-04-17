@@ -159,7 +159,6 @@ arch_packages:
     - kustomize
     - latte-dock
     - libsecret
-    - libvirt
     - linux-headers
     - lsd
     - make
