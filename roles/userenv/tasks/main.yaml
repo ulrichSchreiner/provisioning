@@ -251,7 +251,6 @@
 - name: create metalctl config directory
   file: path=~/.metalctl state=directory mode=0755
 
-
 - name: install metalctl config
   file:
     src: ~/Nextcloud/Entwicklung/metalctl-config.yaml
@@ -261,3 +260,12 @@
 - name: set ignore pattern for nextcloud client
   lineinfile: dest=~/.config/Nextcloud/sync-exclude.lst line="{{ item }}" state=present
   with_items: "{{ nextcloud_ignore }}"
+
+- name: create git config directory
+  file: path=~/.config/git state=directory mode=0755
+
+- name: symlink for git credentials
+  file:
+    src: ~/Nextcloud/Entwicklung/git-credentials
+    dest: ~/.config/git/credentials
+    state: link
