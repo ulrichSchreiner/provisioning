@@ -204,6 +204,7 @@ aur_packages:
     - aur/drone-cli
     - fd
     - act
+    - aur/nodejs-git-split-diffs
     - aur/google-chrome
     - aur/gotty-bin
     - aur/httplab
