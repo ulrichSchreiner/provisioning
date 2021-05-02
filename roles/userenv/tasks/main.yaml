@@ -269,3 +269,9 @@
     src: ~/Nextcloud/Entwicklung/git-credentials
     dest: ~/.config/git/credentials
     state: link
+
+- name: symlink the topgrade config
+  file:
+    src: ~/Nextcloud/Entwicklung/topgrade.toml
+    dest: ~/.config/topgrade.toml
+    state: link
