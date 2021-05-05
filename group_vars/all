@@ -224,6 +224,7 @@ aur_packages:
     - kubefwd-bin
     - aur/kube-prompt
     - lego-bin
+    - aur/logdna-cli-bin
     - aur/metalctl-bin
     - modd
     - nerd-fonts-fira-code
