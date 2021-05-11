@@ -135,6 +135,12 @@
     value: 16384
     sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
     reload: yes
+- name: set conntrack max, so minikube and kind will work again
+  sysctl:
+    name: net.netfilter.nf_conntrack_max
+    value: 393216
+    sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
+    reload: yes
 
 - name: enable userns for podman
   sysctl:
