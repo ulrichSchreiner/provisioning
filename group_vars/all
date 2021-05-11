@@ -7,7 +7,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 helm_version: "2.16.12"
-helm3_version: "3.5.3"
+helm3_version: "3.5.4"
 terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
@@ -68,9 +68,9 @@ gh_products:
     url: "https://storage.googleapis.com/kubernetes-helm"
     package: "helm-v{{helm_version}}-linux-amd64.tar.gz"
     is: "tgz"
+    absent: true
   -
-    name: "helm3"
-    binary: "helm"
+    name: "helm"
     version: "{{helm3_version}}"
     url: "https://get.helm.sh"
     package: "helm-v{{helm3_version}}-linux-amd64.tar.gz"
