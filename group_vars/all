@@ -170,6 +170,7 @@ arch_packages:
     - nodejs
     - npm
     - osquery
+    - pacman-contrib
     - podman
     - ripgrep
     - rofi
