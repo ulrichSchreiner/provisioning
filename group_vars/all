@@ -160,6 +160,7 @@ arch_packages:
     - latte-dock
     - libsecret
     - linux-headers
+    - logcli
     - lsd
     - make
     - meld
