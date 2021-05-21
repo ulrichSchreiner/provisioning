@@ -132,6 +132,7 @@ arch_packages:
     - broot
     - bzr
     - buildah
+    - caddy
     - clang
     - curl
     - docker-compose
