@@ -195,7 +195,6 @@ arch_packages:
     - xdg-desktop-portal-kde
     - community/xh
     - yarn
-    - yay-bin
     - zsh
 
 aur_packages:
@@ -242,6 +241,7 @@ aur_packages:
     - aur/up-bin
     - aur/visual-studio-code-bin
     - aur/pamac-aur
+    - aur/yay
 
 absent_packages:
   - micro
