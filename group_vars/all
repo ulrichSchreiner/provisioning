@@ -232,7 +232,7 @@ aur_packages:
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
     - aur/ngrok
-    - aur/peco
+    - aur/peco-bin
     - skopeo
     - aur/kubetail
     - tmuxp
