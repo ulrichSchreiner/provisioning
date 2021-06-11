@@ -16,6 +16,7 @@ lab_version: "0.15.2"
 sshcode: "0.10.0"
 dasel_version: "1.6.1"
 operator_sdk_version: "1.5.0"
+rga_version: "0.9.6"
 
 gh_products:
   -
@@ -30,6 +31,13 @@ gh_products:
     url: "https://github.com/zaquestion/lab/releases/download/v{{lab_version}}"
     package: "lab_{{lab_version}}_linux_amd64.tar.gz"
     is: "tgz0"
+  -
+    name: "rga"
+    version: "{{rga_version}}"
+    url: "https://github.com/phiresky/ripgrep-all/releases/download/v{{rga_version}}"
+    package: "ripgrep_all-v{{rga_version}}-x86_64-unknown-linux-musl.tar.gz"
+    is: "tgz"
+    bundle: True
   -
     name: "go"
     version: "{{golang_version}}"
