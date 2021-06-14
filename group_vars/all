@@ -181,6 +181,8 @@ arch_packages:
     - npm
     - osquery
     - pacman-contrib
+    - pamac-aur
+    - pamac-tray-icon-plasma
     - podman
     - ripgrep
     - rofi
@@ -239,8 +241,6 @@ aur_packages:
     - modd
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
-    - octopi
-    - octopi-notifier-qt5
     - aur/ngrok
     - aur/peco-bin
     - skopeo
@@ -260,7 +260,10 @@ absent_packages:
   - stern-bin
   - aur/pulumi
   - aur/pulumi-bin
-  - aur/pamach-aur
+  - aur/octopi-notifier-qt5
+  - octopi-notifier-qt5
+  - octopi
+  - aur/octopi
 
 fedora_packages:
     - binutils
