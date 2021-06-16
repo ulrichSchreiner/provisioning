@@ -205,6 +205,7 @@ arch_packages:
     - xdg-desktop-portal-kde
     - community/xh
     - yarn
+    - yq
     - zsh
 
 aur_packages:
