@@ -7,7 +7,7 @@ bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
 helm_version: "2.16.12"
-helm3_version: "3.5.4"
+helm3_version: "3.6.1"
 terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
@@ -243,6 +243,7 @@ aur_packages:
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
     - aur/ngrok
+    - aur/nushell-bin
     - aur/peco-bin
     - skopeo
     - aur/kubetail
