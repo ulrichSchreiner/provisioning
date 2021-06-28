@@ -260,13 +260,13 @@ absent_packages:
   - ruby-xdg
   - direnv
   - stern-bin
-  - aur/pulumi
-  - aur/pulumi-bin
-  - aur/octopi-notifier-qt5
+  - pulumi
+  - pulumi-bin
+  - octopi-notifier-qt5
   - octopi-notifier-qt5
   - octopi
-  - aur/octopi
-  - aur/drone-cli
+  - octopi
+  - drone-cli
 
 fedora_packages:
     - binutils
