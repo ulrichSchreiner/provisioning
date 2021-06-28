@@ -205,11 +205,10 @@
     dest: ~/.config/gcloud
     state: link
 
-- name: symlink for vscode remote configurations
-  file:
-    src: ~/Nextcloud/vscode
-    dest: ~/.config/vscode
-    state: link
+- name: install my vscode-remote configs
+  git: >
+    repo=https://github.com/ulrichSchreiner/vscode-remote-configs.git
+    dest=~/.config/vscode
 
 - name: install zsh syntax highlighter
   git: >
