@@ -214,7 +214,7 @@ aur_packages:
     - aur/cloudctl-bin
     - direnv-bin
     - aur/drawio-desktop-bin
-    - aur/drone-cli
+    - aur/drone-cli-bin
     - fd
     - act
     - aur/nodejs-git-split-diffs
@@ -266,6 +266,7 @@ absent_packages:
   - octopi-notifier-qt5
   - octopi
   - aur/octopi
+  - aur/drone-cli
 
 fedora_packages:
     - binutils
