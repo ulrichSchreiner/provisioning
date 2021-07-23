@@ -244,6 +244,7 @@ aur_packages:
     - nerd-fonts-fira-mono
     - aur/ngrok
     - aur/nushell-bin
+    - aur/octant-bin
     - aur/peco-bin
     - skopeo
     - aur/kubetail
