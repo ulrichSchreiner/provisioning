@@ -71,6 +71,11 @@ alias docker-make="docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -
 alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 alias pacdiff='DIFFPROG=meld pacdiff'
 
+__meitrack_events() {
+  logcli -qo raw query --since=1h -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexdump -C"
+}
+alias meitrack-events=__meitrack_events
+
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
 
