@@ -72,7 +72,7 @@ alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 alias pacdiff='DIFFPROG=meld pacdiff'
 
 __meitrack_events() {
-  logcli -qo raw query --since=1h -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexdump -C"
+  logcli -qo raw query -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexdump -C"
 }
 alias meitrack-events=__meitrack_events
 
