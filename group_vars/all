@@ -247,6 +247,7 @@ aur_packages:
     - aur/octant-bin
     - aur/peco-bin
     - skopeo
+    - aur/stern-bin
     - aur/kubetail
     - tmuxp
     - aur/topgrade
