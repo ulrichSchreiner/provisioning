@@ -2,5 +2,6 @@
 - hosts: development
   become: yes
   roles:
+    - kewlfft.aur
     - base
     - finish

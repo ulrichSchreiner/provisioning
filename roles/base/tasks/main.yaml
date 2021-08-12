@@ -69,9 +69,21 @@
 
 - name: do arch specific things
   block:
-    - name: install german mirrors
-      template: src=pacman-mirrorlist.j2 dest=/etc/pacman.d/mirrorlist mode=0644
+    - name: Use reflector to fetch from german mirrors
+      lineinfile:
+        path: /etc/xdg/reflector/reflector.conf
+        line: --country Germany
 
+    - name: install mirrorupgrade hook
+      copy:
+        src: mirrorupgrade
+        dest: /etc/pacman.d/hooks/mirrorupgrade.hook
+
+    # - name: install german mirrors
+    #   template: src=pacman-mirrorlist.j2 dest=/etc/pacman.d/mirrorlist mode=0644
+
+    - name: remove old packages
+      pacman: name={{absent_packages}} state=absent
     - name: install base packages
       pacman: name={{arch_packages}} state=present
     - name: Add the flathub flatpak repository remote to the user installation
@@ -93,8 +105,6 @@
         line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
         create: yes
         validate: 'visudo -cf %s'
-    - name: remove old packages
-      pacman: name={{absent_packages}} state=absent
     - name: Recursively remove directory
       become: yes
       become_user: aur_builder
