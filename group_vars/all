@@ -272,6 +272,7 @@ absent_packages:
   - peco-bin
   - bzr
   - go-pie
+  - vagrant
 
 fedora_packages:
     - binutils
