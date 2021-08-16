@@ -254,6 +254,7 @@ aur_packages:
     - aur/up-bin
     - aur/visual-studio-code-bin
     - aur/yay
+    - aur/zx
 
 absent_packages:
   - micro
