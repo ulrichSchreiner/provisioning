@@ -230,6 +230,7 @@ aur_packages:
     - hyperfine
     - aur/icdiff
     - aur/jj-bin
+    - aur/kaniko
     - kernel-modules-hook
     - keyleds
     - aur/kind-bin
