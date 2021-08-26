@@ -74,6 +74,9 @@
         path: /etc/xdg/reflector/reflector.conf
         line: --country Germany
 
+    - name: Ensures /etc/pacman.d/hooks/ dir exists
+      file: path=/etc/pacman.d/hooks/ state=directory
+
     - name: install mirrorupgrade hook
       copy:
         src: mirrorupgrade
