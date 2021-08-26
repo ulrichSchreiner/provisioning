@@ -178,6 +178,7 @@ arch_packages:
     - nextcloud-client
     - nodejs
     - npm
+    - nushell
     - osquery
     - pacman-contrib
     - pamac-aur
@@ -244,7 +245,6 @@ aur_packages:
     - nerd-fonts-fira-code
     - nerd-fonts-fira-mono
     - aur/ngrok
-    - aur/nushell-bin
     - aur/octant-bin
     - skopeo
     - aur/stern-bin
@@ -274,6 +274,7 @@ absent_packages:
   - bzr
   - go-pie
   - vagrant
+  - nushell-bin
 
 fedora_packages:
     - binutils
