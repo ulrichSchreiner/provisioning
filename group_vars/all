@@ -153,6 +153,7 @@ arch_packages:
     - fzf
     - gcc
     - git-lfs
+    - git-cliff
     - gnome-keyring
     - grep
     - go
