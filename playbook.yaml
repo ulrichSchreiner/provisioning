@@ -6,7 +6,6 @@
      debug: var=ansible_distribution
 
   roles:
-    - kewlfft.aur
     - base
     - devtools
 
