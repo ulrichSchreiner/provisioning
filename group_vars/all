@@ -11,12 +11,13 @@ helm3_version: "3.7.0"
 terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
-reflex_version: "master"
+reflex_version: "v0.3.1"
 lab_version: "0.15.2"
 sshcode: "0.10.0"
 dasel_version: "1.6.1"
 operator_sdk_version: "1.5.0"
 rga_version: "0.9.6"
+zgrab2_version: "11611670fe78825916037bb99e16958ce237ea1e"
 
 gh_products:
   -
@@ -338,15 +339,15 @@ goapp_base: "{{localinstallation}}/go_appengine"
 
 gogetable_tools:
   -
-    name: sshcode
-    version: "v{{sshcode}}"
-    url: https://github.com/codercom/sshcode
-    path: github.com/codercom/sshcode
-  -
     name: reflex
     version: "{{reflex_version}}"
     url: https://github.com/cespare/reflex
     path: github.com/cespare/reflex
+  -
+    name: zgrab2
+    version: "{{zgrab2_version}}"
+    url: https://github.com/zmap/zgrab2
+    path: github.com/zmap/zgrap2
 
 old_gh_product:
   -
@@ -356,6 +357,11 @@ old_gh_product:
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
+  -
+    name: sshcode
+    version: "v{{sshcode}}"
+    url: https://github.com/codercom/sshcode
+    path: github.com/codercom/sshcode
 
 s3_music_key: "{{ lookup('ini', 'key section=s3_music file=/etc/ansible/environment.ini') }}"
 s3_music_secret: "{{ lookup('ini', 'secret section=s3_music file=/etc/ansible/environment.ini') }}"

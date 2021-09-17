@@ -45,11 +45,6 @@ _sphinx() {
 }
 alias sphinx=_sphinx
 
-__sshcode() {
-  $HOME/go/bin/sshcode --skipsync "$@"
-}
-alias sshcode=__sshcode
-
 alias dockergc='docker rmi $(docker images -q --filter "dangling=true")'
 alias icafox="~/workspaces/ize0h88/dockers/icafox/icafox"
 alias kubebox='docker pull astefanutti/kubebox && docker run -it --rm -v ~/.kube/:/home/node/.kube/:ro astefanutti/kubebox'
