@@ -215,6 +215,7 @@ arch_packages:
 
 aur_packages:
     - aur/aura-bin
+    - btop
     - cfssl
     - aur/cloudctl-bin
     - direnv-bin
