@@ -146,6 +146,7 @@ arch_packages:
     - curl
     - docker-compose
     - doctl
+    - easyeffects
     - exa
     - iptables
     - firefox
