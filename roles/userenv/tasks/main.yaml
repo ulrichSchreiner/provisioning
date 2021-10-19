@@ -274,3 +274,30 @@
     src: ~/Nextcloud/Entwicklung/topgrade.toml
     dest: ~/.config/topgrade.toml
     state: link
+
+- name: install ff-settings
+  git:
+    repo: https://github.com/ulrichSchreiner/ff-settings.git
+    dest: ~/tools/ff-settings
+  register: ffsettingsclone
+
+- set_fact:
+    instdir: "{{ansible_env.HOME}}"
+
+- name: install ff-settings
+  become: yes
+  when: ffsettingsclone.changed
+  ansible.builtin.shell: "./local-install.sh"
+  args:
+    chdir: "{{instdir}}/tools/ff-settings"
+
+- name: Enable and start ff-setttings
+  ansible.builtin.systemd:
+    daemon-reload: yes
+    name: ff-settings
+    state: started
+    enabled: yes
+    scope: user
+
+- name: install my FF settings
+  template: src=ff-settings-user.js dest=~/.config/ff-settings/user.js
