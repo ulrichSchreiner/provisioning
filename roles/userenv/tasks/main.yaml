@@ -281,15 +281,15 @@
     dest: ~/tools/ff-settings
   register: ffsettingsclone
 
-- set_fact:
-    instdir: "{{ansible_env.HOME}}"
+- command: echo ~
+  register: instdir
 
 - name: install ff-settings
   become: yes
   when: ffsettingsclone.changed
   ansible.builtin.shell: "./local-install.sh"
   args:
-    chdir: "{{instdir}}/tools/ff-settings"
+    chdir: "{{instdir.stdout}}/tools/ff-settings"
 
 - name: Enable and start ff-setttings
   ansible.builtin.systemd:
