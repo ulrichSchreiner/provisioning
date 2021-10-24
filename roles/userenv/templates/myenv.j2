@@ -71,6 +71,13 @@ __meitrack_events() {
 }
 alias meitrack-events=__meitrack_events
 
+__cluster_ls_fzf() {
+{% raw %}
+  cloudctl cluster ls  -o template --template "{{.ID}} {{.Tenant}} {{.Name}} {{.PartitionID}}" | fzf --preview 'cloudctl cluster describe -o json $(echo {} | cut -d " " -f1) | bat -l json --color always --style numbers '
+{% endraw %}
+}
+alias cls=__cluster_ls_fzf
+
 # don't forget to do a "npm config set prefix ~/npm"
 export NODE_PATH="$HOME/npm/lib/node_modules"
 
