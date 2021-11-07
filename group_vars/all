@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.17.2"
+golang_version: "1.17.3"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
@@ -221,7 +221,7 @@ aur_packages:
     - aur/cloudctl-bin
     - direnv-bin
     - aur/drawio-desktop-bin
-    - aur/drone-cli-bin
+    - aur/drone-cli
     - fd
     - act
     - aur/nodejs-git-split-diffs
@@ -249,7 +249,6 @@ aur_packages:
     - aur/metalctl-bin
     - modd
     - nerd-fonts-fira-code
-    - nerd-fonts-fira-mono
     - aur/ngrok
     - aur/octant-bin
     - skopeo
@@ -281,6 +280,8 @@ absent_packages:
   - go-pie
   - vagrant
   - nushell-bin
+  - drone-cli-bin
+  - nerd-fonts-fira-mono
 
 fedora_packages:
     - binutils

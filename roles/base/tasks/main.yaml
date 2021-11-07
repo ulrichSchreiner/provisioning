@@ -108,10 +108,10 @@
         line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
         create: yes
         validate: 'visudo -cf %s'
-    - name: Recursively remove directory
-      become: yes
-      become_user: aur_builder
-      shell: chmod -R 755 ~/.cache/yay
+    # - name: Recursively remove directory
+    #   become: yes
+    #   become_user: aur_builder
+    #   shell: chmod -R 755 ~/.cache/yay
     - name: install base aur packages
       kewlfft.aur.aur: name={{aur_packages}} state=present aur_only=yes
       become: yes
