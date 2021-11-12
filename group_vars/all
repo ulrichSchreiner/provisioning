@@ -178,6 +178,7 @@ arch_packages:
     - make
     - meld
     - mercurial
+    - micro
     - minikube
     - mypaint
     - nextcloud-client
