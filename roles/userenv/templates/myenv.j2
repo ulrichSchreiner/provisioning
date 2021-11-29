@@ -65,7 +65,7 @@ alias pacbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --
 alias docker-make="docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -v $(pwd):$(pwd) -w $(pwd) metalstack/docker-make $@"
 alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 alias pacdiff='DIFFPROG=meld pacdiff'
-alias k8s-netpod='kubectl run -i --tty nettest --image=ubuntu -- bash'
+alias k8s-netpod='kubectl run -i --tty nettest --image=registry.gitlab.com/ulrichschreiner/toolbox -- bash'
 
 __meitrack_events() {
   logcli -qo raw query -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexdump -C"
