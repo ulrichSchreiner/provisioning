@@ -144,10 +144,12 @@ arch_packages:
     - caddy
     - clang
     - curl
+    - git-delta
     - docker-compose
     - doctl
     - easyeffects
     - exa
+    - hexyl
     - iptables
     - firefox
     - firefox-i18n-de
