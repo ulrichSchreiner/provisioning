@@ -209,6 +209,7 @@ arch_packages:
     - neovim
     - virtualbox
     - virtualbox-host-modules-arch
+    - watchexec
     - xclip
     - xdg-desktop-portal
     - xdg-desktop-portal-kde
