@@ -226,6 +226,7 @@ aur_packages:
     - aur/drawio-desktop-bin
     - aur/drone-cli
     - fd
+    - fselect-bin
     - act
     - aur/nodejs-git-split-diffs
     - aur/google-chrome
