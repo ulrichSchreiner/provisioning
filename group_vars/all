@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.17.3"
+golang_version: "1.17.4"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
@@ -147,6 +147,7 @@ arch_packages:
     - git-delta
     - docker-compose
     - doctl
+    - drone-cli
     - easyeffects
     - exa
     - hexyl
@@ -225,7 +226,6 @@ aur_packages:
     - aur/cloudctl-bin
     - direnv-bin
     - aur/drawio-desktop-bin
-    - aur/drone-cli
     - fd
     - fselect-bin
     - act
@@ -242,7 +242,6 @@ aur_packages:
     - hyperfine
     - aur/icdiff
     - aur/jj-bin
-    - aur/kaniko
     - kernel-modules-hook
     - keyleds
     - aur/kind-bin
@@ -287,6 +286,7 @@ absent_packages:
   - nushell-bin
   - drone-cli-bin
   - nerd-fonts-fira-mono
+  - kaniko
 
 fedora_packages:
     - binutils
