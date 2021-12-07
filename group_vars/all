@@ -145,6 +145,7 @@ arch_packages:
     - clang
     - curl
     - git-delta
+    - direnv
     - docker-compose
     - doctl
     - drone-cli
@@ -224,7 +225,6 @@ aur_packages:
     - btop
     - cfssl
     - aur/cloudctl-bin
-    - direnv-bin
     - aur/drawio-desktop-bin
     - fd
     - fselect-bin
@@ -270,7 +270,7 @@ absent_packages:
   - micro
   - tmuxinator
   - ruby-xdg
-  - direnv
+  - direnv-bin
   - stern-bin
   - pulumi
   - pulumi-bin
