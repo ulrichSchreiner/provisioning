@@ -249,7 +249,6 @@ aur_packages:
     - kubefwd-bin
     - aur/kube-prompt
     - lego-bin
-    - aur/logdna-cli-bin
     - aur/metalctl-bin
     - modd
     - nerd-fonts-fira-code
@@ -287,6 +286,7 @@ absent_packages:
   - drone-cli-bin
   - nerd-fonts-fira-mono
   - kaniko
+  - logdna-cli-bin
 
 fedora_packages:
     - binutils
