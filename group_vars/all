@@ -228,7 +228,7 @@ aur_packages:
     - aur/drawio-desktop-bin
     - fd
     - fselect-bin
-    - act
+    - act-bin
     - aur/nodejs-git-split-diffs
     - aur/google-chrome
     - aur/gotty-bin
@@ -287,6 +287,7 @@ absent_packages:
   - nerd-fonts-fira-mono
   - kaniko
   - logdna-cli-bin
+  - act
 
 fedora_packages:
     - binutils
