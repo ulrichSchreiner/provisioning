@@ -227,8 +227,10 @@ aur_packages:
     - aur/cloudctl-bin
     - aur/drawio-desktop-bin
     - fd
+    - fq-bin
     - fselect-bin
     - act-bin
+    - gdu-bin
     - aur/nodejs-git-split-diffs
     - aur/google-chrome
     - aur/gotty-bin
