@@ -1,0 +1,8 @@
+[Unit]
+Description=Restart cups after resume
+After=suspend.target
+[Service]
+Type=simple
+ExecStart=/usr/bin/systemctl restart cups
+[Install]
+WantedBy=suspend.target
