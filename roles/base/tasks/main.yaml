@@ -1,4 +1,4 @@
-- lineinfile: dest=/etc/sysctl.d/10-magic-sysrq.conf state=present line="kernel.sysrq=1" regexp="^kernel.sysrq.*" create=true
+- lineinfile: dest=/etc/sysctl.d/90-magic-sysrq.conf state=present line="kernel.sysrq=1" regexp="^kernel.sysrq.*" create=true
 
 - replace: dest=/etc/ssh/ssh_config replace="    AddressFamily inet" regexp="^#   AddressFamily.*"
   when: ansible_distribution == "Ubuntu"
