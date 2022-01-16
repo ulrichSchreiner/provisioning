@@ -210,3 +210,9 @@
 
 - name: enable the cupsrestarter
   systemd: daemon_reload=yes name=cupsresume enabled=yes
+
+- name: disable integraged webcam in one of my laptops
+  template:
+    src: integrated_webcam_disable.rules.j2
+    dest: /etc/udev/rules.d/40-disable-internal-webcam.rules
+  when: "'usc-precision' == ansible_hostname"
