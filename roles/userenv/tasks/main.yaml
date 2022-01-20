@@ -290,3 +290,9 @@
 
 - name: install my FF settings
   template: src=ff-settings-user.js dest=~/.config/ff-settings/user.js
+
+- name: keyledsd.conf file installation (keyledsd is autostarted in /etc/xdg/autostart/)
+  file:
+    src: keyledsd.conf
+    dest: ~/.config/keyledsd.conf
+   when: "'usc-precision' == ansible_hostname"
