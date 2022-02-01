@@ -295,4 +295,4 @@
   file:
     src: keyledsd.conf
     dest: ~/.config/keyledsd.conf
-   when: "'usc-precision' == ansible_hostname"
+  when: "'usc-precision' == ansible_hostname"
