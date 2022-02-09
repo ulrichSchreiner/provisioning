@@ -292,7 +292,14 @@
   template: src=ff-settings-user.js dest=~/.config/ff-settings/user.js
 
 - name: keyledsd.conf file installation (keyledsd is autostarted in /etc/xdg/autostart/)
-  file:
+  ansible.builtin.copy:
     src: keyledsd.conf
     dest: ~/.config/keyledsd.conf
   when: "'usc-precision' == ansible_hostname"
+
+- name: enable ssh-agent on startup
+  ansible.builtin.systemd:
+    name: ssh-agent
+    state: started
+    enabled: yes
+    scope: user
