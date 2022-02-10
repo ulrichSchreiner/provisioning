@@ -299,6 +299,7 @@
 
 - name: enable ssh-agent on startup
   ansible.builtin.systemd:
+    daemon-reload: yes
     name: ssh-agent
     state: started
     enabled: yes
