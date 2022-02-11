@@ -151,6 +151,7 @@ arch_packages:
     - drone-cli
     - easyeffects
     - exa
+    - glow
     - hexyl
     - iptables
     - firefox
@@ -238,7 +239,6 @@ aur_packages:
     - aur/httpstat-go
     - plasma5-applets-eventcalendar
     - go-crane-bin
-    - glow-bin
     - golangci-lint-bin
     - gotop-bin
     - hyperfine
@@ -280,6 +280,7 @@ absent_packages:
   - octopi
   - peco-bin
   - bzr
+  - glow-bin
   - go-pie
   - vagrant
   - nushell-bin
