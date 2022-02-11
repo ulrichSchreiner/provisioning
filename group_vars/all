@@ -245,7 +245,6 @@ aur_packages:
     - aur/icdiff
     - aur/jj-bin
     - kernel-modules-hook
-    - keyleds
     - aur/kind-bin
     - aur/krew-bin
     - kubefwd-bin
@@ -282,6 +281,7 @@ absent_packages:
   - bzr
   - glow-bin
   - go-pie
+  - keyleds
   - vagrant
   - nushell-bin
   - drone-cli-bin
