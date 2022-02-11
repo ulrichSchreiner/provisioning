@@ -266,7 +266,6 @@ aur_packages:
     - aur/up-bin
     - aur/visual-studio-code-bin
     - aur/yay
-    - aur/zx
 
 absent_packages:
   - micro
@@ -289,6 +288,7 @@ absent_packages:
   - kaniko
   - logdna-cli-bin
   - act
+  - zx
 
 fedora_packages:
     - binutils
