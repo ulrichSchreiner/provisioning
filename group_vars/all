@@ -150,7 +150,6 @@ arch_packages:
     - docker-compose
     - doctl
     - drone-cli
-    - easyeffects
     - exa
     - glow
     - hexyl
