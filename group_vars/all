@@ -203,6 +203,7 @@ arch_packages:
     - skim
     - slirp4netns
     - sshfs
+    - tekton-cli
     - terraform
     - tmux
     - tokei
