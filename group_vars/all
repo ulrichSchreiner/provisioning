@@ -164,6 +164,7 @@ arch_packages:
     - git-cliff
     - gnome-keyring
     - grep
+    - glab
     - go
     - gzip
     - helm
@@ -241,7 +242,6 @@ aur_packages:
     - plasma5-applets-eventcalendar
     - go-crane-bin
     - golangci-lint-bin
-    - gotop-bin
     - hyperfine
     - aur/icdiff
     - aur/jj-bin
@@ -282,6 +282,7 @@ absent_packages:
   - bzr
   - glow-bin
   - go-pie
+  - gotop-bin
   - keyleds
   - vagrant
   - nushell-bin
@@ -291,6 +292,7 @@ absent_packages:
   - logdna-cli-bin
   - act
   - zx
+  - gitlab-glab-bin
 
 fedora_packages:
     - binutils
