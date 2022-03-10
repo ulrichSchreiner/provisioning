@@ -244,6 +244,7 @@ aur_packages:
     - golangci-lint-bin
     - hyperfine
     - aur/icdiff
+    - aur/jc
     - aur/jj-bin
     - kernel-modules-hook
     - aur/kind-bin
