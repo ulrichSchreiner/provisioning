@@ -7,4 +7,5 @@ user_pref("toolkit.zoomManager.zoomValues", ".3,.5,.67,.8,.85,.9,1,1.1,1.2,1.33,
 user_pref("media.ffmpeg.vaapi.enabled", true);
 user_pref("media.rdd-vpx.enabled", false);
 user_pref("media.rdd-vpx.enabled", false);
+user_pref("media.setsinkid.enabled", true);
 user_pref("network.http.max-persistent-connections-per-server", 10);
