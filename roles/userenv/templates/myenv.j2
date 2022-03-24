@@ -69,7 +69,7 @@ alias k8s-netpod='kubectl run -i --tty nettest --image=registry.gitlab.com/ulric
 alias k8s-rmevicted="kubectl get pods | grep Evicted | awk '{print $1}' | xargs kubectl delete pod"
 
 __meitrack_events() {
-  logcli -qo raw query -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexdump -C"
+  logcli -qo raw query -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexyl"
 }
 alias meitrack-events=__meitrack_events
 
