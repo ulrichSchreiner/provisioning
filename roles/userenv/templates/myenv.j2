@@ -75,7 +75,7 @@ alias meitrack-events=__meitrack_events
 
 __cluster_ls_fzf() {
 {% raw %}
-  cloudctl cluster ls  -o template --template "{{.ID}} {{.Tenant}} {{.Name}} {{.PartitionID}}" | fzf --preview 'cloudctl cluster describe -o json $(echo {} | cut -d " " -f1) | bat -l json --color always --style numbers '
+  cloudctl cluster ls  -o template --template "{{.ID}} {{.Tenant}} {{.Name}} {{.PartitionID}}" | fzf --bind=up:preview-up,down:preview-down,ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down --preview 'cloudctl cluster describe -o json $(echo {} | cut -d " " -f1) | bat -l json --color always --style numbers '
 {% endraw %}
 }
 alias cls=__cluster_ls_fzf
