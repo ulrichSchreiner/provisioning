@@ -257,6 +257,7 @@ aur_packages:
     - nerd-fonts-fira-code
     - aur/ngrok
     - aur/octant-bin
+    - aur/q-dns-git
     - skopeo
     - aur/stern-bin
     - aur/kubetail
