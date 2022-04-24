@@ -215,6 +215,7 @@ arch_packages:
     - virtualbox
     - virtualbox-host-modules-arch
     - watchexec
+    - wl-clipboard
     - xclip
     - xdg-desktop-portal
     - xdg-desktop-portal-kde
