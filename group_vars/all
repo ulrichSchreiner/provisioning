@@ -213,6 +213,7 @@ arch_packages:
     - typescript
     - ts-node
     - neovim
+    - up
     - virtualbox
     - virtualbox-host-modules-arch
     - watchexec
@@ -266,7 +267,6 @@ aur_packages:
     - tmuxp
     - aur/topgrade
     - community/v4l2loopback-dkms
-    - aur/up-bin
     - aur/visual-studio-code-bin
     - aur/yay
     - aur/zq
@@ -297,6 +297,7 @@ absent_packages:
   - act
   - zx
   - gitlab-glab-bin
+  - up-bin
 
 fedora_packages:
     - binutils
