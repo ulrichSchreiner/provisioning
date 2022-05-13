@@ -198,6 +198,7 @@ arch_packages:
     - pamac-tray-icon-plasma
     - peco
     - podman
+    - reflector
     - ripgrep
     - rofi
     - s3fs-fuse
