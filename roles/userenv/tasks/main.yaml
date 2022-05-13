@@ -302,3 +302,10 @@
     state: started
     enabled: yes
     scope: user
+
+# some cleanups of old tools
+
+- name: Recursively remove z
+  ansible.builtin.file:
+    path: ~/tools/z
+    state: absent
