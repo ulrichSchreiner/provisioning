@@ -148,11 +148,6 @@
 - name: install my zshrc
   template: src=zshrc.j2 dest=~/.zshrc
 
-# - name: install z
-#   git: >
-#     repo=https://github.com/rupa/z.git
-#     dest=~/tools/z
-
 - name: create the folder for the gpg-agent-startup
   file: path=~/.config/plasma-workspace/env/ state=directory mode=0755
 
