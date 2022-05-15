@@ -309,3 +309,20 @@
   ansible.builtin.file:
     path: ~/tools/z
     state: absent
+
+# some configs for nushell
+
+- name: install configs for nushell
+  template: src={{item}}.j2 dest=~/.config/nushell/{{item}}
+  loop:
+    - config.nu
+    - env.nu
+
+- name: create starship nu config directory
+  file: path=~/.cache/starship state=directory mode=0755
+
+- name: install starship for nushell
+  template: src=starship.nu.j2 dest=~/.cache/starship/init.nu
+
+- name: install starship config
+  template: src=starship.toml.j2 dest=~/.config/starship.toml
