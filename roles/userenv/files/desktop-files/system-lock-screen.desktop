@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[de_DE]=
 Comment=
-Exec=/usr/bin/loginctl lock-session
+Exec=/usr/bin/loginctl lock-session --no-wall
 GenericName[de_DE]=
 GenericName=
 Icon=system-lock-screen

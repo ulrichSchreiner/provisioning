@@ -1,7 +1,7 @@
 [Desktop Entry]
 Comment[de_DE]=
 Comment=
-Exec=/usr/bin/systemctl suspend
+Exec=/usr/bin/systemctl suspend --no-wall
 GenericName[de_DE]=
 GenericName=
 Icon=system-suspend
