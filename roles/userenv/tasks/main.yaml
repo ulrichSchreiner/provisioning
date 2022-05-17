@@ -317,6 +317,7 @@
   loop:
     - config.nu
     - env.nu
+    - myenv.nu
 
 - name: create starship nu config directory
   file: path=~/.cache/starship state=directory mode=0755
