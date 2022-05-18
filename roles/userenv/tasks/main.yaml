@@ -312,6 +312,9 @@
 
 # some configs for nushell
 
+- name: create nu config directory
+  file: path=~/.config/nushell state=directory mode=0755
+
 - name: install configs for nushell
   template: src={{item}}.j2 dest=~/.config/nushell/{{item}}
   loop:
