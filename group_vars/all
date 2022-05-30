@@ -150,12 +150,14 @@ arch_packages:
   - docker-compose
   - doctl
   - drone-cli
+  - duf
   - entr
   - exa
   - firefox
   - firefox-i18n-de
   - flatpak
   - fwupd
+  - fx
   - fzf
   - gcc
   - git-cliff
@@ -166,6 +168,7 @@ arch_packages:
   - gnome-keyring
   - go
   - grep
+  - gron
   - gzip
   - helm
   - hexyl
@@ -238,6 +241,7 @@ aur_packages:
   - cloudctl-bin
   - community/v4l2loopback-dkms
   - drawio-desktop-bin
+  - dyff-bin
   - fd
   - fq-bin
   - fselect-bin
