@@ -129,8 +129,10 @@ source ~/tools/ktx/ktx-completion.sh
 #source ~/tools/fubectl/fubectl.source
 source ~/tools/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
+if [ -d "/usr/share/fzf" ]; then
+  source /usr/share/fzf/key-bindings.zsh
+  source /usr/share/fzf/completion.zsh
+fi
 
 #
 if [ -x "$(command -v doctl)" ]; then
