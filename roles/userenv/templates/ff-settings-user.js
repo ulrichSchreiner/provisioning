@@ -5,6 +5,8 @@ user_pref("accessibility.typeaheadfind.enablesound", false);
 user_pref("gfx.webrender.all", true);
 user_pref("toolkit.zoomManager.zoomValues", ".3,.5,.67,.8,.85,.9,1,1.1,1.2,1.33,1.5,1.7,2,2.4,3,4,5");
 user_pref("media.ffmpeg.vaapi.enabled", true);
+user_pref("media.ffvpx.enabled", false);
+user_pref("media.navigator.mediadatadecoder_vpx_enabled", true);
 user_pref("media.rdd-vpx.enabled", false);
 user_pref("media.setsinkid.enabled", true);
 user_pref("network.http.max-persistent-connections-per-server", 10);
