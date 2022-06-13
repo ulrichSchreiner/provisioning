@@ -181,6 +181,7 @@ arch_packages:
   - k9s
   - kubectl
   - kubectx
+  - kubie
   - kustomize
   - latte-dock
   - libsecret

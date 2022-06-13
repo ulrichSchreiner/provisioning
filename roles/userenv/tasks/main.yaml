@@ -330,3 +330,6 @@
 
 - name: install starship config
   template: src=starship.toml.j2 dest=~/.config/starship.toml
+
+- name: install kubie config
+  copy: src=kubie.yaml dest=~/.kube/kubie.yaml
