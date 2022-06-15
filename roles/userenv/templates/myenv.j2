@@ -4,6 +4,8 @@ export PULUMI_SKIP_UPDATE_CHECK=true
 
 source ~/Nextcloud/Entwicklung/environment
 
+source /usr/share/bash-completion/completions/kubie
+
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
 _atocker() {
