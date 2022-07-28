@@ -184,7 +184,6 @@ arch_packages:
   - kubectx
   - kubie
   - kustomize
-  - latte-dock
   - libsecret
   - linux-headers
   - logcli
