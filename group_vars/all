@@ -162,6 +162,7 @@ arch_packages:
   - gcc
   - git-cliff
   - git-delta
+  - git-extras
   - git-lfs
   - glab
   - glow
