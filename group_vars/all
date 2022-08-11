@@ -220,6 +220,7 @@ arch_packages:
   - translate-shell
   - tree
   - ts-node
+  - ttf-ibm-plex
   - typescript
   - up
   - virtualbox
