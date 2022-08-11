@@ -236,6 +236,7 @@ arch_packages:
 
 aur_packages:
   - act-bin
+  - apple-fonts
   - aura-bin
   - btop
   - cfssl
