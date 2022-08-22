@@ -279,6 +279,7 @@ aur_packages:
   - tmuxp
   - topgrade
   - visual-studio-code-bin
+  - viu
   - yay
   - zq
 
