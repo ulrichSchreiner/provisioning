@@ -162,7 +162,6 @@ arch_packages:
   - gcc
   - git-cliff
   - git-delta
-  - git-extras
   - git-lfs
   - glab
   - glow
@@ -249,6 +248,7 @@ aur_packages:
   - fq-bin
   - fselect-bin
   - gdu-bin
+  - git-extras
   - go-crane-bin
   - golangci-lint-bin
   - google-chrome
