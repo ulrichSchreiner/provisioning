@@ -147,7 +147,7 @@ source /home/usc/.config/broot/launcher/bash/br
 typeset -g POWERLEVEL9K_METALCTL_SHOW_ON_COMMAND='metalctl'
 function prompt_metalctl() {
   local ctx=$(metalctl context |grep "*"|cut -d" " -f1)
-  local u=$(metalctl context |grep "*"|cut -f2)
+  local u=$(metalctl context |grep "*"|cut -d" " -f5)
   p10k segment -i '⭐' -f blue -t "${ctx} (${u// /})"
 }
 
