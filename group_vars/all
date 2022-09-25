@@ -224,6 +224,7 @@ arch_packages:
   - up
   - virtualbox
   - virtualbox-host-modules-arch
+  - viu
   - watchexec
   - wl-clipboard
   - xclip
@@ -279,7 +280,6 @@ aur_packages:
   - tmuxp
   - topgrade
   - visual-studio-code-bin
-  - viu
   - yay
   - zq
 
