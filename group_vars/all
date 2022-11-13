@@ -268,7 +268,6 @@ aur_packages:
   - lego-bin
   - metalctl-bin
   - modd
-  - nerd-fonts-fira-code
   - ngrok
   - nodejs-git-split-diffs
   - octant-bin
