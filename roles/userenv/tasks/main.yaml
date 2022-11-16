@@ -333,3 +333,9 @@
 
 - name: install kubie config
   copy: src=kubie.yaml dest=~/.kube/kubie.yaml
+
+- name: create environment settings dir
+  file: path=~/.config/environment.d state=directory mode=0755
+
+- name: export some environment variables when kde starts
+  copy: src=ssh_askpass.conf dest=~/.config/environment.d/ssh_askpass.conf mode=0644
