@@ -1,4 +1,18 @@
-- lineinfile: dest=/etc/sysctl.d/90-magic-sysrq.conf state=present line="kernel.sysrq=1" regexp="^kernel.sysrq.*" create=true
+- name: enable magic sysra
+  lineinfile: >
+    dest=/etc/sysctl.d/90-magic-sysrq.conf
+    state=present
+    line="kernel.sysrq=1"
+    regexp="^kernel.sysrq.*"
+    create=true
+
+- name: allow .local resolution with avahi, so kio-fuse will work
+  lineinfile: >
+    dest=/etc/nsswitch.conf
+    state=present
+    line="hosts: mymachines mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] files myhostname dns"
+    regexp="^hosts:"
+    create=false
 
 - replace: dest=/etc/ssh/ssh_config replace="    AddressFamily inet" regexp="^#   AddressFamily.*"
   when: ansible_distribution == "Ubuntu"

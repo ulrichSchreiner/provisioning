@@ -197,6 +197,7 @@ arch_packages:
   - nextcloud-client
   - nodejs
   - npm
+  - nss-mdns
   - nushell
   - osquery
   - pacman-contrib
