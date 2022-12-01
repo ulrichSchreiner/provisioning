@@ -283,6 +283,13 @@ aur_packages:
   - yay
   - zq
 
+arch_android_dev_packages:
+  - jdk11-openjdk
+  - android-sdk 
+  - android-sdk-platform-tools
+  - android-sdk-build-tools
+  - android-studio
+
 absent_packages:
   - act
   - bzr
