@@ -147,6 +147,7 @@ arch_packages:
   - community/xh
   - curl
   - direnv
+  - docker-buildx
   - docker-compose
   - doctl
   - drone-cli
