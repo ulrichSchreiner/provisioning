@@ -227,6 +227,7 @@ arch_packages:
   - virtualbox
   - virtualbox-host-modules-arch
   - viu
+  - wails
   - watchexec
   - wl-clipboard
   - xclip
