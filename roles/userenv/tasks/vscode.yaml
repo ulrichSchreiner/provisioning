@@ -22,12 +22,8 @@
     - stkb.rewrap
     - mutantdino.resourcemonitor
     - eamodio.gitlens
-    - mhutchie.git-graph
     - vscode-snippet.Snippet
     - ms-vscode-remote.remote-containers
     - ms-vscode-remote.vscode-remote-extensionpack
-    - ms-vsliveshare.vsliveshare
-    - ms-vsliveshare.vsliveshare-audio
-    - ms-vsliveshare.vsliveshare-pack
   loop_control:
     loop_var: ext_item
