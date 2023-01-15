@@ -135,10 +135,19 @@
       async: 3600
       poll: 0
       register: aur_installs
-    - name: install modconfig for v4l2
-      template: src=v4l2loopback.conf.j2 dest=/etc/modprobe.d/v4l2loopback.conf
-    - name: load v4l2
-      template: src=v4l2loopback.load.j2 dest=/etc/modules-load.d/v4l2loopback.conf
+
+    # - name: install modconfig for v4l2
+    #   template: src=v4l2loopback.conf.j2 dest=/etc/modprobe.d/v4l2loopback.conf
+    # - name: load v4l2
+    #   template: src=v4l2loopback.load.j2 dest=/etc/modules-load.d/v4l2loopback.conf
+    - name: remove v4l2loopback configs
+      ansible.builtin.file:
+        path: {{item}}
+        state: absent
+      loop:
+        - /etc/modprobe.d/v4l2loopback.conf
+        - /etc/modules-load.d/v4l2loopback.conf
+
   when: ansible_distribution == "Archlinux"
 
 # develop with docker you get after a few hours this error:

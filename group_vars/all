@@ -245,7 +245,6 @@ aur_packages:
   - btop
   - cfssl
   - cloudctl-bin
-  - community/v4l2loopback-dkms
   - drawio-desktop-bin
   - dyff-bin
   - fd
@@ -287,7 +286,7 @@ aur_packages:
 
 arch_android_dev_packages:
   - jdk11-openjdk
-  - android-sdk 
+  - android-sdk
   - android-sdk-platform-tools
   - android-sdk-build-tools
   - android-studio
@@ -314,6 +313,7 @@ absent_packages:
   - tmuxinator
   - up-bin
   - vagrant
+  - v4l2loopback-dkms
   - zx
 
 fedora_packages:
