@@ -279,7 +279,7 @@ aur_packages:
   - stern-bin
   - systemd-ssh-agent
   - tmuxp
-  - topgrade
+  - topgrade-bin
   - visual-studio-code-bin
   - yay
   - zq
@@ -311,6 +311,7 @@ absent_packages:
   - pulumi-bin
   - ruby-xdg
   - tmuxinator
+  - topgrade
   - up-bin
   - vagrant
   - v4l2loopback-dkms
