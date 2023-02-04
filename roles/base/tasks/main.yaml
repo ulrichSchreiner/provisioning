@@ -83,6 +83,16 @@
 
 - name: do arch specific things
   block:
+    - name: allow zsh as a shell
+      lineinfile:
+        path: /etc/shells
+        line: /bin/zsh
+
+    - name: allow nu as a shell
+      lineinfile:
+        path: /etc/shells
+        line: /bin/nu
+
     - name: Use reflector to fetch from german mirrors
       lineinfile:
         path: /etc/xdg/reflector/reflector.conf
