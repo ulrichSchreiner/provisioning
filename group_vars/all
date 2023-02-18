@@ -2,7 +2,7 @@
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
 
-golang_version: "1.20"
+golang_version: "1.20.1"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
