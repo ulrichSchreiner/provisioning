@@ -64,7 +64,7 @@ alias c=cloudctl
 alias m=metalctl
 alias o=xdg-open
 alias pacbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
-alias docker-make="docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -v $(pwd):$(pwd) -w $(pwd) metalstack/docker-make $@"
+alias docker-make='docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -v "$(pwd)":"$(pwd)" -w "$(pwd)" metalstack/docker-make $@'
 alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 alias pacdiff='DIFFPROG=meld pacdiff'
 alias k8s-netpod='kubectl run -i --tty nettest --image=registry.gitlab.com/ulrichschreiner/toolbox --image-pull-policy Always -- bash'
