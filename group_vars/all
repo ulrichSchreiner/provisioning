@@ -248,7 +248,6 @@ aur_packages:
   - drawio-desktop-bin
   - dyff-bin
   - fd
-  - firefox-pwa-bin
   - fq-bin
   - fselect-bin
   - gdu-bin
