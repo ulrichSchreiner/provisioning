@@ -179,6 +179,7 @@ arch_packages:
   - iptables
   - jc
   - jq
+  - just
   - k9s
   - kcharselect
   - kubectl
