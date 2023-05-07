@@ -98,6 +98,12 @@
         path: /etc/xdg/reflector/reflector.conf
         line: --country Germany
 
+    - name: Use reflector to fetch from german mirrors
+      lineinfile:
+        path: /etc/xdg/reflector/reflector.conf
+        regexp: '^--save'
+        line: --save /etc/pacman.d/mirrorlist-reflector
+
     - name: Ensures /etc/pacman.d/hooks/ dir exists
       file: path=/etc/pacman.d/hooks/ state=directory
 
@@ -106,8 +112,11 @@
         src: mirrorupgrade
         dest: /etc/pacman.d/hooks/mirrorupgrade.hook
 
-    # - name: install german mirrors
-    #   template: src=pacman-mirrorlist.j2 dest=/etc/pacman.d/mirrorlist mode=0644
+    - name: install local mirror cache
+      copy:
+        src: mirrorlist
+        dest: /etc/pacman.d/mirrorlist
+        mode: 0644
 
     - name: remove old packages
       pacman: name={{absent_packages}} state=absent
