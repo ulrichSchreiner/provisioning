@@ -145,6 +145,7 @@ arch_packages:
   - catimg
   - clang
   - community/xh
+  - crane
   - curl
   - direnv
   - docker-buildx
@@ -254,7 +255,6 @@ aur_packages:
   - fselect-bin
   - gdu-bin
   - git-extras
-  - go-crane-bin
   - golangci-lint-bin
   - google-chrome
   - gotty-bin
@@ -300,6 +300,7 @@ absent_packages:
   - drone-cli-bin
   - gitlab-glab-bin
   - glow-bin
+  - go-crane-bin
   - gotop-bin
   - kaniko
   - keyleds
