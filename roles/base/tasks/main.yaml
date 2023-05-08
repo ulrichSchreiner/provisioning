@@ -102,7 +102,43 @@
       lineinfile:
         path: /etc/xdg/reflector/reflector.conf
         regexp: '^--save'
-        line: --save /etc/pacman.d/mirrorlist-reflector
+        line: --save /etc/pacman.d/mirrorlist
+
+    - name: Use home mirror as default
+      blockinfile:
+        path: /etc/pacman.conf
+        block: |
+          # The testing repositories are disabled by default. To enable, uncomment the
+          # repo name header and Include lines. You can add preferred servers immediately
+          # after the header, and they will be used before the default mirrors.
+
+          [core]
+          Server = http://homeserver:7878/$repo/os/$arch
+          Include = /etc/pacman.d/mirrorlist
+
+          [extra]
+          Server = http://homeserver:7878/$repo/os/$arch
+          Include = /etc/pacman.d/mirrorlist
+
+          [community]
+          Server = http://homeserver:7878/$repo/os/$arch
+          Include = /etc/pacman.d/mirrorlist
+
+          #[community-testing]
+          #Server = http://homeserver:7878/$repo/os/$arch
+          #Include = /etc/pacman.d/mirrorlist
+
+          #[testing]
+          #Server = http://homeserver:7878/$repo/os/$arch
+          #Include = /etc/pacman.d/mirrorlist
+
+          #[multilib]
+          #Server = http://homeserver:7878/$repo/os/$arch
+          #Include = /etc/pacman.d/mirrorlist
+
+          #[multilib-testing]
+          #Server = http://homeserver:7878/$repo/os/$arch
+          #Include = /etc/pacman.d/mirrorlist
 
     - name: Ensures /etc/pacman.d/hooks/ dir exists
       file: path=/etc/pacman.d/hooks/ state=directory
@@ -111,12 +147,6 @@
       copy:
         src: mirrorupgrade
         dest: /etc/pacman.d/hooks/mirrorupgrade.hook
-
-    - name: install local mirror cache
-      copy:
-        src: mirrorlist
-        dest: /etc/pacman.d/mirrorlist
-        mode: 0644
 
     - name: remove old packages
       pacman: name={{absent_packages}} state=absent
