@@ -217,6 +217,7 @@ arch_packages:
   - slirp4netns
   - sshfs
   - starship
+  - tailscale
   - tekton-cli
   - terraform
   - tmux
