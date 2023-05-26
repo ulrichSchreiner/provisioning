@@ -120,15 +120,11 @@
           Server = http://homeserver:7878/$repo/os/$arch
           Include = /etc/pacman.d/mirrorlist
 
-          [community]
-          Server = http://homeserver:7878/$repo/os/$arch
-          Include = /etc/pacman.d/mirrorlist
-
-          #[community-testing]
+          #[extra-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 
-          #[testing]
+          #[core-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 

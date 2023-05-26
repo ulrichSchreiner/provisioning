@@ -144,7 +144,7 @@ arch_packages:
   - caddy
   - catimg
   - clang
-  - community/xh
+  - xh
   - crane
   - curl
   - direnv
