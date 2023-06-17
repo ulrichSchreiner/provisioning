@@ -32,6 +32,7 @@ gh_products:
     url: "https://github.com/zaquestion/lab/releases/download/v{{lab_version}}"
     package: "lab_{{lab_version}}_linux_amd64.tar.gz"
     is: "tgz0"
+    absent: true
   -
     name: "rga"
     version: "{{rga_version}}"
@@ -39,6 +40,7 @@ gh_products:
     package: "ripgrep_all-v{{rga_version}}-x86_64-unknown-linux-musl.tar.gz"
     is: "tgz"
     bundle: True
+    absent: true
   -
     name: "go"
     version: "{{golang_version}}"
@@ -59,6 +61,7 @@ gh_products:
     url: "https://github.com/TomWright/dasel/releases/download/v{{dasel_version}}"
     package: "dasel_linux_amd64"
     is: "bin"
+    absent: true
   -
     name: "swagger"
     version: "{{go_swagger}}"
@@ -71,6 +74,7 @@ gh_products:
     url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
     package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
     is: "tgz"
+    absent: true
   -
     name: "helm2"
     version: "{{helm_version}}"
@@ -212,6 +216,7 @@ arch_packages:
   - podman
   - reflector
   - ripgrep
+  - ripgrep-all
   - rofi
   - s3fs-fuse
   - skim
