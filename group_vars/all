@@ -226,6 +226,7 @@ arch_packages:
   - tailscale
   - tekton-cli
   - terraform
+  - tig
   - tmux
   - tokei
   - translate-shell
