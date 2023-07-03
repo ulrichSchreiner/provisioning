@@ -220,6 +220,13 @@
     sysctl_file: /etc/sysctl.d/docker_dev_neigh_cache.conf
     reload: yes
 
+- name: increase max_map_count for firefox
+  sysctl:
+    name: vm.max_map_count
+    value: 262144
+    sysctl_file: /etc/sysctl.d/firefox.conf
+    reload: yes
+
 - name: enable userns for podman
   sysctl:
     name: kernel.unprivileged_userns_clone
