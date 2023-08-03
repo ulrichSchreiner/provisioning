@@ -193,10 +193,11 @@
     repo=https://github.com/zsh-users/zsh-syntax-highlighting.git
     dest=~/tools/zsh-syntax-highlighting
 
-- name: install zsh syntax highlighter
+- name: install git-fuzzy
   git: >
     repo=https://github.com/bigH/git-fuzzy
     dest=~/tools/git-fuzzy
+    version=main
 
 - name: install desktop files
   copy:
