@@ -188,6 +188,7 @@ arch_packages:
   - just
   - k9s
   - kcharselect
+  - kexec-tools
   - kubectl
   - kubectx
   - kubie
