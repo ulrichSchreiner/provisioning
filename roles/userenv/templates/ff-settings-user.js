@@ -14,3 +14,5 @@ user_pref("browser.compactmode.show", true);
 //user_pref("layout.css.devPixelsPerPx", "0.9");
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
 user_pref("widget.wayland.vsync.enabled",false);
+user_pref("network.security.ports.banned.override","1-65535");
+
