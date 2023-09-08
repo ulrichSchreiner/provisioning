@@ -225,7 +225,6 @@ arch_packages:
   - sshfs
   - starship
   - tailscale
-  - tekton-cli
   - terraform
   - tig
   - tmux
@@ -323,6 +322,7 @@ absent_packages:
   - pulumi
   - pulumi-bin
   - ruby-xdg
+  - tekton-cli
   - tmuxinator
   - topgrade
   - up-bin
