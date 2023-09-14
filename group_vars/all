@@ -287,7 +287,6 @@ aur_packages:
   - q-dns-git
   - skopeo
   - stern-bin
-  - systemd-ssh-agent
   - tmuxp
   - topgrade-bin
   - visual-studio-code-bin
@@ -322,6 +321,7 @@ absent_packages:
   - pulumi
   - pulumi-bin
   - ruby-xdg
+  - systemd-ssh-agent
   - tekton-cli
   - tmuxinator
   - topgrade
