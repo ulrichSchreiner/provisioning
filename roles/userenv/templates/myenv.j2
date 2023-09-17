@@ -8,40 +8,6 @@ source /usr/share/bash-completion/completions/kubie
 
 alias s3cmd="docker run -it --rm -e aws_key=${S3_BUCKET_BACKUP_KEY} -e aws_secret=${S3_BACKUP_BACKUP_SECRET} -e cmd=interactive -v $HOME:$HOME garland/docker-s3cmd /bin/sh"
 
-_atocker() {
-  CONFIG=$HOME/.config/atocker
-  mkdir -p $CONFIG
-  DBPATH=$(echo $DBUS_SESSION_BUS_ADDRESS|cut -d '=' -f2)
-docker run  \
-    --rm \
-    -it \
-    --net=host \
-    --privileged \
-    --security-opt=seccomp:unconfined \
-    --device /dev/dri \
-    -v /etc/localtime:/etc/localtime:ro \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v `pwd`:/work \
-    -v $CONFIG:/config \
-    -v $HOME/.gitconfig:/devhome/.gitconfig \
-    -v $SSH_AUTH_SOCK:/ssh-agent -e SSH_AUTH_SOCK=/ssh-agent \
-    -v /var/run/dbus:/var/run/dbus:ro \
-    -v $DBPATH:/dbus \
-    -e DBUS_SESSION_BUS_ADDRESS="unix:path=/dbus" \
-    -v /etc/machine-id:/etc/machine-id:ro \
-    -e DISPLAY=$DISPLAY \
-    -e xDISABLE_GPU="--disable-gpu" \
-    -e LANG=$LANG \
-    -e HOSTUSER=`id -un` \
-    -e HOSTGROUP=`id -gn` \
-    -e HOSTUSERID=`id -u` \
-    -e HOSTGROUPID=`id -g` \
-    -e WORKSPACE=`pwd | cut --complement -d / -n -f 2,3` \
-    -e XAUTHORITY=/.XAUTHORITY -v $XAUTHORITY:/.XAUTHORITY \
-    quay.io/ulrichschreiner/atocker "$1"
-}
-alias atm="_atocker"
-
 _sphinx() {
   docker run -u `id -u`:`id -g` -it --rm -v `pwd`:/doc ulrichschreiner/sphinx "$@"
 }
@@ -106,7 +72,7 @@ export ANSIBLE_CONFIG_DIR=$HOME/Nextcloud/ansible-config
 export EDITOR='nvim'
 export GPG_TTY=$(tty)
 
-export CDPATH=.:~/go/src/gitlab.com/globalsafetrack:~/workspaces/ulrichSchreiner:~/workspaces:~/go/src/git.f-i-ts.de/devops:~/go/src/git.f-i-ts.de/cloud-native
+export CDPATH=.:~/go/src/gitlab.com/globalsafetrack:~/workspaces/ulrichSchreiner:~/workspaces
 
 export GITSTATUS_LOG_LEVEL=DEBUG
 
