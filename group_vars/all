@@ -152,6 +152,7 @@ arch_packages:
   - crane
   - curl
   - direnv
+  - dive
   - docker-buildx
   - docker-compose
   - doctl
