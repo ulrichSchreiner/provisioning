@@ -223,6 +223,7 @@ arch_packages:
   - s3fs-fuse
   - skim
   - slirp4netns
+  - speech-dispatcher
   - sshfs
   - starship
   - tailscale
