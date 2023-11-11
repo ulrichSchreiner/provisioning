@@ -16,4 +16,4 @@ user_pref("browser.download.start_downloads_in_tmp_dir", true);
 user_pref("widget.wayland.vsync.enabled",false);
 user_pref("network.security.ports.banned.override","1-65535");
 user_pref("browser.urlbar.quickactions.enabled",true);
-
+user_pref("apz.gtk.kinetic_scroll.enabled",false);
