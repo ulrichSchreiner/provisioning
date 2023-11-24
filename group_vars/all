@@ -206,6 +206,7 @@ arch_packages:
   - minikube
   - mypaint
   - neovim
+  - nerd-fonts
   - nextcloud-client
   - nodejs
   - npm
