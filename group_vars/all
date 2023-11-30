@@ -190,6 +190,7 @@ arch_packages:
   - k9s
   - kcharselect
   - kexec-tools
+  - kio-gdrive
   - krfb
   - kubectl
   - kubectx
