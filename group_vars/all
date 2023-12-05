@@ -296,6 +296,7 @@ aur_packages:
   - topgrade-bin
   - visual-studio-code-bin
   - yay
+  - yh-bin
   - zq
 
 arch_android_dev_packages:
