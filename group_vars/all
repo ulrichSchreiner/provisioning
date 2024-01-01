@@ -219,6 +219,7 @@ arch_packages:
   - pamac-tray-icon-plasma
   - peco
   - podman
+  - qt5-virtualkeyboard
   - reflector
   - ripgrep
   - ripgrep-all
