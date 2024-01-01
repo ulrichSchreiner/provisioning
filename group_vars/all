@@ -245,6 +245,7 @@ arch_packages:
   - viu
   - wails
   - watchexec
+  - weston
   - wl-clipboard
   - xclip
   - xdg-desktop-portal
