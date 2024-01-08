@@ -193,6 +193,9 @@
         - /etc/modprobe.d/v4l2loopback.conf
         - /etc/modules-load.d/v4l2loopback.conf
 
+    - name: Ensures sddm/wayland config dir exists
+      file: path=/etc/sddm.conf.d/ state=directory
+
     - name: install sddm/wayland
       copy:
         src: sddm-wayland.conf
