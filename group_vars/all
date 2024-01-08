@@ -272,6 +272,7 @@ aur_packages:
   - git-extras
   - golangci-lint-bin
   - google-chrome
+  - go-task-bin
   - gotty-bin
   - httplab
   - httpstat-go
