@@ -28,6 +28,7 @@ alias v='code .'
 alias watch='watch '
 alias c=cloudctl
 alias m=metalctl
+alias t=go-task
 alias o=xdg-open
 alias pacbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 alias docker-make='docker run -it --rm -v /run/docker.sock:/run/docker.sock:ro -v "$(pwd)":"$(pwd)" -w "$(pwd)" metalstack/docker-make $@'
