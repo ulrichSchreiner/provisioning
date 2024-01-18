@@ -218,6 +218,7 @@ arch_packages:
   - pacman-contrib
   - pamac-aur
   - pamac-tray-icon-plasma
+  - parallel
   - peco
   - podman
   - reflector
