@@ -163,6 +163,7 @@ arch_packages:
   - firefox
   - firefox-i18n-de
   - flatpak
+  - fluxcd
   - fq
   - fwupd
   - fx
