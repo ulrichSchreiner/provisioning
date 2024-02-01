@@ -148,6 +148,7 @@ arch_packages:
   - caddy
   - catimg
   - clang
+  - croc
   - xh
   - crane
   - curl
