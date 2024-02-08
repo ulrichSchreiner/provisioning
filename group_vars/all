@@ -185,6 +185,7 @@ arch_packages:
   - highlight
   - htop
   - httpie
+  - inxi
   - iptables
   - jc
   - jq
