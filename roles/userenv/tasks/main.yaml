@@ -111,12 +111,6 @@
     dest: ~/.p10k.zsh
     state: link
 
-- name: symlink pulimi state
-  file:
-    src: ~/Nextcloud/pulumi-state
-    dest: ~/.pulumi
-    state: link
-
 - name: install autosuggestion
   git: >
     repo=https://github.com/zsh-users/zsh-autosuggestions.git
@@ -323,3 +317,9 @@
 
 - name: export some environment variables when kde starts
   copy: src=ssh_askpass.conf dest=~/.config/environment.d/ssh_askpass.conf mode=0644
+
+- name: symlink vscode starting flags
+  file:
+    src: ~/Nextcloud/Entwicklung/code-flags.conf
+    dest: ~/.config/code-flags.conf
+    state: link

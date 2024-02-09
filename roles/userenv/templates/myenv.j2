@@ -37,6 +37,7 @@ alias cpu-frequency='watch grep \"cpu MHz\" /proc/cpuinfo'
 alias pacdiff='DIFFPROG=meld pacdiff'
 alias k8s-netpod='kubectl run -i --tty nettest --image=registry.gitlab.com/ulrichschreiner/toolbox --image-pull-policy Always -- bash'
 alias k8s-rmevicted="kubectl get pods | grep Evicted | awk '{print \$1}' | xargs kubectl delete pod"
+alias kwin-debug-console="qdbus org.kde.KWin /KWin org.kde.KWin.showDebugConsole"
 
 __meitrack_events() {
   logcli -qo raw query -t '{app="meitrack-server",stage="prod"} |="binary" | json | line_format "{{ '{{' }}.binary{{ '}}' }}"' | xargs -I{} sh -c "echo {} | base64 -d | hexyl"
