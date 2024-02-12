@@ -159,7 +159,7 @@
     state: link
 
 - name: create local vscode config settings
-  include: vscode.yaml
+  include_tasks: vscode.yaml
   loop:
     - "Code"
 
