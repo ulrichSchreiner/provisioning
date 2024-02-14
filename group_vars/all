@@ -192,6 +192,7 @@ arch_packages:
   - jc
   - jq
   - just
+  - jwt-cli
   - k9s
   - kcharselect
   - kexec-tools
