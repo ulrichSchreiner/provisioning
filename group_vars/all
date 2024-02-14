@@ -434,3 +434,16 @@ s3_music_mount: /mnt/s3/music
 
 nextcloud_ignore:
   - "http-cache/"
+
+kubectl_plugins:
+  - ca-cert
+  - cert-manager
+  - devinjeon/gpt
+  - ingress-nginx
+  - modify-secret
+  - node-shell
+  - rbac-tool
+  - stern
+  - view-secret
+  - view-cert
+  - view-serviceaccount-kubeconfig

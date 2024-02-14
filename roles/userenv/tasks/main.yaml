@@ -323,3 +323,6 @@
     src: ~/Nextcloud/Entwicklung/code-flags.conf
     dest: ~/.config/code-flags.conf
     state: link
+
+- name: install kubectl plugins
+  shell: kubectl krew install {{kubectl_plugins | join(" ")}}
