@@ -446,3 +446,4 @@ kubectl_plugins:
   - view-secret
   - view-cert
   - view-serviceaccount-kubeconfig
+  - resource-capacity
