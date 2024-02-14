@@ -159,6 +159,7 @@ arch_packages:
   - doctl
   - drone-cli
   - duf
+  - dust
   - entr
   - exa
   - firefox
@@ -178,6 +179,7 @@ arch_packages:
   - gnome-keyring
   - go
   - grep
+  - grex
   - gron
   - gzip
   - helm
@@ -229,12 +231,14 @@ arch_packages:
   - ripgrep-all
   - rofi
   - s3fs-fuse
+  - sd
   - skim
   - slirp4netns
   - speech-dispatcher
   - sshfs
   - starship
   - tailscale
+  - tealdeer
   - terraform
   - tig
   - tmux
