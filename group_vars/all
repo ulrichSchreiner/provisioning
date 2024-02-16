@@ -226,6 +226,7 @@ arch_packages:
   - pamac-tray-icon-plasma
   - parallel
   - peco
+  - plymouth-kcm
   - podman
   - reflector
   - ripgrep
@@ -274,6 +275,7 @@ aur_packages:
   - cloudctl-bin
   - drawio-desktop-bin
   - dyff-bin
+  - fancontrol-kcm
   - fd
   - fq-bin
   - fselect-bin
@@ -288,6 +290,7 @@ aur_packages:
   - hyperfine
   - icdiff
   - jj-bin
+  - kcm-uefi
   - kernel-modules-hook
   - kind-bin
   - krew-bin
@@ -305,6 +308,7 @@ aur_packages:
   - q-dns-git
   - skopeo
   - stern-bin
+  - systemd-kcm
   - tmuxp
   - topgrade-bin
   - visual-studio-code-bin
