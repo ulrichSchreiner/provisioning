@@ -170,6 +170,7 @@ arch_packages:
   - fx
   - fzf
   - gcc
+  - gitbutler-bin
   - git-cliff
   - git-delta
   - git-lfs
