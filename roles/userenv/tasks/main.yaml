@@ -193,12 +193,6 @@
   with_fileglob:
     - "desktop-files/*.desktop"
 
-- name: install broot
-  file:
-    src: ~/Nextcloud/Entwicklung/broot
-    dest: ~/.config/broot
-    state: link
-
 - name: Check for ~/go/src/git.f-i-ts.de/cloud-native/ exists
   stat: path=~/go/src/git.f-i-ts.de/cloud-native/
   register: cnative

@@ -143,7 +143,6 @@ arch_packages:
   - base-devel
   - bat
   - binutils
-  - broot
   - buildah
   - caddy
   - catimg
