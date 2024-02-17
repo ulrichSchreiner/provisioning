@@ -238,6 +238,7 @@ arch_packages:
   - speech-dispatcher
   - sshfs
   - starship
+  - stow
   - tailscale
   - tealdeer
   - terraform
