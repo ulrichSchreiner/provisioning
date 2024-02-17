@@ -37,9 +37,6 @@
   include_tasks: lib/goget.yaml
   with_items: "{{gogetable_tools}}"
 
-- name: create environment for sourcing
-  template: src=myenv.j2 dest=~/.myenv
-
 - name: create environment for gotty
   template: src=gotty.j2 dest=~/.gotty
 
@@ -130,9 +127,6 @@
   git: >
     repo=https://github.com/kubermatic/fubectl.git
     dest=~/tools/fubectl
-
-- name: install my zshrc
-  template: src=zshrc.j2 dest=~/.zshrc
 
 - name: create the folder for the gpg-agent-startup
   file: path=~/.config/plasma-workspace/env/ state=directory mode=0755
