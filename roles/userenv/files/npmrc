@@ -1,3 +1,0 @@
-prefix=${HOME}/npm
-cache=${HOME}/npm/cache
-cache-min=86400

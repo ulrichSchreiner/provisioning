@@ -63,9 +63,6 @@
   copy: src=chromedebug dest=/usr/local/bin/chromedebug mode=0755
   become: yes
 
-- name: set the npm configuration
-  copy: src=npmrc dest=~/.npmrc
-
 - name: check if npm-check-updates is installed
   shell: npm list -g --depth 1 npm-check-updates
   ignore_errors: yes
@@ -136,12 +133,6 @@
 
 - name: export some environment variables when kde starts
   copy: src=my-plasma-env.sh dest=~/.config/plasma-workspace/env/my-plasma-env.sh mode=0755
-
-- name: create local k3s directory
-  file: path=~/tools/k3s state=directory mode=0755
-
-- name: copy k3s compose file
-  copy: src=k3s-compose.yml dest=~/tools/k3s/docker-compose.yml
 
 - name: copy my nanorc
   copy: src=nanorc dest=~/.nanorc
