@@ -170,7 +170,6 @@ arch_packages:
   - fx
   - fzf
   - gcc
-  - gitbutler-bin
   - git-cliff
   - git-delta
   - git-lfs
@@ -276,6 +275,7 @@ aur_packages:
   - cloudctl-bin
   - drawio-desktop-bin
   - dyff-bin
+  - gitbutler-bin
   - fancontrol-kcm
   - fd
   - fq-bin
