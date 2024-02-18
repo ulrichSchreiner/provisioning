@@ -6,9 +6,6 @@ golang_version: "1.22.0"
 bfg_version: "1.12.13"
 #my_distribution_release: {{ansible_distribution_release}}
 my_distribution_release: xenial
-helm_version: "2.16.12"
-helm3_version: "3.7.2"
-terraform_provider_ct_version: "0.4.0"
 go_swagger: "0.19.0"
 linuxkit_version: "0.7"
 reflex_version: "v0.3.1"
@@ -68,27 +65,6 @@ gh_products:
     url: "https://github.com/go-swagger/go-swagger/releases/download/v{{go_swagger}}"
     package: "swagger_linux_amd64"
     is: "bin"
-  -
-    name: "terraform-provider-ct"
-    version: "{{terraform_provider_ct_version}}"
-    url: "https://github.com/coreos/terraform-provider-ct/releases/download/v{{terraform_provider_ct_version}}"
-    package: "terraform-provider-ct-v{{terraform_provider_ct_version}}-linux-amd64.tar.gz"
-    is: "tgz"
-    absent: true
-  -
-    name: "helm2"
-    version: "{{helm_version}}"
-    url: "https://storage.googleapis.com/kubernetes-helm"
-    package: "helm-v{{helm_version}}-linux-amd64.tar.gz"
-    is: "tgz"
-    absent: true
-  -
-    name: "helm"
-    version: "{{helm3_version}}"
-    url: "https://get.helm.sh"
-    package: "helm-v{{helm3_version}}-linux-amd64.tar.gz"
-    is: "tgz"
-    absent: true
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 packagecloud_key_url: https://packagecloud.io/gpg.key

@@ -40,21 +40,6 @@
 - name: create environment for gotty
   template: src=gotty.j2 dest=~/.gotty
 
-- name: source the new environment
-  lineinfile: dest=~/.bashrc regexp='^source ~/.myenv' line='source ~/.myenv'
-
-- name: set zsh as default for tmux
-  lineinfile: dest=~/.tmux.conf regexp="^set-option -g default-shell /bin/zsh" line="set-option -g default-shell /bin/zsh" create=yes state=present
-
-- name: set shortcut to sync keys in tmux
-  lineinfile: dest=~/.tmux.conf regexp="synchronize-panes on" line="bind -n C-x setw synchronize-panes on" create=yes state=present
-
-- name: set shortcut to sync keys in tmux (off)
-  lineinfile: dest=~/.tmux.conf regexp="synchronize-panes off" line="bind -n M-x setw synchronize-panes off" create=yes state=present
-
-- name: enable mouse in tmux
-  lineinfile: dest=~/.tmux.conf regexp="set -g mouse on" line="set -g mouse on" create=yes state=present
-
 - name: create a wrapper for openapi-cli
   copy: src=openapi-cli dest=/usr/local/bin/openapi-cli mode=0755
   become: yes
@@ -120,29 +105,6 @@
     repo=https://github.com/heptiolabs/ktx.git
     dest=~/tools/ktx
 
-- name: install fubectl
-  git: >
-    repo=https://github.com/kubermatic/fubectl.git
-    dest=~/tools/fubectl
-
-- name: create the folder for the gpg-agent-startup
-  file: path=~/.config/plasma-workspace/env/ state=directory mode=0755
-
-- name: start gpg-agent when kde starts
-  copy: src=gpg-agent-startup.sh dest=~/.config/plasma-workspace/env/gpg-agent-startup.sh mode=0755
-
-- name: export some environment variables when kde starts
-  copy: src=my-plasma-env.sh dest=~/.config/plasma-workspace/env/my-plasma-env.sh mode=0755
-
-- name: copy my nanorc
-  copy: src=nanorc dest=~/.nanorc
-
-- name: symlink the wd (warp) state file
-  file:
-    src: ~/Nextcloud/Entwicklung/warprc
-    dest: ~/.warprc
-    state: link
-
 - name: create local vscode config settings
   include_tasks: vscode.yaml
   loop:
@@ -169,18 +131,6 @@
     repo=https://github.com/bigH/git-fuzzy
     dest=~/tools/git-fuzzy
     version=main
-
-- name: install desktop files
-  copy:
-    src: "{{ item }}"
-    dest: "~/.local/share/applications"
-    mode: 0600
-  with_fileglob:
-    - "desktop-files/*.desktop"
-
-- name: Check for ~/go/src/git.f-i-ts.de/cloud-native/ exists
-  stat: path=~/go/src/git.f-i-ts.de/cloud-native/
-  register: cnative
 
 - name: create cloudctl config directory
   file: path=~/.cloudctl state=directory mode=0755
@@ -260,13 +210,6 @@
     enabled: yes
     scope: user
 
-# some cleanups of old tools
-
-- name: Recursively remove z
-  ansible.builtin.file:
-    path: ~/tools/z
-    state: absent
-
 # some configs for nushell
 
 - name: create nu config directory
@@ -293,15 +236,6 @@
 
 - name: create environment settings dir
   file: path=~/.config/environment.d state=directory mode=0755
-
-- name: export some environment variables when kde starts
-  copy: src=ssh_askpass.conf dest=~/.config/environment.d/ssh_askpass.conf mode=0644
-
-- name: symlink vscode starting flags
-  file:
-    src: ~/Nextcloud/Entwicklung/code-flags.conf
-    dest: ~/.config/code-flags.conf
-    state: link
 
 - name: install kubectl plugins
   shell: kubectl krew install {{kubectl_plugins | join(" ")}}
