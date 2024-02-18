@@ -132,6 +132,14 @@
     dest=~/tools/git-fuzzy
     version=main
 
+- name: install desktop files
+  copy:
+    src: "{{ item }}"
+    dest: "~/.local/share/applications"
+    mode: 0600
+  with_fileglob:
+    - "desktop-files/*.desktop"
+
 - name: create cloudctl config directory
   file: path=~/.cloudctl state=directory mode=0755
 
