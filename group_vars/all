@@ -65,6 +65,7 @@ gh_products:
     url: "https://github.com/go-swagger/go-swagger/releases/download/v{{go_swagger}}"
     package: "swagger_linux_amd64"
     is: "bin"
+    absent: true
 
 chrome_key_url: https://dl.google.com/linux/linux_signing_key.pub
 packagecloud_key_url: https://packagecloud.io/gpg.key
@@ -153,6 +154,7 @@ arch_packages:
   - glow
   - gnome-keyring
   - go
+  - go-swagger
   - grep
   - grex
   - gron
