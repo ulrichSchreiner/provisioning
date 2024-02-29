@@ -8,7 +8,6 @@ bfg_version: "1.12.13"
 my_distribution_release: xenial
 go_swagger: "0.19.0"
 reflex_version: "v0.3.1"
-lab_version: "0.25.1"
 sshcode: "0.10.0"
 operator_sdk_version: "1.18.0"
 rga_version: "0.9.6"
@@ -21,13 +20,6 @@ gh_products:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v{{operator_sdk_version}}"
     package: "operator-sdk_linux_amd64"
     is: "bin"
-  -
-    name: "lab"
-    version: "{{lab_version}}"
-    url: "https://github.com/zaquestion/lab/releases/download/v{{lab_version}}"
-    package: "lab_{{lab_version}}_linux_amd64.tar.gz"
-    is: "tgz0"
-    absent: true
   -
     name: "rga"
     version: "{{rga_version}}"
