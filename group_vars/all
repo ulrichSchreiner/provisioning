@@ -163,7 +163,6 @@ arch_packages:
   - maliit-keyboard
   - meld
   - mercurial
-  - micro
   - minikube
   - mypaint
   - neovim
@@ -291,6 +290,7 @@ absent_packages:
   - kaniko
   - keyleds
   - logdna-cli-bin
+  - micro
   - nerd-fonts-fira-mono
   - nushell-bin
   - octopi
