@@ -131,6 +131,7 @@ arch_packages:
   - gnome-keyring
   - go
   - go-swagger
+  - go-yq
   - grep
   - grex
   - gron
@@ -215,7 +216,6 @@ arch_packages:
   - xdg-desktop-portal
   - xdg-desktop-portal-kde
   - yarn
-  - yq
   - zoxide
   - zsh
 
@@ -306,6 +306,7 @@ absent_packages:
   - up-bin
   - vagrant
   - v4l2loopback-dkms
+  - yq
   - zx
 
 fedora_packages:
