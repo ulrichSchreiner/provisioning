@@ -104,6 +104,7 @@ arch_packages:
   - xh
   - crane
   - curl
+  - difftastic
   - direnv
   - dive
   - docker-buildx
