@@ -171,6 +171,10 @@ arch_packages:
   - nerd-fonts
   - nextcloud-client
   - nodejs
+  - noto-fonts-emoji
+  - noto-fonts-extra
+  - noto-fonts-cjk
+  - noto-fonts
   - npm
   - nss-mdns
   - nushell
