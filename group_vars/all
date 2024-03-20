@@ -210,6 +210,7 @@ arch_packages:
   - ttf-ibm-plex
   - typescript
   - up
+  - viddy-bin
   - virtualbox
   - virtualbox-host-modules-arch
   - viu
