@@ -210,7 +210,6 @@ arch_packages:
   - ttf-ibm-plex
   - typescript
   - up
-  - viddy-bin
   - virtualbox
   - virtualbox-host-modules-arch
   - viu
@@ -249,6 +248,7 @@ aur_packages:
   - hyperfine
   - icdiff
   - jj-bin
+  - jnv
   - kcm-uefi
   - kernel-modules-hook
   - kind-bin
@@ -270,6 +270,7 @@ aur_packages:
   - systemd-kcm
   - tmuxp
   - topgrade-bin
+  - viddy-bin
   - visual-studio-code-bin
   - yay
   - yh-bin
@@ -413,6 +414,7 @@ kubectl_plugins:
   - node-shell
   - rbac-tool
   - stern
+  - tree
   - view-secret
   - view-cert
   - view-serviceaccount-kubeconfig
