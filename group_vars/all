@@ -142,6 +142,7 @@ arch_packages:
   - highlight
   - htop
   - httpie
+  - hunspell-de
   - inxi
   - iptables
   - jc
