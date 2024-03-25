@@ -96,6 +96,7 @@ arch_packages:
   - base-devel
   - bat
   - binutils
+  - btop
   - buildah
   - caddy
   - catimg
@@ -229,7 +230,6 @@ aur_packages:
   - act-bin
   - apple-fonts
   - aura-bin
-  - btop
   - cfssl
   - cloudctl-bin
   - drawio-desktop-bin
