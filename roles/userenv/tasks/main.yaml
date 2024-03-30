@@ -64,10 +64,11 @@
     create: yes
     mode: "0600"
     dest: ~/.ssh/config
+    insertbefore: BOF
     block: |
-      AddKeysToAgent yes
-      Host *
-         ForwardAgent yes
+      Include ~/Nextcloud/Entwicklung/ssh-config
+
+
 
 - name: install oh-my-zsh
   git: >
