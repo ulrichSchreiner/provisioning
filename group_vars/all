@@ -168,6 +168,7 @@ arch_packages:
   - meld
   - mercurial
   - minikube
+  - mqttui
   - mypaint
   - neovim
   - nerd-fonts
@@ -298,6 +299,7 @@ absent_packages:
   - keyleds
   - logdna-cli-bin
   - micro
+  - mqttui-bin
   - nerd-fonts-fira-mono
   - nushell-bin
   - octopi
