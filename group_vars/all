@@ -212,6 +212,7 @@ arch_packages:
   - ts-node
   - ttf-ibm-plex
   - typescript
+  - typos
   - up
   - virtualbox
   - virtualbox-host-modules-arch
