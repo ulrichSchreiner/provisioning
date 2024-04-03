@@ -1,3 +1,9 @@
+- command: echo ~
+  register: instdir
+
+- name: create local wireguard network manager connections
+  include_tasks: nm-wireguard-conns.yaml
+
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
 
@@ -67,7 +73,7 @@
     insertbefore: BOF
     block: |
       Include ~/Nextcloud/Entwicklung/ssh-config
-      Include ~/Nextcloud/Entwicklung/metal/ssh-config
+      Include ~/Nextcloud/Entwicklung/metal/wireguard/ssh-config
 
 - name: install oh-my-zsh
   git: >
@@ -175,9 +181,6 @@
     dest: ~/tools/ff-settings
   register: ffsettingsclone
 
-- command: echo ~
-  register: instdir
-
 - name: install ff-settings
   become: yes
   when: ffsettingsclone.changed
@@ -239,3 +242,4 @@
 
 - name: install kubectl plugins
   shell: kubectl krew install {{kubectl_plugins | join(" ")}}
+

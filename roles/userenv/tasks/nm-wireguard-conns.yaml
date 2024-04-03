@@ -1,0 +1,36 @@
+- name: query exsting nm connections
+  command: nmcli -f NAME connection show
+  register: nm_conns_out
+
+- name: set the conns list
+  set_fact:
+    nm_conns: "{{nm_conns_out.stdout | split('\n') | map('trim') }}"
+
+- name: Find the wireguard configs on the remote (aka my system)
+  find:
+    paths: "~/Nextcloud/Entwicklung/metal/wireguard/configs/"
+    patterns: "*.conf"
+  register: wg_conns
+
+
+- name: query the names of the wanted connections
+  set_fact:
+    new_conns: "{{ wg_conns.files | map(attribute='path') | map('basename') | map('splitext') | map('first') | list }}"
+
+- name: calculate the needed nm conns
+  set_fact:
+    non_existing : "{{ new_conns | difference (nm_conns) }}"
+
+- name: register new wireguard connection
+  become: true
+  command: "nmcli connection import type wireguard file {{instdir.stdout}}/Nextcloud/Entwicklung/metal/wireguard/configs/{{item}}.conf"
+  loop: "{{ non_existing }}"
+
+- name: pause for a few secs so all connections should exist
+  pause:
+    seconds: 2
+
+- name: set the connections down
+  become: true
+  command: "nmcli connection down {{item}}"
+  loop: "{{ non_existing }}"
