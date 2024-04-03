@@ -67,8 +67,7 @@
     insertbefore: BOF
     block: |
       Include ~/Nextcloud/Entwicklung/ssh-config
-
-
+      Include ~/Nextcloud/Entwicklung/metal/ssh-config
 
 - name: install oh-my-zsh
   git: >

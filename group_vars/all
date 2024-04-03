@@ -220,6 +220,7 @@ arch_packages:
   - wails
   - watchexec
   - weston
+  - wireguard-tools
   - wl-clipboard
   - xclip
   - xdg-desktop-portal
