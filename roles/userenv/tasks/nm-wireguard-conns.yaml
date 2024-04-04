@@ -34,3 +34,8 @@
   become: true
   command: "nmcli connection down {{item}}"
   loop: "{{ non_existing }}"
+
+- name: set the connections to not autoconnect
+  become: true
+  command: "nmcli connection modify {{item}} connection.autoconnect no"
+  loop: "{{ non_existing }}"
