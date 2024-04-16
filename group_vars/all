@@ -96,6 +96,7 @@ arch_packages:
   - base-devel
   - bat
   - binutils
+  - bore
   - btop
   - buildah
   - caddy
