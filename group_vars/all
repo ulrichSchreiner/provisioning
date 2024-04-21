@@ -120,6 +120,7 @@ arch_packages:
   - firefox
   - firefox-i18n-de
   - flatpak
+  - flatpak-kcm
   - fluxcd
   - fq
   - fwupd
