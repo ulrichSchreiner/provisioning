@@ -123,6 +123,7 @@ arch_packages:
   - flatpak-kcm
   - fluxcd
   - fq
+  - freerdp2
   - fwupd
   - fx
   - fzf
