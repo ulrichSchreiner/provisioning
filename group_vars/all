@@ -103,6 +103,7 @@ arch_packages:
   - catimg
   - clang
   - croc
+  - cryfs
   - xh
   - crane
   - curl
