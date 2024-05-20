@@ -206,7 +206,6 @@ arch_packages:
   - starship
   - stow
   - tailscale
-  - tealdeer
   - terraform
   - tig
   - tmux
