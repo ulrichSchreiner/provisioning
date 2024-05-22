@@ -229,6 +229,7 @@ arch_packages:
   - xdg-desktop-portal
   - xdg-desktop-portal-kde
   - yarn
+  - zellij
   - zoxide
   - zsh
 
