@@ -268,7 +268,6 @@ aur_packages:
   - metalctl-bin
   - mirrord-bin
   - modd
-  - ngrok
   - nodejs-git-split-diffs
   - octant-bin
   - plasma5-applets-eventcalendar
@@ -307,6 +306,7 @@ absent_packages:
   - micro
   - mqttui-bin
   - nerd-fonts-fira-mono
+  - ngrok
   - nushell-bin
   - octopi
   - octopi-notifier-qt5
