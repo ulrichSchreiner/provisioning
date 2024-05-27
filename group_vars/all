@@ -264,6 +264,7 @@ aur_packages:
   - krew-bin
   - kube-prompt
   - kubefwd-bin
+  - kubeswitch-bin
   - kubetail
   - lego-bin
   - metalctl-bin
