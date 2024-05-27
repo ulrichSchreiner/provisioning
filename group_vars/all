@@ -227,6 +227,7 @@ arch_packages:
   - wl-clipboard
   - xclip
   - xdg-desktop-portal
+  - xdg-desktop-portal-gtk
   - xdg-desktop-portal-kde
   - yarn
   - zellij
