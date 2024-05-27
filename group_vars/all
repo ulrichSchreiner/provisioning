@@ -416,6 +416,8 @@ s3_music_mount: /mnt/s3/music
 
 nextcloud_ignore:
   - "http-cache/"
+  - ".switch_tmp*"
+  - ".kube/.switch_tmp*"
 
 kubectl_plugins:
   - ca-cert
