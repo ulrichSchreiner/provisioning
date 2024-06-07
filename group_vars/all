@@ -117,6 +117,7 @@ arch_packages:
   - duf
   - dust
   - entr
+  - esbuild
   - exa
   - firefox
   - firefox-i18n-de
@@ -132,6 +133,7 @@ arch_packages:
   - git-cliff
   - git-delta
   - git-lfs
+  - github-cli
   - glab
   - glow
   - gnome-keyring
