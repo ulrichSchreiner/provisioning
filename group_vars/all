@@ -188,6 +188,7 @@ arch_packages:
   - npm
   - nss-mdns
   - nushell
+  - operator-sdk
   - osquery
   - pacman-contrib
   - pamac-aur
