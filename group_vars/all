@@ -276,6 +276,7 @@ aur_packages:
   - modd
   - nodejs-git-split-diffs
   - octant-bin
+  - oh-my-posh-bin
   - plasma5-applets-eventcalendar
   - q-dns-git
   - skopeo
