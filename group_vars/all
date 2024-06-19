@@ -124,6 +124,10 @@ arch_packages:
   - flatpak
   - flatpak-kcm
   - fluxcd
+  - foomatic-db
+  - foomatic-db-ppds
+  - foomatic-db-nonfree
+  - foomatic-db-nonfree-ppds
   - fq
   - freerdp2
   - fwupd
