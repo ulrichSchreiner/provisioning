@@ -1,0 +1,7 @@
+absent_home_folders:
+  - tools/kube-ps1
+  - github.com/zsh-users/zsh-autosuggestions
+  - .p10k.zsh
+  - .oh-my-zsh/custom/themes/powerlevel10k
+  - .cache/starship
+  - .config/starship.toml

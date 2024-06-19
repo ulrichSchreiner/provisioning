@@ -85,27 +85,6 @@
     repo=https://github.com/jimeh/zsh-peco-history.git
     dest=~/.oh-my-zsh/custom/plugins/zsh-peco-history
 
-- name: install powerlevel10k
-  git: >
-    repo=https://github.com/romkatv/powerlevel10k.git
-    dest=~/.oh-my-zsh/custom/themes/powerlevel10k
-
-- name: symlink the p10k customization
-  file:
-    src: ~/Nextcloud/Entwicklung/p10k.zsh
-    dest: ~/.p10k.zsh
-    state: link
-
-- name: install autosuggestion
-  git: >
-    repo=https://github.com/zsh-users/zsh-autosuggestions.git
-    dest=~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-
-- name: install kube-ps1
-  git: >
-    repo=https://github.com/jonmosco/kube-ps1.git
-    dest=~/tools/kube-ps1
-
 - name: install ktx
   git: >
     repo=https://github.com/heptiolabs/ktx.git
@@ -196,8 +175,6 @@
     enabled: yes
     scope: user
 
-- name: install my FF settings
-  template: src=ff-settings-user.js dest=~/.config/ff-settings/user.js
 
 - name: keyledsd.conf file installation (keyledsd is autostarted in /etc/xdg/autostart/)
   ansible.builtin.copy:
@@ -215,25 +192,6 @@
 
 # some configs for nushell
 
-- name: create nu config directory
-  file: path=~/.config/nushell state=directory mode=0755
-
-- name: install configs for nushell
-  template: src={{item}}.j2 dest=~/.config/nushell/{{item}}
-  loop:
-    - config.nu
-    - env.nu
-    - myenv.nu
-
-- name: create starship nu config directory
-  file: path=~/.cache/starship state=directory mode=0755
-
-- name: install starship for nushell
-  template: src=starship.nu.j2 dest=~/.cache/starship/init.nu
-
-- name: install starship config
-  template: src=starship.toml.j2 dest=~/.config/starship.toml
-
 - name: install kubie config
   copy: src=kubie.yaml dest=~/.kube/kubie.yaml
 
@@ -243,3 +201,8 @@
 - name: install kubectl plugins
   shell: kubectl krew install {{kubectl_plugins | join(" ")}}
 
+- name: remove unwanted folders
+  file: >
+    path=~/{{ item}}
+    state=absent
+  loop: "{{ absent_home_folders }}"

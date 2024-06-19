@@ -207,7 +207,6 @@ arch_packages:
   - slirp4netns
   - speech-dispatcher
   - sshfs
-  - starship
   - stow
   - tailscale
   - terraform
@@ -322,6 +321,7 @@ absent_packages:
   - pulumi
   - pulumi-bin
   - ruby-xdg
+  - starship
   - systemd-ssh-agent
   - tekton-cli
   - tmuxinator
