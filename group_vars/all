@@ -173,6 +173,7 @@ arch_packages:
   - linux-headers
   - logcli
   - lsd
+  - lsix
   - make
   - maliit-keyboard
   - meld
