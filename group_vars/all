@@ -321,7 +321,7 @@ absent_packages:
   - octopi
   - octopi-notifier-qt5
   - peco-bin
-  - plasma-applets-eventcalendar
+  - plasma5-applets-eventcalendar
   - pulumi
   - pulumi-bin
   - q-dns-git
