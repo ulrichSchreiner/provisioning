@@ -120,6 +120,10 @@
           Server = http://homeserver:7878/$repo/os/$arch
           Include = /etc/pacman.d/mirrorlist
 
+          [aur]
+          SigLevel = Optional TrustAll
+          Server = http://homeserver:8001
+
           #[extra-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
