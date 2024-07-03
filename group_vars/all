@@ -119,6 +119,7 @@ arch_packages:
   - entr
   - esbuild
   - exa
+  - fd
   - firefox
   - firefox-i18n-de
   - flatpak
@@ -154,6 +155,7 @@ arch_packages:
   - htop
   - httpie
   - hunspell-de
+  - hyperfine
   - inxi
   - iptables
   - jc
@@ -209,14 +211,17 @@ arch_packages:
   - s3fs-fuse
   - sd
   - skim
+  - skopeo
   - slirp4netns
   - speech-dispatcher
   - sshfs
+  - stern
   - stow
   - tailscale
   - terraform
   - tig
   - tmux
+  - tmuxp
   - tokei
   - translate-shell
   - tree
@@ -252,8 +257,6 @@ aur_packages:
   - drawio-desktop-bin
   - dyff-bin
   - fancontrol-kcm
-  - fd
-  - fq-bin
   - fselect-bin
   - gdu-bin
   - git-extras
@@ -263,31 +266,21 @@ aur_packages:
   - gotty-bin
   - httplab
   - httpstat-go
-  - hyperfine
-  - icdiff
   - jj-bin
-  - jnv
+  - jnv-bin
   - kcm-uefi
   - kernel-modules-hook
   - kind-bin
   - krew-bin
   - kube-prompt
-  - kubefwd-bin
   - kubeswitch-bin
-  - kubetail
   - lego-bin
   - metalctl-bin
   - mirrord-bin
   - modd
   - nodejs-git-split-diffs
-  - octant-bin
   - oh-my-posh-bin
-  - plasma5-applets-eventcalendar
-  - q-dns-git
-  - skopeo
-  - stern-bin
-  - systemd-kcm
-  - tmuxp
+  - q-dns-bin
   - topgrade-bin
   - viddy-bin
   - visual-studio-code-bin
@@ -312,22 +305,31 @@ absent_packages:
   - glow-bin
   - go-crane-bin
   - gotop-bin
+  - icdiff
+  - jnv
   - kaniko
   - keyleds
+  - kubefwd-bin
+  - kubetail
   - logdna-cli-bin
   - micro
   - mqttui-bin
   - nerd-fonts-fira-mono
   - ngrok
   - nushell-bin
+  - octant-bin
   - octopi
   - octopi-notifier-qt5
   - peco-bin
+  - plasma-applets-eventcalendar
   - pulumi
   - pulumi-bin
+  - q-dns-git
   - ruby-xdg
   - starship
+  - stern-bin
   - systemd-ssh-agent
+  - systemd-kcm
   - tekton-cli
   - tmuxinator
   - topgrade
