@@ -197,8 +197,6 @@ arch_packages:
   - operator-sdk
   - osquery
   - pacman-contrib
-  - pamac-aur
-  - pamac-tray-icon-plasma
   - parallel
   - peco
   - plymouth-kcm
@@ -279,6 +277,8 @@ aur_packages:
   - modd
   - nodejs-git-split-diffs
   - oh-my-posh-bin
+  - pamac-aur
+  - pamac-tray-icon-plasma
   - q-dns-bin
   - topgrade-bin
   - viddy-bin
