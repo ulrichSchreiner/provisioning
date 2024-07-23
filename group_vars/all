@@ -118,7 +118,7 @@ arch_packages:
   - dust
   - entr
   - esbuild
-  - exa
+  - eza
   - fd
   - firefox
   - firefox-i18n-de
