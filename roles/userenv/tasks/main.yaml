@@ -54,17 +54,6 @@
   copy: src=chromedebug dest=/usr/local/bin/chromedebug mode=0755
   become: yes
 
-- name: check if npm-check-updates is installed
-  shell: npm list -g --depth 1 npm-check-updates
-  ignore_errors: yes
-  register: ncu
-  check_mode: False
-  changed_when: False
-
-- name: install npm-check-updates if needed
-  shell: npm install -g npm-check-updates
-  when: ncu.rc != 0
-
 - name: insert/update my local ssh config
   blockinfile:
     create: yes
