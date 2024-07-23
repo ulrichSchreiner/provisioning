@@ -231,7 +231,6 @@ arch_packages:
   - virtualbox
   - virtualbox-host-modules-arch
   - viu
-  - wails
   - watchexec
   - weston
   - wireguard-tools
@@ -283,6 +282,7 @@ aur_packages:
   - topgrade-bin
   - viddy-bin
   - visual-studio-code-bin
+  - wails
   - yay
   - yh-bin
   - zq
