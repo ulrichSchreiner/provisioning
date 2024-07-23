@@ -171,6 +171,7 @@ arch_packages:
   - kubectx
   - kubie
   - kustomize
+  - kwalletmanager
   - libsecret
   - linux-headers
   - logcli
@@ -268,7 +269,6 @@ aur_packages:
   - kernel-modules-hook
   - kind-bin
   - krew-bin
-  - kube-prompt
   - kubeswitch-bin
   - lego-bin
   - metalctl-bin
@@ -310,6 +310,7 @@ absent_packages:
   - keyleds
   - kubefwd-bin
   - kubetail
+  - kube-prompt
   - logdna-cli-bin
   - micro
   - mqttui-bin
