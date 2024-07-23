@@ -177,7 +177,6 @@ arch_packages:
   - lsd
   - lsix
   - make
-  - maliit-keyboard
   - meld
   - mercurial
   - minikube
