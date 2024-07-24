@@ -172,6 +172,7 @@ arch_packages:
   - kubie
   - kustomize
   - kwalletmanager
+  - ksshaskpass
   - libsecret
   - linux-headers
   - logcli
@@ -225,6 +226,7 @@ arch_packages:
   - tree
   - ts-node
   - ttf-ibm-plex
+  - ttf-meslo-nerd
   - turbostat
   - typescript
   - typos
