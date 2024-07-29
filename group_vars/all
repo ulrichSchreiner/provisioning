@@ -217,7 +217,6 @@ arch_packages:
   - stern
   - stow
   - tailscale
-  - terraform
   - tig
   - tmux
   - tmuxp
@@ -231,8 +230,6 @@ arch_packages:
   - typescript
   - typos
   - up
-  - virtualbox
-  - virtualbox-host-modules-arch
   - viu
   - watchexec
   - weston
@@ -333,10 +330,13 @@ absent_packages:
   - systemd-ssh-agent
   - systemd-kcm
   - tekton-cli
+  - terraform
   - tmuxinator
   - topgrade
   - up-bin
   - vagrant
+  - virtualbox
+  - virtualbox-host-modules-arch
   - v4l2loopback-dkms
   - yq
   - zx
