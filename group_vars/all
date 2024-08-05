@@ -279,6 +279,7 @@ aur_packages:
   - pamac-aur
   - pamac-tray-icon-plasma
   - q-dns-bin
+  - scc-bin
   - topgrade-bin
   - viddy-bin
   - visual-studio-code-bin
