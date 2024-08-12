@@ -253,7 +253,6 @@ aur_packages:
   - cloudctl-bin
   - drawio-desktop-bin
   - dyff-bin
-  - fancontrol-kcm
   - fselect-bin
   - gdu-bin
   - git-extras
@@ -300,6 +299,7 @@ absent_packages:
   - bzr
   - direnv-bin
   - drone-cli-bin
+  - fancontrol-kcm
   - fq-bin
   - gitlab-glab-bin
   - glow-bin
