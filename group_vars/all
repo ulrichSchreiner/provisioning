@@ -164,6 +164,7 @@ arch_packages:
   - jwt-cli
   - k9s
   - kcharselect
+  - kernel-modules-hook
   - kexec-tools
   - kio-gdrive
   - krfb

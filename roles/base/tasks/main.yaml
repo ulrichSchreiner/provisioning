@@ -201,6 +201,13 @@
         src: sddm-wayland.conf
         dest: /etc/sddm.conf.d/10-wayland.conf
 
+    - name: Enable and start linux-modules-cleanup.service
+      ansible.builtin.systemd:
+        name: linux-modules-cleanup.service
+        state: started
+        enabled: yes
+
+
   when: ansible_distribution == "Archlinux"
 
 # develop with docker you get after a few hours this error:
