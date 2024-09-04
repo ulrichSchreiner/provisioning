@@ -199,7 +199,6 @@ arch_packages:
   - nushell
   - nvtop
   - operator-sdk
-  - osquery
   - pacman-contrib
   - parallel
   - peco
@@ -322,6 +321,7 @@ absent_packages:
   - octant-bin
   - octopi
   - octopi-notifier-qt5
+  - osquery
   - peco-bin
   - plasma5-applets-eventcalendar
   - pulumi
