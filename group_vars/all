@@ -112,6 +112,7 @@ arch_packages:
   - docker-buildx
   - docker-compose
   - doctl
+  - drawio-desktop
   - drone-cli
   - duf
   - dust
@@ -250,7 +251,6 @@ aur_packages:
   - aura-bin
   - cfssl
   - cloudctl-bin
-  - drawio-desktop-bin
   - dyff-bin
   - fselect-bin
   - gdu-bin
@@ -297,6 +297,7 @@ absent_packages:
   - act
   - bzr
   - direnv-bin
+  - drawio-desktop-bin
   - drone-cli-bin
   - fancontrol-kcm
   - fq-bin
