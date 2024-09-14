@@ -300,6 +300,7 @@ absent_packages:
   - drawio-desktop-bin
   - drone-cli-bin
   - fancontrol-kcm
+  - fancontrol-gui
   - fq-bin
   - gitlab-glab-bin
   - glow-bin
