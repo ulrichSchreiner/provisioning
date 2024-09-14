@@ -108,6 +108,7 @@ arch_packages:
   - curl
   - difftastic
   - direnv
+  - discover
   - dive
   - docker-buildx
   - docker-compose
@@ -200,6 +201,7 @@ arch_packages:
   - nvtop
   - operator-sdk
   - pacman-contrib
+  - packagekit-qt6
   - parallel
   - peco
   - plymouth-kcm
@@ -274,8 +276,6 @@ aur_packages:
   - modd
   - nodejs-git-split-diffs
   - oh-my-posh-bin
-  - pamac-aur
-  - pamac-tray-icon-plasma
   - q-dns-bin
   - scc-bin
   - topgrade-bin
@@ -323,6 +323,8 @@ absent_packages:
   - octopi
   - octopi-notifier-qt5
   - osquery
+  - pamac-aur
+  - pamac-tray-icon-plasma
   - peco-bin
   - plasma5-applets-eventcalendar
   - pulumi
