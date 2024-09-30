@@ -145,6 +145,7 @@ arch_packages:
   - gnome-keyring
   - go
   - go-swagger
+  - go-task
   - go-yq
   - grep
   - grex
@@ -168,6 +169,7 @@ arch_packages:
   - kernel-modules-hook
   - kexec-tools
   - kio-gdrive
+  - krew
   - krfb
   - kubectl
   - kubectx
@@ -259,7 +261,6 @@ aur_packages:
   - git-extras
   - golangci-lint-bin
   - google-chrome
-  - go-task-bin
   - gotty-bin
   - httplab
   - httpstat-go
@@ -268,7 +269,6 @@ aur_packages:
   - kcm-uefi
   - kernel-modules-hook
   - kind-bin
-  - krew-bin
   - kubeswitch-bin
   - lego-bin
   - metalctl-bin
@@ -305,11 +305,13 @@ absent_packages:
   - gitlab-glab-bin
   - glow-bin
   - go-crane-bin
+  - go-task-bin
   - gotop-bin
   - icdiff
   - jnv
   - kaniko
   - keyleds
+  - krew-bin
   - kubefwd-bin
   - kubetail
   - kube-prompt
