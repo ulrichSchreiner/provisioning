@@ -41,3 +41,11 @@
   loop_control:
     loop_var: p
 
+- name: force some aliases for interactive root shells
+  lineinfile:
+    path: ~/.profile
+    create: true
+    line: "{{ item }}"
+  loop:
+    - alias vim=nvim
+    - alias vi=nvim
