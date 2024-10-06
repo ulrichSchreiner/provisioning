@@ -267,7 +267,6 @@ aur_packages:
   - jj-bin
   - jnv-bin
   - kcm-uefi
-  - kernel-modules-hook
   - kind-bin
   - kubeswitch-bin
   - lego-bin
