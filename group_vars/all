@@ -254,6 +254,7 @@ aur_packages:
   - act-bin
   - apple-fonts
   - aura-bin
+  - carapace-bin
   - cfssl
   - cloudctl-bin
   - dyff-bin
@@ -265,6 +266,7 @@ aur_packages:
   - gotty-bin
   - httplab
   - httpstat-go
+  - hyper-bin
   - jj-bin
   - jnv-bin
   - kcm-uefi
