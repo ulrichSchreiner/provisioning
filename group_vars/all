@@ -206,6 +206,7 @@ arch_packages:
   - packagekit-qt6
   - parallel
   - peco
+  - pipewire-zeroconf
   - plymouth-kcm
   - podman
   - reflector
