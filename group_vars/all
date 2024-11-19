@@ -159,7 +159,6 @@ arch_packages:
   - hunspell-de
   - hyperfine
   - inxi
-  - iptables
   - jc
   - jq
   - just
@@ -206,6 +205,7 @@ arch_packages:
   - parallel
   - peco
   - pipewire-zeroconf
+  - plasma-vault
   - plymouth-kcm
   - podman
   - reflector
@@ -447,7 +447,6 @@ nextcloud_ignore:
 kubectl_plugins:
   - ca-cert
   - cert-manager
-  - ingress-nginx
   - modify-secret
   - node-shell
   - rbac-tool
