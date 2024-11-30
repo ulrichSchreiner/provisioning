@@ -69,15 +69,10 @@
     repo=https://github.com/robbyrussell/oh-my-zsh.git
     dest=~/.oh-my-zsh
 
-- name: install zsh-peco-history
+- name: install nu-modules
   git: >
-    repo=https://github.com/jimeh/zsh-peco-history.git
-    dest=~/.oh-my-zsh/custom/plugins/zsh-peco-history
-
-- name: install ktx
-  git: >
-    repo=https://github.com/heptiolabs/ktx.git
-    dest=~/tools/ktx
+    repo=https://gitlab.com/ulrichSchreiner/nu-modules.git
+    dest=~/.config/nu-modules
 
 - name: create local vscode config settings
   include_tasks: vscode.yaml
