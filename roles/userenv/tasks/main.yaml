@@ -1,8 +1,8 @@
 - command: echo ~
   register: instdir
 
-- name: create local wireguard network manager connections
-  include_tasks: nm-wireguard-conns.yaml
+# - name: create local wireguard network manager connections
+#   include_tasks: nm-wireguard-conns.yaml
 
 - name: create local go workspace
   file: path=~/go state=directory mode=0755
