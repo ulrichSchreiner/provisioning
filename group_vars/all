@@ -19,6 +19,7 @@ gh_products:
     url: "https://github.com/operator-framework/operator-sdk/releases/download/v{{operator_sdk_version}}"
     package: "operator-sdk_linux_amd64"
     is: "bin"
+    absent: true
   -
     name: "rga"
     version: "{{rga_version}}"
