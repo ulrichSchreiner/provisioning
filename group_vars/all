@@ -34,6 +34,7 @@ gh_products:
     package: "go{{golang_version}}.linux-amd64.tar.gz"
     is: "tgz"
     bundle: True
+    absent: true
   -
     name: "swagger"
     version: "{{go_swagger}}"
