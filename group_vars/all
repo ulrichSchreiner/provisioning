@@ -138,6 +138,7 @@ arch_packages:
   - fx
   - fzf
   - gcc
+  - ghostty
   - git-cliff
   - git-delta
   - git-lfs
