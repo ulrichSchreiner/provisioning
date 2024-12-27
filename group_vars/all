@@ -269,7 +269,6 @@ aur_packages:
   - gotty-bin
   - httplab
   - httpstat-go
-  - hyper-bin
   - jj-bin
   - jnv-bin
   - kcm-uefi
@@ -312,6 +311,7 @@ absent_packages:
   - go-crane-bin
   - go-task-bin
   - gotop-bin
+  - hyper-bin
   - icdiff
   - jnv
   - kaniko
