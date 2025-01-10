@@ -183,6 +183,7 @@ arch_packages:
   - logcli
   - lsd
   - lsix
+  - macchina
   - make
   - meld
   - mercurial
