@@ -235,7 +235,9 @@ arch_packages:
   - tree
   - ts-node
   - ttf-ibm-plex
+  - ttf-jetbrains-mono
   - ttf-meslo-nerd
+  - ttf-roboto
   - turbostat
   - typescript
   - typos
