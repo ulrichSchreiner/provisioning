@@ -262,14 +262,14 @@
   file: path={{ s3_music_mount }} state=directory mode=0777
   when: s3_music_key is defined and s3_dir.stat.exists is defined and not s3_dir.stat.exists
 
-- name: s3fs mount
-  mount: >
-    name={{ s3_music_mount }}
-    src='{{ s3_music_bucket }}'
-    fstype=fuse.s3fs
-    opts=_netdev,allow_other
-    state=mounted
-  when: s3_music_key is defined
+# - name: s3fs mount
+#   mount: >
+#     name={{ s3_music_mount }}
+#     src='{{ s3_music_bucket }}'
+#     fstype=fuse.s3fs
+#     opts=_netdev,allow_other
+#     state=mounted
+#   when: s3_music_key is defined
 
 - name: systemd settings
   file: path=/etc/systemd/{{item}}/ state=directory mode=0755
