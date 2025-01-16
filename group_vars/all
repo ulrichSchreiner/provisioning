@@ -187,6 +187,7 @@ arch_packages:
   - make
   - meld
   - mercurial
+  - micro
   - minikube
   - mqttui
   - msr-tools
@@ -325,7 +326,6 @@ absent_packages:
   - kubetail
   - kube-prompt
   - logdna-cli-bin
-  - micro
   - mqttui-bin
   - nerd-fonts-fira-mono
   - ngrok
