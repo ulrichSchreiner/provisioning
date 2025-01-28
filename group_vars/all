@@ -286,6 +286,7 @@ aur_packages:
   - oh-my-posh-bin
   - q-dns-bin
   - scc-bin
+  - subfinder-bin
   - topgrade-bin
   - viddy-bin
   - visual-studio-code-bin
