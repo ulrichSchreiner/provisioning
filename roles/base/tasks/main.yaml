@@ -104,6 +104,11 @@
         regexp: '^--save'
         line: --save /etc/pacman.d/mirrorlist
 
+    - name: Import a key via keyserver
+      community.general.pacman_key:
+        id: EF925EA60F33D0CB85C44AD13056513887B78AEB
+        keyserver: keyserver.ubuntu.com
+
     - name: Use home mirror as default
       blockinfile:
         path: /etc/pacman.conf
@@ -123,6 +128,9 @@
           [aur]
           SigLevel = Optional TrustAll
           Server = http://homeserver:8001
+
+          [chaotic-aur]
+          Server = http://homeserver:7878/$repo/$arch
 
           #[extra-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
@@ -150,6 +158,9 @@
 
     - name: remove old packages
       pacman: name={{absent_packages}} state=absent
+
+    - name: install keyring so later packages will be signed
+      pacman: name=chaotic-keyring state=present
 
     - name: install base packages
       pacman: name={{arch_packages}} state=present
