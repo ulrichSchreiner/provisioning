@@ -104,10 +104,16 @@
 - name: create cloudctl config directory
   file: path=~/.cloudctl state=directory mode=0755
 
-- name: install cloudctl config
+- name: install cloudctl config dev
   file:
-    src: ~/Nextcloud/Entwicklung/cloudctl-config.yaml
-    dest: ~/.cloudctl/config.yaml
+    src: ~/Nextcloud/Entwicklung/cloudctl-dev-config.yaml
+    dest: ~/.cloudctl/config-dev.yaml
+    state: link
+
+- name: install cloudctl config prod
+  file:
+    src: ~/Nextcloud/Entwicklung/cloudctl-prod-config.yaml
+    dest: ~/.cloudctl/config-prod.yaml
     state: link
 
 - name: create metalctl config directory
