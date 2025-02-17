@@ -196,3 +196,21 @@
     path=~/{{ item}}
     state=absent
   loop: "{{ absent_home_folders }}"
+
+- name: install kubeconfig global
+  file:
+    src: ~/Nextcloud/kubernetes/config/kube/all-config
+    dest: ~/.kube/config
+    state: link
+
+- name: install kubeconfig dev
+  file:
+    src: ~/Nextcloud/kubernetes/config/kube/config-all-dev
+    dest: ~/.kube/config-dev
+    state: link
+
+- name: install kubeconfig prod
+  file:
+    src: ~/Nextcloud/kubernetes/config/kube/config-all-prod
+    dest: ~/.kube/config-prod
+    state: link
