@@ -110,6 +110,12 @@
     dest: ~/.cloudctl/config-dev.yaml
     state: link
 
+- name: install cloudctl config int
+  file:
+    src: ~/Nextcloud/Entwicklung/cloudctl-int-config.yaml
+    dest: ~/.cloudctl/config-int.yaml
+    state: link
+
 - name: install cloudctl config prod
   file:
     src: ~/Nextcloud/Entwicklung/cloudctl-prod-config.yaml
@@ -207,6 +213,12 @@
   file:
     src: ~/Nextcloud/kubernetes/config/kube/config-all-dev
     dest: ~/.kube/config-dev
+    state: link
+
+- name: install kubeconfig int
+  file:
+    src: ~/Nextcloud/kubernetes/config/kube/config-all-int
+    dest: ~/.kube/config-int
     state: link
 
 - name: install kubeconfig prod

@@ -6,6 +6,7 @@ configs:
     include:
         - ~/.kube/config
         - ~/.kube/config-dev
+        - ~/.kube/config-int
         - ~/.kube/config-prod
 
     # Exclude these globs.
