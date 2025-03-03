@@ -173,6 +173,8 @@ arch_packages:
   - kio-gdrive
   - krew
   - krfb
+  - krdp
+  - krdc
   - kubectl
   - kubectx
   - kubie
@@ -194,6 +196,7 @@ arch_packages:
   - msr-tools
   - mypaint
   - neovim
+  - nerdctl
   - nerd-fonts
   - nextcloud-client
   - nodejs
