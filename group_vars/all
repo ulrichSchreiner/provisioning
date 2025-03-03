@@ -220,7 +220,6 @@ arch_packages:
   - reflector
   - ripgrep
   - ripgrep-all
-  - rofi
   - s3fs-fuse
   - sd
   - skim
@@ -347,6 +346,7 @@ absent_packages:
   - pulumi
   - pulumi-bin
   - q-dns-git
+  - rofi
   - ruby-xdg
   - stern-bin
   - systemd-ssh-agent
