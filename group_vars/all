@@ -297,7 +297,6 @@ aur_packages:
   - wails
   - yay
   - yh-bin
-  - zq
 
 arch_android_dev_packages:
   - jdk11-openjdk
@@ -362,6 +361,7 @@ absent_packages:
   - virtualbox-host-modules-arch
   - v4l2loopback-dkms
   - yq
+  - zq
   - zx
 
 fedora_packages:
