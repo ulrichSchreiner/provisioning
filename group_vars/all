@@ -169,6 +169,7 @@ arch_packages:
   - jwt-cli
   - k9s
   - kcharselect
+  - kde-cli-tools
   - kexec-tools
   - kio-gdrive
   - krew
