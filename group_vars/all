@@ -280,6 +280,7 @@ aur_packages:
   - httplab
   - httpstat-go
   - httptap-bin
+  - hwatch-bin
   - jj-bin
   - jnv-bin
   - kcm-uefi
