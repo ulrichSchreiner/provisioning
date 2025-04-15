@@ -285,7 +285,6 @@ aur_packages:
   - jnv-bin
   - kcm-uefi
   - kind-bin
-  - kubeswitch-bin
   - lego-bin
   - metalctl-bin
   - mirrord-bin
@@ -331,6 +330,7 @@ absent_packages:
   - kubefwd-bin
   - kubetail
   - kube-prompt
+  - kubeswitch-bin
   - logdna-cli-bin
   - mqttui-bin
   - nerd-fonts-fira-mono
