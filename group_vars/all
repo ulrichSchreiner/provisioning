@@ -1,3 +1,6 @@
+custom_ansible_config_dir: "{{ lookup('ansible.builtin.env', 'ANSIBLE_CONFIG_DIR') }}"
+custom_ansible_config_ini: "{{ custom_ansible_config_dir }}/environment.ini"
+
 # use the fedora_relse in repo files because the normal $releasever
 # does not work for a few weeks after an upgrade
 fedora_relase: 28
@@ -449,9 +452,9 @@ old_gh_product:
     url: https://github.com/codercom/sshcode
     path: github.com/codercom/sshcode
 
-s3_music_key: "{{ lookup('ini', 'key section=s3_music file=/etc/ansible/environment.ini') }}"
-s3_music_secret: "{{ lookup('ini', 'secret section=s3_music file=/etc/ansible/environment.ini') }}"
-s3_music_bucket: "{{ lookup('ini', 'name section=s3_music file=/etc/ansible/environment.ini') }}"
+s3_music_key: "{{ lookup('ini', 'key section=s3_music file='+custom_ansible_config_ini) }}"
+s3_music_secret: "{{ lookup('ini', 'secret section=s3_music file='+custom_ansible_config_ini) }}"
+s3_music_bucket: "{{ lookup('ini', 'name section=s3_music file='+custom_ansible_config_ini) }}"
 s3_music_mount: /mnt/s3/music
 
 nextcloud_ignore:
