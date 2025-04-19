@@ -103,10 +103,12 @@ arch_packages:
   - bore
   - btop
   - buildah
+  - buildkit
   - caddy
   - catimg
   - chaotic-keyring
   - clang
+  - cni-plugins
   - croc
   - cryfs
   - xh
@@ -224,6 +226,7 @@ arch_packages:
   - reflector
   - ripgrep
   - ripgrep-all
+  - rootlesskit
   - s3fs-fuse
   - sd
   - skim
