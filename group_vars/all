@@ -234,7 +234,6 @@ arch_packages:
   - slirp4netns
   - speech-dispatcher
   - sshfs
-  - starship
   - stern
   - stow
   - tailscale
@@ -355,6 +354,7 @@ absent_packages:
   - q-dns-git
   - rofi
   - ruby-xdg
+  - starship
   - stern-bin
   - systemd-ssh-agent
   - systemd-kcm
