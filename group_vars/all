@@ -170,6 +170,7 @@ arch_packages:
   - inxi
   - jc
   - jq
+  - jujutsu
   - just
   - jwt-cli
   - k9s
@@ -286,7 +287,6 @@ aur_packages:
   - httpstat-go
   - httptap-bin
   - hwatch-bin
-  - jj-bin
   - jnv-bin
   - kcm-uefi
   - kind-bin
@@ -327,6 +327,7 @@ absent_packages:
   - gotop-bin
   - hyper-bin
   - icdiff
+  - jj-bin
   - jnv
   - kaniko
   - keyleds
