@@ -296,6 +296,7 @@ aur_packages:
   - modd
   - nodejs-git-split-diffs
   - oh-my-posh-bin
+  - plasma6-applets-panel-colorizer
   - q-dns-bin
   - scc-bin
   - subfinder-bin
