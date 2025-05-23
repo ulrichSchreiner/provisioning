@@ -199,6 +199,7 @@ arch_packages:
   - mercurial
   - micro
   - minikube
+  - mise
   - mqttui
   - msr-tools
   - mypaint
@@ -224,6 +225,7 @@ arch_packages:
   - plasma-vault
   - plymouth-kcm
   - podman
+  - presenterm
   - reflector
   - ripgrep
   - ripgrep-all
@@ -294,6 +296,7 @@ aur_packages:
   - metalctl-bin
   - mirrord-bin
   - modd
+  - mprocs-bin
   - nodejs-git-split-diffs
   - oh-my-posh-bin
   - plasma6-applets-panel-colorizer
