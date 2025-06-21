@@ -16,21 +16,21 @@
 #     dest={{ localinstallation }}/ansible-docker
 #     version=master
 
-- name: remove my custom ansible docker repo
-  file: dest={{ localinstallation }}/ansible-docker state=absent
+# - name: remove my custom ansible docker repo
+#   file: dest={{ localinstallation }}/ansible-docker state=absent
 
-- name: remove my custom ansible shortcuts
-  file: dest=/usr/local/bin/{{item}} mode=0755 state=absent
-  with_items:
-    - ansible
-    - ansible-playbook
-    - ansible-vault
-    - ansible-doc
-    - ansible-pull
-    - ansible-galaxy
-    - ansible-console
-    - ansible-config
-    - ansible-inventory
+# - name: remove my custom ansible shortcuts
+#   file: dest=/usr/local/bin/{{item}} mode=0755 state=absent
+#   with_items:
+#     - ansible
+#     - ansible-playbook
+#     - ansible-vault
+#     - ansible-doc
+#     - ansible-pull
+#     - ansible-galaxy
+#     - ansible-console
+#     - ansible-config
+#     - ansible-inventory
 
 - name: create local bin directory
   file: path={{localinstallation}}/bin state=directory mode=0755
