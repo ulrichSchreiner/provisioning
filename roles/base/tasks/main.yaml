@@ -321,7 +321,7 @@
   template: src=resume-unlock.sh.j2 dest=/etc/local-scripts/resume-unlock.sh mode=0755
 
 - name: create auto unlock service
-  template: src=resume-unlock.service.j2 dest=/etc/systemd/system/resume-unlock@.service mode=0644
+  template: src=resume-unlock.service.j2 dest=/etc/systemd/system/resume-unlock.service mode=0644
 
 - name: enable the auto unlocker
-  systemd: daemon_reload=yes name=resume-unlock@user.service enabled=yes
+  systemd: daemon_reload=yes name=resume-unlock.service enabled=yes
