@@ -485,6 +485,7 @@ kubectl_plugins:
   - resource-capacity
 
 trusted_localdata:
+  only_hosts: ["wollschaf","zugspitze"]
   networks:
     - uscHome
     - UBNT

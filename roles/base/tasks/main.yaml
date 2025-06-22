@@ -325,3 +325,4 @@
 
 - name: enable the auto unlocker
   systemd: daemon_reload=yes name=resume-unlock.service enabled=yes
+  when: "ansible_hostname in trusted_localdata.only_hosts"
