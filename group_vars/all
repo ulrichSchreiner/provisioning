@@ -490,3 +490,6 @@ trusted_localdata:
     - UBNT
   usbdevices:
     - 17e9:6000
+    - 046d:c333
+    - 046d:082d
+
