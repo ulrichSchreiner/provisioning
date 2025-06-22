@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+
+# Unlock session if at a trusted location
+# https://wiki.archlinux.org/title/Power_management/Suspend_and_hibernate#Tips_and_tricks
+
+function trusted() {
+    # Check if connected to a trusted Wi-Fi network
+{% for nw in trusted_localdata.networks %}
+    [[ $(iwgetid -r) == {{ nw }} ]] \
+        && return 0
+{% endfor %}
+
+    # Check if trusted USB device is connected.
+{% for ud in trusted_localdata.usbdevices %}
+    lsusb -d {{ ud }} && return 0
+{% endfor %}
+
+    return 1 # Not trusted
+}
+
+for (( i=0; i < 10; i++ )); do
+    if trusted; then
+        loginctl unlock-sessions
+        exit
+    fi
+    sleep 0.5
+done

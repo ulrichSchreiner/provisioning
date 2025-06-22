@@ -313,3 +313,15 @@
     src: integrated_webcam_disable.rules.j2
     dest: /etc/udev/rules.d/40-disable-internal-webcam.rules
   when: "'usc-precision' == ansible_hostname"
+
+- name: local scripts etc directory
+  file: path=/etc/local-scripts state=directory mode=0755
+
+- name: create auto unlock
+  template: src=resume-unlock.sh.j2 dest=/etc/local-scripts/resume-unlock.sh mode=0755
+
+- name: create auto unlock service
+  template: src=resume-unlock.service.j2 dest=/etc/systemd/system/resume-unlock@.service mode=0644
+
+- name: enable the auto unlocker
+  systemd: daemon_reload=yes name=resume-unlock@user.service enabled=yes

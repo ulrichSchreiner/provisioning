@@ -1,0 +1,11 @@
+[Unit]
+Description=Unlock all screens in trusted environment
+After=suspend.target hibernate.target
+
+[Service]
+User=%I
+Type=simple
+ExecStart=/etc/local-scripts/resume-unlock.sh
+
+[Install]
+WantedBy=suspend.target hibernate.target

@@ -261,6 +261,7 @@ arch_packages:
   - watchexec
   - weston
   - wireguard-tools
+  - wireless_tools
   - wl-clipboard
   - xclip
   - xdg-desktop-portal
@@ -482,3 +483,10 @@ kubectl_plugins:
   - view-cert
   - view-serviceaccount-kubeconfig
   - resource-capacity
+
+trusted_local_data:
+  networks:
+    - uscHome
+    - UBNT
+  usbdevices:
+    - 17e9:6000
