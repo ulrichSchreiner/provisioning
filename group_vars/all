@@ -484,13 +484,13 @@ kubectl_plugins:
   - view-serviceaccount-kubeconfig
   - resource-capacity
 
-trusted_localdata:
-  only_hosts: ["wollschaf"]
-  networks:
-    - uscHome
-    - UBNT
-  usbdevices:
-    - 17e9:6000
-    - 046d:c333
-    - 046d:082d
-
+# create a file in custom_ansible_config_dir+'/computer_enroll_data.yaml' with the following content:
+#trusted_localdata:
+#  only_hosts: ["host1"]
+#  networks:
+#    - SSID1
+#    - SSID2
+#  usbdevices:
+#    - idVendor:idProduct
+enrolling_data: "{{ lookup('file', custom_ansible_config_dir+'/computer_enroll_data.yaml') | from_yaml  }}"
+trusted_localdata: "{{ enrolling_data.trusted_localdata }}"

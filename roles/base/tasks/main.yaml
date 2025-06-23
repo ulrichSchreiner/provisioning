@@ -317,6 +317,7 @@
 - name: local scripts etc directory
   file: path=/etc/local-scripts state=directory mode=0755
 
+- debug: var=trusted_localdata
 - name: create auto unlock
   template: src=resume-unlock.sh.j2 dest=/etc/local-scripts/resume-unlock.sh mode=0755
 
