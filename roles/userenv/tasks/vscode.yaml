@@ -16,15 +16,15 @@
     #    dest: "~/.config/{{item}}/User"
     #    state: link
 
-- name: install extensions
-  command: /usr/bin/code --force --install-extension {{ext_item}}
-  loop:
-    - stkb.rewrap
-    - mutantdino.resourcemonitor
-    - vscode-snippet.Snippet
-    - ms-vscode-remote.remote-containers
-    - ms-vscode-remote.vscode-remote-extensionpack
-    - ms-vscode.vscode-speech
-    - ms-vscode.vscode-speech-language-pack-de-de
-  loop_control:
-    loop_var: ext_item
+# - name: install extensions
+#   command: /usr/bin/code --force --install-extension {{ext_item}}
+#   loop:
+#     - stkb.rewrap
+#     - mutantdino.resourcemonitor
+#     - vscode-snippet.Snippet
+#     - ms-vscode-remote.remote-containers
+#     - ms-vscode-remote.vscode-remote-extensionpack
+#     - ms-vscode.vscode-speech
+#     - ms-vscode.vscode-speech-language-pack-de-de
+#   loop_control:
+#     loop_var: ext_item

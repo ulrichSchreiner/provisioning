@@ -8,6 +8,7 @@ configs:
         - ~/.kube/config-dev
         - ~/.kube/config-int
         - ~/.kube/config-prod
+        - ~/workspaces/gardener/gardener/example/gardener-local/kind/local/kubeconfig
 
     # Exclude these globs.
     # Default: values listed below.
