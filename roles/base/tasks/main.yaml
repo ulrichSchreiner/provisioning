@@ -306,7 +306,7 @@
   template: src=cupsresume.service.j2 dest=/etc/systemd/system/cupsresume.service
 
 - name: enable the cupsrestarter
-  systemd: daemon_reload=yes name=cupsresume enabled=yes
+  systemd: daemon_reload=yes name=cupsresume enabled=no
 
 - name: local scripts etc directory
   file: path=/etc/local-scripts state=directory mode=0755
