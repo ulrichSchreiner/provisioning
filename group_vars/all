@@ -125,6 +125,7 @@ arch_packages:
   - drone-cli
   - duf
   - dust
+  - dysk
   - entr
   - esbuild
   - eza
