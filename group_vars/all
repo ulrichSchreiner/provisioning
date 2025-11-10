@@ -293,6 +293,7 @@ aur_packages:
   - jnv-bin
   - kcm-uefi
   - kind-bin
+  - kwin-effect-rounded-corners
   - lego-bin
   - metalctl-bin
   - mirrord-bin
