@@ -3,7 +3,7 @@
   become: yes
   pre_tasks:
    - name: show distribution
-     debug: var=ansible_distribution
+     debug: var=ansible_facts['distribution']
 
   roles:
     - base

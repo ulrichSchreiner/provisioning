@@ -14,73 +14,6 @@
     regexp="^hosts:"
     create=false
 
-- replace: dest=/etc/ssh/ssh_config replace="    AddressFamily inet" regexp="^#   AddressFamily.*"
-  when: ansible_distribution == "Ubuntu"
-
-- name: do ubuntu specific things
-  block:
-    - apt_repository:
-        repo: "{{item}}"
-        state: present
-      with_items:
-        - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
-        - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} multiverse'
-        - 'deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
-        - 'deb-src http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}}-updates multiverse'
-        - 'ppa:git-core/ppa'
-
-    - name: google cloud packages
-      apt_key: >
-        url={{ google_cloud_url }}
-        state=present
-
-    - name: add key for dropbox
-      apt_key: >
-        keyserver={{ dropbox_keyserver }}
-        id={{ dropbox_key }}
-        state=present
-
-    - name: add key for docker
-      apt_key: >
-        url={{ docker_key_url }}
-        state=present
-
-    - name: add key for google chrome
-      apt_key: >
-        url={{ chrome_key_url }}
-        state=present
-
-    - name: add key for packagecloud
-      apt_key: >
-        url={{ packagecloud_key_url }}
-        state=present
-
-    - name: activate addons apt sources
-      template: src=addons.list.j2 dest=/etc/apt/sources.list.d/addons.list
-      register: newsources
-
-    - apt: update_cache=yes
-      when: newsources is changed
-
-    - name: install base packages
-      apt: name={{base_packages}} state=present
-  when: ansible_distribution == "Ubuntu"
-
-- name: do fedora specific things
-  block:
-    - name: install some repos
-      template: src={{item}} dest=/etc/yum.repos.d/{{item | basename }}
-      with_fileglob:
-        - "../templates/*.repo"
-
-    - name: install base modules
-      command: dnf -y module install {{ item }}
-      with_items: "{{ fedora_modules }}"
-
-    - name: install base packages
-      dnf: name={{fedora_packages}} state=present
-  when: ansible_distribution == "Fedora"
-
 - name: do arch specific things
   block:
     - name: allow zsh as a shell
@@ -218,7 +151,7 @@
         src: sddm-wayland.conf
         dest: /etc/sddm.conf.d/10-wayland.conf
 
-  when: ansible_distribution == "Archlinux"
+  when: ansible_facts['distribution'] == "Archlinux"
 
 # develop with docker you get after a few hours this error:
 #   neighbour: arp_cache: neighbor table overflow!
@@ -320,12 +253,12 @@
 
 - name: enable the auto unlocker
   systemd: daemon_reload=yes name=resume-unlock.service enabled=yes
-  when: "ansible_hostname in trusted_localdata.only_hosts"
+  when: "ansible_facts['hostname'] in trusted_localdata.only_hosts"
 
 - name: disable user session freeze so create override dir
   file: path=/etc/systemd/system/systemd-suspend.service.d/ state=directory mode=0755
 
 - name: disable user session freeze
   template: src=systemd-suspend.service.override.conf.j2 dest=/etc/systemd/system/systemd-suspend.service.d/override.conf mode=0644
-  when: "'zugspitze' == ansible_hostname"
+  when: "'zugspitze' == ansible_facts['hostname']"
 
