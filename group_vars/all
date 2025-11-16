@@ -231,6 +231,7 @@ arch_packages:
   - ripgrep
   - ripgrep-all
   - rootlesskit
+  - rust
   - s3fs-fuse
   - sd
   - skim
@@ -301,6 +302,7 @@ aur_packages:
   - mprocs-bin
   - nodejs-git-split-diffs
   - oh-my-posh-bin
+  - oniux
   - plasma6-applets-panel-colorizer
   - q-dns-bin
   - scc-bin
