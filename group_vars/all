@@ -145,6 +145,7 @@ arch_packages:
   - fx
   - fzf
   - gcc
+  - gdu
   - ghostty
   - git-cliff
   - git-delta
@@ -283,7 +284,6 @@ aur_packages:
   - cloudctl-bin
   - dyff-bin
   - fselect-bin
-  - gdu-bin
   - git-extras
   - golangci-lint-bin
   - google-chrome
@@ -328,6 +328,7 @@ absent_packages:
   - fancontrol-kcm
   - fancontrol-gui
   - fq-bin
+  - gdu-bin
   - gitlab-glab-bin
   - glow-bin
   - go-crane-bin
