@@ -276,7 +276,6 @@ arch_packages:
   - zsh
 
 aur_packages:
-  - act-bin
   - apple-fonts
   - aura-bin
   - carapace-bin
@@ -321,6 +320,7 @@ arch_android_dev_packages:
 
 absent_packages:
   - act
+  - act-bin
   - bzr
   - direnv-bin
   - drawio-desktop-bin
