@@ -261,6 +261,7 @@ arch_packages:
   - up
   - viddy
   - viu
+  - vlc-plugins-all
   - watchexec
   - weston
   - wireguard-tools
