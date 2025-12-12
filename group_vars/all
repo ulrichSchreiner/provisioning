@@ -238,6 +238,7 @@ arch_packages:
   - skim
   - skopeo
   - slirp4netns
+  - sniffnet
   - speech-dispatcher
   - sshfs
   - stern
