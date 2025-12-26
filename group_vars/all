@@ -284,6 +284,7 @@ aur_packages:
   - cfssl
   - cloudctl-bin
   - dyff-bin
+  - fresh-editor-bin
   - fselect-bin
   - git-extras
   - golangci-lint-bin
