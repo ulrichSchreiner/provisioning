@@ -158,6 +158,7 @@ arch_packages:
   - go-swagger
   - go-task
   - go-yq
+  - gopls
   - grep
   - grex
   - gron
