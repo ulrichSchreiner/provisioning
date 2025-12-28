@@ -312,6 +312,7 @@ aur_packages:
   - subfinder-bin
   - visual-studio-code-bin
   - wails
+  - witr-bin
   - yay
   - yh-bin
 
