@@ -233,7 +233,7 @@ arch_packages:
   - ripgrep
   - ripgrep-all
   - rootlesskit
-  - rust
+  - rustup
   - s3fs-fuse
   - sd
   - skim
