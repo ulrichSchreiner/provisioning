@@ -1,0 +1,15 @@
+[Unit]
+Description=Tasmota Switch Boot/Shutdown
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+# Beim Booten: Skript mit "post" aufrufen
+ExecStart=/usr/local/bin/tasmota-switch.sh post is_boot
+# Beim Shutdown: Skript mit "pre" aufrufen
+ExecStop=/usr/local/bin/tasmota-switch.sh pre
+
+[Install]
+WantedBy=multi-user.target

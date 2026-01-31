@@ -262,3 +262,21 @@
   template: src=systemd-suspend.service.override.conf.j2 dest=/etc/systemd/system/systemd-suspend.service.d/override.conf mode=0644
   when: "'zugspitze' == ansible_facts['hostname']"
 
+- name: tasmota socket for audio
+  block:
+  - name: create the audio socket enabler script
+    template: src=tasmota-switch.sh dest=/usr/local/bin/tasmota-switch.sh mode=0755
+
+  - name: symlink script
+    file: >
+      src=/usr/local/bin/tasmota-switch.sh
+      dest=/usr/lib/systemd/system-sleep/tasmota-switch.sh
+      state=link
+
+  - name: create the audio socket enabler
+    template: src=tasmota-socket.service.j2 dest=/etc/systemd/system/tasmota-socket.service mode=0644
+
+  - name: enable the audio socket enabler
+    systemd: daemon_reload=yes name=tasmota-socket.service enabled=yes
+
+  when: "'zugspitze' == ansible_facts['hostname']"
