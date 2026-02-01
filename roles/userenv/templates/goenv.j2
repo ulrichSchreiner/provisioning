@@ -1,2 +1,2 @@
 layout go
-export MAKEFLAGS=-j{{ansible_processor_vcpus}}
+export MAKEFLAGS=-j{{ansible_facts["processor_vcpus"]}}
