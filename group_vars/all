@@ -201,6 +201,7 @@ arch_packages:
   - meld
   - mercurial
   - micro
+  - minicom
   - minikube
   - mise
   - mqttui
