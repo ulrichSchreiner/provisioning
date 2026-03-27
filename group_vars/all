@@ -304,6 +304,7 @@ aur_packages:
   - modd
   - mprocs-bin
   - nodejs-git-split-diffs
+  - nrfutil
   - oh-my-posh-bin
   - oniux
   - plasma6-applets-panel-colorizer
