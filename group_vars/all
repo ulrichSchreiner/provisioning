@@ -227,6 +227,7 @@ arch_packages:
   - peco
   - pipewire-zeroconf
   - plasma-vault
+  - playerctl
   - plymouth-kcm
   - podman
   - presenterm
