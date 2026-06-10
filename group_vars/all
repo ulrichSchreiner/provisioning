@@ -220,6 +220,7 @@ arch_packages:
   - nss-mdns
   - nushell
   - nvtop
+  - opencode
   - operator-sdk
   - pacman-contrib
   - packagekit-qt6
@@ -310,6 +311,7 @@ aur_packages:
   - nrfutil
   - oh-my-posh-bin
   - oniux
+  - opencode-desktop-bin
   - plasma6-applets-panel-colorizer
   - q-dns-bin
   - scc-bin
