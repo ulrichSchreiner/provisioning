@@ -157,6 +157,7 @@ arch_packages:
   - go-swagger
   - go-task
   - go-yq
+  - golangci-lint
   - gopls
   - grep
   - grex
@@ -171,6 +172,7 @@ arch_packages:
   - hyperfine
   - inxi
   - jc
+  - jnv
   - jq
   - jujutsu
   - just
@@ -289,15 +291,12 @@ aur_packages:
   - cloudctl-bin
   - dyff-bin
   - fresh-editor-bin
-  - fselect-bin
   - git-extras
-  - golangci-lint-bin
   - google-chrome
   - httplab
   - httpstat-go
   - httptap-bin
   - hwatch-bin
-  - jnv-bin
   - kcm-uefi
   - kind-bin
   - kwin-effect-rounded-corners
@@ -315,7 +314,6 @@ aur_packages:
   - wails
   - witr-bin
   - yay
-  - yh-bin
 
 arch_android_dev_packages:
   - jdk11-openjdk
@@ -337,11 +335,13 @@ absent_packages:
   - fancontrol-gui
   - fq-bin
   - freerdp2
+  - fselect-bin
   - gdu-bin
   - gitlab-glab-bin
   - glow-bin
   - go-crane-bin
   - go-task-bin
+  - golangci-lint-bin
   - gotop-bin
   - gotty-bin
   - gtk2
@@ -351,7 +351,7 @@ absent_packages:
   - hyper-bin
   - icdiff
   - jj-bin
-  - jnv
+  - jnv-bin
   - kaniko
   - keyleds
   - kernel-modules-hook
@@ -367,6 +367,7 @@ absent_packages:
   - libjpeg6-turbo
   - libkdcraw5
   - libpng12
+  - mirrord-bin
   - mqttui-bin
   - nerd-fonts-fira-mono
   - ngrok
@@ -402,6 +403,7 @@ absent_packages:
   - virtualbox
   - virtualbox-host-modules-arch
   - v4l2loopback-dkms
+  - yh-bin
   - yq
   - zq
   - zx
