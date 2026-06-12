@@ -305,7 +305,6 @@ aur_packages:
   - mirrord-bin
   - modd
   - mprocs-bin
-  - nodejs-git-split-diffs
   - nrfutil
   - oh-my-posh-bin
   - oniux
@@ -371,6 +370,7 @@ absent_packages:
   - mqttui-bin
   - nerd-fonts-fira-mono
   - ngrok
+  - nodejs-git-split-diffs
   - nushell-bin
   - octant-bin
   - octopi
