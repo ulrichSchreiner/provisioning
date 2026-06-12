@@ -191,6 +191,7 @@ arch_packages:
   - kustomize
   - kwalletmanager
   - ksshaskpass
+  - lego
   - libsecret
   - linux-headers
   - logcli
@@ -284,7 +285,6 @@ arch_packages:
 
 aur_packages:
   - apple-fonts
-  - aura-bin
   - carapace-bin
   - cfssl
   - cloudctl-bin
@@ -314,8 +314,6 @@ aur_packages:
   - opencode-desktop-bin
   - plasma6-applets-panel-colorizer
   - q-dns-bin
-  - scc-bin
-  - subfinder-bin
   - visual-studio-code-bin
   - wails
   - witr-bin
@@ -332,13 +330,16 @@ arch_android_dev_packages:
 absent_packages:
   - act
   - act-bin
+  - aura-bin
   - bzr
   - direnv-bin
   - drawio-desktop-bin
   - drone-cli-bin
+  - electron33
   - fancontrol-kcm
   - fancontrol-gui
   - fq-bin
+  - freerdp2
   - gdu-bin
   - gitlab-glab-bin
   - glow-bin
@@ -346,6 +347,10 @@ absent_packages:
   - go-task-bin
   - gotop-bin
   - gotty-bin
+  - gtk2
+  - http-parser
+  - httplab
+  - httptap-bin
   - hyper-bin
   - icdiff
   - jj-bin
@@ -358,7 +363,13 @@ absent_packages:
   - kubetail
   - kube-prompt
   - kubeswitch-bin
+  - lego-bin
   - logdna-cli-bin
+  - layer-shell-qt5
+  - libidn11
+  - libjpeg6-turbo
+  - libkdcraw5
+  - libpng12
   - mqttui-bin
   - nerd-fonts-fira-mono
   - ngrok
@@ -376,8 +387,10 @@ absent_packages:
   - q-dns-git
   - rofi
   - ruby-xdg
+  - scc-bin
   - starship
   - stern-bin
+  - subfinder-bin
   - systemd-ssh-agent
   - systemd-kcm
   - tekton-cli
@@ -386,6 +399,7 @@ absent_packages:
   - topgrade-bin
   - up-bin
   - vagrant
+  - vdhcoapp-bin
   - viddy-bin
   - virtualbox
   - virtualbox-host-modules-arch
