@@ -140,7 +140,6 @@ arch_packages:
   - foomatic-db-nonfree
   - foomatic-db-nonfree-ppds
   - fq
-  - freerdp2
   - fwupd
   - fx
   - fzf
@@ -302,7 +301,6 @@ aur_packages:
   - kcm-uefi
   - kind-bin
   - kwin-effect-rounded-corners
-  - lego-bin
   - metalctl-bin
   - mirrord-bin
   - modd

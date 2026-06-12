@@ -5,7 +5,7 @@
 .phony:
 all:
 	@[ "${ANSIBLE_CONFIG_DIR}" ] && echo "config dir found" || ( echo "ANSIBLE_CONFIG_DIR is not set"; exit 1 )
-	ansible-playbook playbook.yaml -i inventory
+	ansible-playbook playbook.yaml -i inventory --ask-pass -K
 
 .phony:
 install:
