@@ -106,6 +106,7 @@ arch_packages:
   - buildkit
   - caddy
   - catimg
+  - cfssl
   - chaotic-keyring
   - clang
   - cni-plugins
@@ -285,9 +286,7 @@ arch_packages:
   - zsh
 
 aur_packages:
-  - apple-fonts
   - carapace-bin
-  - cfssl
   - cloudctl-bin
   - dyff-bin
   - fresh-editor-bin
@@ -297,7 +296,6 @@ aur_packages:
   - httpstat-go
   - httptap-bin
   - hwatch-bin
-  - kcm-uefi
   - kind-bin
   - kwin-effect-rounded-corners
   - metalctl-bin
@@ -325,6 +323,7 @@ arch_android_dev_packages:
 absent_packages:
   - act
   - act-bin
+  - apple-fonts
   - aura-bin
   - bzr
   - direnv-bin
@@ -353,6 +352,7 @@ absent_packages:
   - jj-bin
   - jnv-bin
   - kaniko
+  - kcm-uefi
   - keyleds
   - kernel-modules-hook
   - krew-bin
@@ -384,6 +384,7 @@ absent_packages:
   - pulumi
   - pulumi-bin
   - q-dns-git
+  - reflector-simple
   - rofi
   - ruby-xdg
   - scc-bin
