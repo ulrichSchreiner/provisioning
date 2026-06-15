@@ -141,6 +141,7 @@ arch_packages:
   - foomatic-db-nonfree
   - foomatic-db-nonfree-ppds
   - fq
+  - fresh-editor
   - fwupd
   - fx
   - fzf
@@ -149,6 +150,7 @@ arch_packages:
   - ghostty
   - git-cliff
   - git-delta
+  - git-extras
   - git-lfs
   - github-cli
   - glab
@@ -193,6 +195,7 @@ arch_packages:
   - kustomize
   - kwalletmanager
   - ksshaskpass
+  - kwin-effect-rounded-corners
   - lego
   - libsecret
   - linux-headers
@@ -223,7 +226,9 @@ arch_packages:
   - nss-mdns
   - nushell
   - nvtop
+  - oh-my-posh-bin
   - opencode
+  - opencode-desktop-bin
   - operator-sdk
   - pacman-contrib
   - packagekit-qt6
@@ -231,10 +236,12 @@ arch_packages:
   - peco
   - pipewire-zeroconf
   - plasma-vault
+  - plasma6-applets-panel-colorizer
   - playerctl
   - plymouth-kcm
   - podman
   - presenterm
+  - q-dns-git
   - reflector
   - ripgrep
   - ripgrep-all
@@ -268,6 +275,7 @@ arch_packages:
   - typos
   - up
   - viddy
+  - visual-studio-code-bin
   - viu
   - vlc-plugins-all
   - watchexec
@@ -288,29 +296,14 @@ arch_packages:
 aur_packages:
   - carapace-bin
   - cloudctl-bin
-  - dyff-bin
-  - fresh-editor-bin
-  - git-extras
   - google-chrome
-  - httplab
-  - httpstat-go
-  - httptap-bin
-  - hwatch-bin
   - kind-bin
-  - kwin-effect-rounded-corners
   - metalctl-bin
-  - mirrord-bin
   - modd
   - mprocs-bin
   - nrfutil
-  - oh-my-posh-bin
   - oniux
-  - opencode-desktop-bin
-  - plasma6-applets-panel-colorizer
-  - q-dns-bin
-  - visual-studio-code-bin
   - wails
-  - witr-bin
   - yay
 
 arch_android_dev_packages:
@@ -329,11 +322,13 @@ absent_packages:
   - direnv-bin
   - drawio-desktop-bin
   - drone-cli-bin
+  - dyff-bin
   - electron33
   - fancontrol-kcm
   - fancontrol-gui
   - fq-bin
   - freerdp2
+  - fresh-editor-bin
   - fselect-bin
   - gdu-bin
   - gitlab-glab-bin
@@ -347,6 +342,9 @@ absent_packages:
   - http-parser
   - httplab
   - httptap-bin
+  - httpstat-go
+  - httptap-bin
+  - hwatch-bin
   - hyper-bin
   - icdiff
   - jj-bin
@@ -404,6 +402,7 @@ absent_packages:
   - virtualbox
   - virtualbox-host-modules-arch
   - v4l2loopback-dkms
+  - witr-bin
   - yh-bin
   - yq
   - zq
