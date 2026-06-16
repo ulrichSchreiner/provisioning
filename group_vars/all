@@ -299,8 +299,6 @@ aur_packages:
   - google-chrome
   - kind-bin
   - metalctl-bin
-  - modd
-  - mprocs-bin
   - nrfutil
   - oniux
   - wails
