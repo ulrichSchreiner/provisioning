@@ -161,6 +161,7 @@ arch_packages:
   - go-task
   - go-yq
   - golangci-lint
+  - google-chrome
   - gopls
   - grep
   - grex
@@ -278,6 +279,7 @@ arch_packages:
   - visual-studio-code-bin
   - viu
   - vlc-plugins-all
+  - wails
   - watchexec
   - waypipe
   - weston
@@ -296,12 +298,10 @@ arch_packages:
 aur_packages:
   - carapace-bin
   - cloudctl-bin
-  - google-chrome
   - kind-bin
   - metalctl-bin
   - nrfutil
   - oniux
-  - wails
   - yay
 
 arch_android_dev_packages:
