@@ -237,12 +237,14 @@ arch_packages:
   - peco
   - pipewire-zeroconf
   - plasma-vault
+  - plasma-keyboard
   - plasma6-applets-panel-colorizer
   - playerctl
   - plymouth-kcm
   - podman
   - presenterm
   - q-dns-git
+  - qt6-virtualkeyboard
   - reflector
   - ripgrep
   - ripgrep-all
