@@ -1,0 +1,8 @@
+## Geo mirror (virtual)
+# Automatic routing to the geographically closest mirror (default)
+Server = https://geo-mirror.chaotic.cx/$repo/$arch
+
+## CDN mirror (regular)
+# Global
+# * By: Garuda Linux donators, hosted on Cloudflare R2
+Server = https://cdn-mirror.chaotic.cx/$repo/$arch

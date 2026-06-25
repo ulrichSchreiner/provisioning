@@ -65,6 +65,7 @@
 
           [chaotic-aur]
           Server = http://homeserver:7878/custom_repo/chaotic-aur/$repo/$arch
+          Include = /etc/pacman.d/chaotic-mirrorlist
 
           #[extra-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
@@ -81,6 +82,11 @@
           #[multilib-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
+
+    - name: install chaotic mirrorlist
+      copy:
+        src: chaotic-mirrorlist
+        dest: /etc/pacman.d/chaotic-mirrorlist
 
     - name: Ensures /etc/pacman.d/hooks/ dir exists
       file: path=/etc/pacman.d/hooks/ state=directory
