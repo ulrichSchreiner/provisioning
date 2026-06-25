@@ -64,7 +64,7 @@
           #Server = http://homeserver:8001
 
           [chaotic-aur]
-          Server = http://homeserver:7878/$repo/$arch
+          Server = http://homeserver:7878/custom_repo/chaotic-aur/$repo/$arch
 
           #[extra-testing]
           #Server = http://homeserver:7878/$repo/os/$arch
