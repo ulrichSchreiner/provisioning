@@ -228,6 +228,7 @@ arch_packages:
   - nushell
   - nvtop
   - oh-my-posh-bin
+  - openbsd-netcat
   - opencode
   - opencode-desktop-bin
   - operator-sdk
