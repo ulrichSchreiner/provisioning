@@ -278,6 +278,7 @@ arch_packages:
   - typescript
   - typos
   - up
+  - uv
   - viddy
   - visual-studio-code-bin
   - viu
