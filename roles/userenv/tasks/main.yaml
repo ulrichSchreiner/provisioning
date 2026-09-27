@@ -138,11 +138,11 @@
 - name: create git config directory
   file: path=~/.config/git state=directory mode=0755
 
-- name: symlink for git credentials
-  file:
-    src: ~/Nextcloud/Entwicklung/git-credentials
-    dest: ~/.config/git/credentials
-    state: link
+# - name: symlink for git credentials
+#   file:
+#     src: ~/Nextcloud/Entwicklung/git-credentials
+#     dest: ~/.config/git/credentials
+#     state: link
 
 - name: symlink the topgrade config
   file:
