@@ -16,7 +16,9 @@ case "$1" in
         else
             # RESUME: Entkoppelt im Hintergrund mit Verzögerung starten
             systemctl stop tasmota-resume-delay.service 2>/dev/null
+            systemctl reset-failed tasmota-resume-delay.service 2>/dev/null
             systemd-run --unit=tasmota-resume-delay \
+                --property=RemainAfterExit=no \
                 /usr/bin/bash -c "sleep 15 && /usr/bin/curl -s 'http://tasmota-03/cm?cmnd=Power+On'"
         fi
         ;;
