@@ -52,11 +52,11 @@
           # after the header, and they will be used before the default mirrors.
 
           [core]
-          Server = http://homeserver:7878/$repo/os/$arch
+          Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           Include = /etc/pacman.d/mirrorlist
 
           [extra]
-          Server = http://homeserver:7878/$repo/os/$arch
+          Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           Include = /etc/pacman.d/mirrorlist
 
           #[aur]
@@ -64,23 +64,23 @@
           #Server = http://homeserver:8001
 
           [chaotic-aur]
-          Server = http://homeserver:7878/custom_repo/chaotic-aur/$repo/$arch
+          Server = http://homeserver:9129/repo/chaotic-aur
           Include = /etc/pacman.d/chaotic-mirrorlist
 
           #[extra-testing]
-          #Server = http://homeserver:7878/$repo/os/$arch
+          #Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 
           #[core-testing]
-          #Server = http://homeserver:7878/$repo/os/$arch
+          #Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 
           #[multilib]
-          #Server = http://homeserver:7878/$repo/os/$arch
+          #Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 
           #[multilib-testing]
-          #Server = http://homeserver:7878/$repo/os/$arch
+          #Server = http://homeserver:9129/repo/archlinux/$repo/os/$arch
           #Include = /etc/pacman.d/mirrorlist
 
     - name: install chaotic mirrorlist
