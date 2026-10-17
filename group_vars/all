@@ -104,6 +104,7 @@ arch_packages:
   - btop
   - buildah
   - buildkit
+  - bup
   - caddy
   - catimg
   - cfssl
@@ -194,6 +195,7 @@ arch_packages:
   - kubectl
   - kubectx
   - kubie
+  - kup
   - kustomize
   - kwalletmanager
   - ksshaskpass
