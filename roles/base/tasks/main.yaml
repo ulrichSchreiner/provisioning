@@ -96,6 +96,12 @@
         src: mirrorupgrade
         dest: /etc/pacman.d/hooks/mirrorupgrade.hook
 
+    - name: disable download timeout with pacman so my proxy can prefetch packages
+      lineinfile:
+          path: /etc/pacman.conf
+          line: 'DisableDownloadTimeout'
+          insertafter: 'DownloadUser = alpm'
+          
     - name: remove old packages
       pacman: name={{absent_packages}} state=absent
 
