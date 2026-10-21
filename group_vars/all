@@ -154,6 +154,7 @@ arch_packages:
   - git-extras
   - git-lfs
   - github-cli
+  - gitlogue
   - glab
   - glow
   - gnome-keyring
@@ -306,6 +307,7 @@ arch_packages:
 aur_packages:
   - carapace-bin
   - cloudctl-bin
+  - dnsglobe-bin
   - metalctl-bin
   - nrfutil
   - oniux
