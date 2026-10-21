@@ -295,6 +295,7 @@ arch_packages:
   - wireguard-tools
   - wireless_tools
   - wl-clipboard
+  - worktrunk
   - xclip
   - xdg-desktop-portal
   - xdg-desktop-portal-gtk
